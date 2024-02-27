@@ -17,37 +17,29 @@ const landingData = {
     id: [
       {
         name: "Layanan",
-        link: "/services",
+        link: "#services",
       },
       {
         name: "Portofolio",
-        link: "/works?search=&category=0",
+        link: "#works",
       },
       {
-        name: "Tentang Kami",
-        link: "/about",
-      },
-      {
-        name: "FAQs",
-        link: "/faqs",
+        name: "Tentang Saya",
+        link: "#about",
       },
     ],
     en: [
       {
         name: "Services",
-        link: "/services",
+        link: "#services",
       },
       {
         name: "Portfolio",
-        link: "/works?search=&category=0",
+        link: "#works",
       },
       {
-        name: "About Us",
-        link: "/about",
-      },
-      {
-        name: "FAQs",
-        link: "/faqs",
+        name: "About Me",
+        link: "#about",
       },
     ],
   },

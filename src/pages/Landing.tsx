@@ -4,6 +4,7 @@ import { getLang, setLang as setLangLocal } from "../lib/lang";
 import useTrigger from "../global/useTrigger";
 import Hero from "../landingSections/Hero";
 import Services from "../landingSections/Services";
+import TopNav from "../components/TopNav";
 
 export default function Landing() {
   const { setTrigger } = useTrigger();
@@ -28,6 +29,8 @@ export default function Landing() {
       align={"stretch"}
       overflowX={"clip"}
     >
+      <TopNav />
+
       {lang && (
         <>
           <Hero />

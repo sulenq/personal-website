@@ -2,7 +2,6 @@ import {
   Button,
   HStack,
   Image,
-  Text,
   // Link as ChakraLink,
 } from "@chakra-ui/react";
 import landingData from "../constant/landingData";
@@ -29,9 +28,9 @@ export default function TopNav(props: any) {
       maxW={"1440px"}
       mx={"auto"}
       zIndex={99}
-      // position={"fixed"}
-      // top={0}
-      // left={0}
+      position={"sticky"}
+      top={0}
+      left={0}
       {...props}
     >
       <HStack
@@ -42,20 +41,9 @@ export default function TopNav(props: any) {
         w={[null, null, "300px"]}
       >
         <Image loading={"lazy"} src="/logos/logoColor.svg" h={"24px"} />
-        {sw >= 350 && (
-          <Text
-            className="display"
-            fontSize={20}
-            fontWeight={600}
-            mt={"2px"}
-            color={"p.500"}
-          >
-            Distro Studio
-          </Text>
-        )}
       </HStack>
 
-      {sw > 1200 ? (
+      {sw > 850 ? (
         <HStack gap={0}>
           {landingData.landingNav[lang].map((nav, i) => (
             <Button
@@ -83,7 +71,7 @@ export default function TopNav(props: any) {
 
         <LangSwitcher color={props?.color || "current"} />
 
-        {sw <= 1200 && <NavDrawer color={props?.color || "current"} />}
+        {sw <= 850 && <NavDrawer color={props?.color || "current"} />}
       </HStack>
     </HStack>
   );
