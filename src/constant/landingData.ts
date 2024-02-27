@@ -16,6 +16,10 @@ const landingData = {
   landingNav: {
     id: [
       {
+        name: "Tentang Saya",
+        link: "#about",
+      },
+      {
         name: "Layanan",
         link: "#services",
       },
@@ -23,12 +27,12 @@ const landingData = {
         name: "Portofolio",
         link: "#works",
       },
-      {
-        name: "Tentang Saya",
-        link: "#about",
-      },
     ],
     en: [
+      {
+        name: "About Me",
+        link: "#about",
+      },
       {
         name: "Services",
         link: "#services",
@@ -36,10 +40,6 @@ const landingData = {
       {
         name: "Portfolio",
         link: "#works",
-      },
-      {
-        name: "About Me",
-        link: "#about",
       },
     ],
   },

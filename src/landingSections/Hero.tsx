@@ -8,7 +8,6 @@ import {
   Heading,
   Button,
   IconButton,
-  Wrap,
   Image,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
@@ -141,7 +140,7 @@ export default function Hero3() {
               ))}
             </HStack>
 
-            <Wrap justify={"stretch"}>
+            <HStack justify={"stretch"}>
               {landingData.sosmeds.map((sosmed, i) => (
                 <IconButton
                   flex={"1 0 50px"}
@@ -154,7 +153,7 @@ export default function Hero3() {
                   className="btn-solid"
                 />
               ))}
-            </Wrap>
+            </HStack>
           </VStack>
         </SimpleGrid>
       </Container>
