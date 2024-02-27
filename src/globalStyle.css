@@ -7,7 +7,9 @@
 .display {
   font-family: "Clash Display", sans-serif !important;
 }
-
+.serif {
+  font-family: "Libre Baskerville", serif !important;
+}
 /* html,
 body {
   scroll-behavior: smooth;
@@ -15,16 +17,16 @@ body {
 
 /* COLORS */
 :root {
-  --p50: #e4f7ff;
-  --p100: #ccefff;
-  --p200: #99dbff;
-  --p300: #66c1ff;
-  --p400: #3fa8ff;
-  --p500: #007fff;
-  --p600: #0062db;
-  --p700: #0049b7;
-  --p800: #003393;
-  --p900: #00247a;
+  --p50: #d7f3ff;
+  --p100: #b9ecff;
+  --p200: #88e2ff;
+  --p300: #50cfff;
+  --p400: #28b3ff;
+  --p500: #0693ff;
+  --p600: #0a7eeb;
+  --p700: #0f64be;
+  --p800: #135695;
+  --p900: #11345a;
 
   --s50: #fff3ee;
   --s100: #fee4d8;
@@ -290,6 +292,13 @@ input.filled:focus-visible {
 }
 
 /* CUSTOM */
+.bentoBox {
+  padding: 32px;
+  background: var(--divider);
+  align-items: stretch;
+  border-radius: 12px;
+}
+
 @keyframes float-in-from-top {
   0% {
     transform: translateY(-100%);
