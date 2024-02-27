@@ -110,7 +110,7 @@ export default function Hero3() {
             <VStack
               bg={"var(--divider)"}
               flex={1}
-              maxH={"500px"}
+              maxH={"480px"}
               pt={12}
               px={2}
               justify={"flex-end"}

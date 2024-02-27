@@ -8,6 +8,7 @@ import {
   HStack,
   Button,
   Box,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ArrowUpRight, List, X } from "@phosphor-icons/react";
 import landingData from "../../constant/landingData";
@@ -19,7 +20,7 @@ import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import formatDate from "../../lib/formatDate";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function DrawerNav(props: any) {
   const [closing, setClosing] = useState(false);
@@ -67,6 +68,18 @@ export default function DrawerNav(props: any) {
     { scope: "#MenuNav", dependencies: [isOpen, closing] }
   );
 
+  useEffect(() => {
+    if (isOpen) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "0";
+    }
+  }, [isOpen]);
+
   return (
     <>
       <IconButton
@@ -86,13 +99,13 @@ export default function DrawerNav(props: any) {
           id="MenuNav"
           w={"100vw"}
           minH={"100vh"}
-          bg={"blackAlpha.800"}
-          backdropFilter={"blur(10px)"}
+          bg={useColorModeValue("white", "black")}
           position={"fixed"}
           left={0}
           top={0}
           justify={"center"}
           zIndex={99}
+          color={"current"}
           onClick={handleClose}
         >
           <VStack
@@ -126,13 +139,11 @@ export default function DrawerNav(props: any) {
                   w={"100%"}
                   h={"50px"}
                   fontSize={20}
-                  color={"white"}
                   className="btn-solid"
                   ml={"auto"}
                 />
 
                 <LangSwitcher
-                  color={"white"}
                   ml={"auto"}
                   w={"100%"}
                   h={"50px"}
@@ -145,7 +156,7 @@ export default function DrawerNav(props: any) {
                   aria-label="close drawer button"
                   icon={<Icon as={X} fontSize={20} />}
                   borderRadius={12}
-                  color={"s.400"}
+                  color={"s.500"}
                   className="btn-solid sm-clicky"
                   bg={"var(--divider)"}
                   onClick={handleClose}
@@ -176,7 +187,6 @@ export default function DrawerNav(props: any) {
                     <Text
                       fontSize={32}
                       fontWeight={600}
-                      color={"white"}
                       transition={"200ms"}
                       textAlign={"left"}
                       wordBreak={"break-word"}
@@ -206,12 +216,11 @@ export default function DrawerNav(props: any) {
                     <Icon
                       as={sosmed.icon}
                       fontSize={24}
-                      color={"white"}
+
                       // weight="fill"
                     />
                   }
                   className="btn-solid"
-                  color={"white"}
                 />
               ))}
             </HStack>
@@ -222,7 +231,6 @@ export default function DrawerNav(props: any) {
                 h={"50px"}
                 px={6}
                 className="btn-ap clicky"
-                color={"white"}
                 onClick={() => {
                   setTimeout(() => {
                     const contact = document.getElementById("contact");
