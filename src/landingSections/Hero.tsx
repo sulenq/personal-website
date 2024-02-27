@@ -46,7 +46,7 @@ export default function Hero3() {
   );
 
   return (
-    <Wrapper id={"hero"} minH={"720px"}>
+    <Wrapper id={"hero"} minH={"600px"} mb={12}>
       <Container flex={1}>
         <SimpleGrid columns={[1, null, null, 3]} flex={1} pt={5} gap={5}>
           <VStack
@@ -105,29 +105,29 @@ export default function Hero3() {
             h={"100%"}
             justify={"center"}
             p={5}
-            pb={0}
             position={"relative"}
           >
             <VStack
               bg={"var(--divider)"}
               flex={1}
+              maxH={"500px"}
               pt={12}
               px={2}
               justify={"flex-end"}
-              borderRadius={"500px 500px 12px 12px"}
+              borderRadius={"full"}
               overflow={"clip"}
             >
               <Image
                 mt={"auto"}
                 alt="Fatwa Linovera"
-                src="/images/pas2.png"
+                src="/images/pas.png"
                 w={"100%"}
                 objectFit={"contain"}
               />
             </VStack>
           </VStack>
 
-          <VStack align={"stretch"} justify={"center"} p={5} gap={5}>
+          <VStack align={"stretch"} justify={"center"} p={5} py={12} gap={5}>
             <Text mt={[0, null, null, "50px"]}>{data.narative}</Text>
 
             <HStack align={"stretch"} mt={"auto"}>
