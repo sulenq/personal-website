@@ -119,7 +119,7 @@ export default function Hero3() {
                 pt={12}
                 px={2}
                 justify={"flex-end"}
-                borderRadius={"200px 200px 12px 12px"}
+                borderRadius={"500px 500px 12px 12px"}
                 overflow={"clip"}
               >
                 <Image
@@ -147,7 +147,7 @@ export default function Hero3() {
               </HStack>
 
               <Wrap justify={"stretch"}>
-                {data.sosmeds.map((sosmed, i) => (
+                {landingData.sosmeds.map((sosmed, i) => (
                   <IconButton
                     flex={"1 0 50px"}
                     key={i}

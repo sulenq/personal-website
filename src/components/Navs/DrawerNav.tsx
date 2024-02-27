@@ -136,7 +136,7 @@ export default function DrawerNav(props: any) {
                 gap={3}
                 onClick={(e) => e.stopPropagation()}
               >
-                {landingData.sosmed.map((sosmed, i) => (
+                {landingData.sosmeds.map((sosmed, i) => (
                   <IconButton
                     w={"100%"}
                     h={"50px"}

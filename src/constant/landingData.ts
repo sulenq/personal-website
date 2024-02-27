@@ -8,9 +8,7 @@ import {
   SealCheck,
   Smiley,
   StarFour,
-  TiktokLogo,
   UsersThree,
-  WhatsappLogo,
 } from "@phosphor-icons/react";
 import worksData from "./worksData";
 
@@ -71,11 +69,6 @@ const landingData = {
           value: 1,
         },
       ],
-      sosmeds: [
-        { name: "Github", link: "", icon: InstagramLogo },
-        { name: "LinkedIn", link: "", icon: LinkedinLogo },
-        { name: "Instagram", link: "", icon: GithubLogo },
-      ],
     },
     en: {
       greeting: "Hi there, i'm",
@@ -93,30 +86,13 @@ const landingData = {
           value: 1,
         },
       ],
-      sosmeds: [
-        { name: "Github", link: "", icon: InstagramLogo },
-        { name: "LinkedIn", link: "", icon: LinkedinLogo },
-        { name: "Instagram", link: "", icon: GithubLogo },
-      ],
     },
   },
 
-  sosmed: [
-    {
-      name: "Whatsappp",
-      icon: WhatsappLogo,
-      link: "",
-    },
-    {
-      name: "Instagram",
-      icon: InstagramLogo,
-      link: "",
-    },
-    {
-      name: "Tiktok",
-      icon: TiktokLogo,
-      link: "",
-    },
+  sosmeds: [
+    { name: "Instagram", link: "", icon: GithubLogo },
+    { name: "LinkedIn", link: "", icon: LinkedinLogo },
+    { name: "Github", link: "", icon: InstagramLogo },
   ],
 
   stats: {
