@@ -15,7 +15,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { ArrowUp } from "@phosphor-icons/react";
-import React from "react";
+
 import landingData from "../../constant/landingData";
 import { getLang } from "../../lib/lang";
 

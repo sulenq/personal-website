@@ -177,6 +177,7 @@ export default function DrawerNav(props: any) {
                     <HStack
                       as={Link}
                       p={4}
+                      px={6}
                       borderRadius={12}
                       bg={"var(--divider)"}
                       to={nav.link}

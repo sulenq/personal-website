@@ -1,5 +1,4 @@
 import { Button, Icon, Text, VStack, useDisclosure } from "@chakra-ui/react";
-import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { iconSize } from "../../constant/sizes";

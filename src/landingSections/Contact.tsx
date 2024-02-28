@@ -18,7 +18,7 @@ import {
   Wrap,
   Button,
 } from "@chakra-ui/react";
-import React from "react";
+
 import Container from "../components/Container";
 import landingData from "../constant/landingData";
 

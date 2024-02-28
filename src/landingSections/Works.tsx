@@ -74,6 +74,7 @@ export default function Works() {
           each: 0.2,
         },
       });
+
       gsap.from([`.workItem`, "#moreWorks"], {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
         scale: 0.5,
@@ -86,206 +87,15 @@ export default function Works() {
     { scope: "#works", dependencies: [worksType] }
   );
 
-  useGSAP(() => {
-    gsap.from("#carouselControl", {
-      scrollTrigger: scrollTriggerConfig("#worksContent"),
-      y: 50,
-      opacity: 0,
-    });
-  });
-
-  const WebWorks = () => (
-    <>
-      <Container>
-        <VStack mb={6} className="sectionHeader">
-          {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
-              </Box> */}
-          <Heading as={"h1"} className="sectionTitle">
-            {landingData.works.content[lang].title}
-          </Heading>
-        </VStack>
-      </Container>
-
-      {/* Carousel */}
-      <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
-        <VStack
-          w={"100%"}
-          className="noScroll"
-          overflow={"auto"}
-          ref={containerRef}
-          scrollBehavior={"smooth"}
-          align={"flex-start"}
-          scrollSnapType={"x mandatory"}
-        >
-          <HStack
-            ref={carouselRef}
-            minW={"100%"}
-            w={"max-content"}
-            justify={"center"}
-            gap={5}
-            px={[6, null, 14]}
-            py={4}
-            align={"stretch"}
-          >
-            {landingData.works.worksItem[lang].map((work, i) => {
-              const ok = i < 4;
-
-              return (
-                ok && (
-                  <Box className="workItem" key={i}>
-                    <PortfolioCard
-                      work={work}
-                      // setActiveWork={setActiveWork}
-                      w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                    />
-                  </Box>
-                )
-              );
-            })}
-
-            <Box id="moreWorks">
-              <VStack
-                scrollSnapAlign={"center"}
-                align={"center"}
-                bg={"var(--divider)"}
-                borderRadius={12}
-                overflow={"clip"}
-                w={"280px"}
-                h={"400px"}
-                p={5}
-                transition={"200ms"}
-                justify={"center"}
-                role="group"
-                gap={0}
-                cursor={"pointer"}
-                _hover={{ bg: "var(--divider3)" }}
-                as={Link}
-                to={"/works?search=&category=0"}
-                position={"relative"}
-                className="clicky"
-              >
-                <Icon
-                  as={ArrowUpRight}
-                  fontSize={600}
-                  // h={"0 !important"}
-                  _groupHover={{ transform: "scale(1.2)" }}
-                  transition={"200ms"}
-                  mb={4}
-                  position={"absolute"}
-                  bottom={"-150px"}
-                  right={"-100px"}
-                  zIndex={1}
-                  opacity={0.05}
-                  weight="bold"
-                />
-                <Text textAlign={"center"} fontSize={24} fontWeight={600}>
-                  {lang === "id" ? "Lihat Karya Lainnya" : "View Other Works"}
-                </Text>
-              </VStack>
-            </Box>
-          </HStack>
-        </VStack>
-      </Box>
-    </>
-  );
-
-  const DesignWorks = () => (
-    <>
-      <Container>
-        <VStack mb={6} className="sectionHeader">
-          {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>
-                  {landingData.designWorks.content[lang].nav}
-                </SectionNav>
-              </Box> */}
-          <Heading as={"h1"} className="sectionTitle">
-            {landingData.designWorks.content[lang].title}
-          </Heading>
-        </VStack>
-      </Container>
-
-      {/* Carousel */}
-      <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
-        <VStack
-          w={"100%"}
-          className="noScroll"
-          overflow={"auto"}
-          ref={containerRef}
-          scrollBehavior={"smooth"}
-          align={"flex-start"}
-          scrollSnapType={"x mandatory"}
-        >
-          <HStack
-            ref={carouselRef}
-            minW={"100%"}
-            w={"max-content"}
-            justify={"center"}
-            gap={5}
-            px={[6, null, 14]}
-            py={4}
-            align={"stretch"}
-          >
-            {landingData.designWorks.worksItem[lang].map((work, i) => {
-              const ok = i < 4;
-
-              return (
-                ok && (
-                  <Box className="workItem" key={i}>
-                    <PortfolioCard
-                      work={work}
-                      // setActiveWork={setActiveWork}
-                      w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                    />
-                  </Box>
-                )
-              );
-            })}
-
-            <Box id="moreWorks">
-              <VStack
-                scrollSnapAlign={"center"}
-                align={"center"}
-                bg={"var(--divider)"}
-                borderRadius={12}
-                overflow={"clip"}
-                w={"280px"}
-                h={"400px"}
-                p={5}
-                transition={"200ms"}
-                justify={"center"}
-                role="group"
-                gap={0}
-                cursor={"pointer"}
-                _hover={{ bg: "var(--divider3)" }}
-                as={Link}
-                to={"/works?search=&category=0"}
-                position={"relative"}
-                className="clicky"
-              >
-                <Icon
-                  as={ArrowUpRight}
-                  fontSize={600}
-                  // h={"0 !important"}
-                  _groupHover={{ transform: "scale(1.2)" }}
-                  transition={"200ms"}
-                  mb={4}
-                  position={"absolute"}
-                  bottom={"-150px"}
-                  right={"-100px"}
-                  zIndex={1}
-                  opacity={0.05}
-                  weight="bold"
-                />
-                <Text textAlign={"center"} fontSize={24} fontWeight={600}>
-                  {lang === "id" ? "Lihat Karya Lainnya" : "View Other Works"}
-                </Text>
-              </VStack>
-            </Box>
-          </HStack>
-        </VStack>
-      </Box>
-    </>
+  useGSAP(
+    () => {
+      gsap.from("#carouselControl", {
+        scrollTrigger: scrollTriggerConfig("#worksContent"),
+        y: 50,
+        opacity: 0,
+      });
+    },
+    { scope: "#works" }
   );
 
   return (
@@ -307,7 +117,208 @@ export default function Works() {
           align={"stretch"}
           id={"worksContent"}
         >
-          {worksType === 0 ? <WebWorks /> : <DesignWorks />}
+          {worksType === 0 ? (
+            <>
+              <Container>
+                <VStack mb={6} className="sectionHeader">
+                  {/* <Box className={"sectionNavLabel"}>
+                <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
+              </Box> */}
+                  <Heading as={"h1"} className="sectionTitle">
+                    {landingData.works.content[lang].title}
+                  </Heading>
+                </VStack>
+              </Container>
+
+              {/* Carousel */}
+              <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
+                <VStack
+                  w={"100%"}
+                  className="noScroll"
+                  overflow={"auto"}
+                  ref={containerRef}
+                  scrollBehavior={"smooth"}
+                  align={"flex-start"}
+                  scrollSnapType={"x mandatory"}
+                >
+                  <HStack
+                    ref={carouselRef}
+                    minW={"100%"}
+                    w={"max-content"}
+                    justify={"center"}
+                    gap={5}
+                    px={[6, null, 14]}
+                    py={4}
+                    align={"stretch"}
+                  >
+                    {landingData.works.worksItem[lang].map((work, i) => {
+                      const ok = i < 4;
+
+                      return (
+                        ok && (
+                          <Box className="workItem" key={i}>
+                            <PortfolioCard
+                              work={work}
+                              // setActiveWork={setActiveWork}
+                              w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                            />
+                          </Box>
+                        )
+                      );
+                    })}
+
+                    <Box id="moreWorks">
+                      <VStack
+                        scrollSnapAlign={"center"}
+                        align={"center"}
+                        bg={"var(--divider)"}
+                        borderRadius={12}
+                        overflow={"clip"}
+                        w={"280px"}
+                        h={"400px"}
+                        p={5}
+                        transition={"200ms"}
+                        justify={"center"}
+                        role="group"
+                        gap={0}
+                        cursor={"pointer"}
+                        _hover={{ bg: "var(--divider3)" }}
+                        as={Link}
+                        to={"/works?search=&category=0"}
+                        position={"relative"}
+                        className="clicky"
+                      >
+                        <Icon
+                          as={ArrowUpRight}
+                          fontSize={600}
+                          // h={"0 !important"}
+                          _groupHover={{ transform: "scale(1.2)" }}
+                          transition={"200ms"}
+                          mb={4}
+                          position={"absolute"}
+                          bottom={"-150px"}
+                          right={"-100px"}
+                          zIndex={1}
+                          opacity={0.05}
+                          weight="bold"
+                        />
+                        <Text
+                          textAlign={"center"}
+                          fontSize={24}
+                          fontWeight={600}
+                        >
+                          {lang === "id"
+                            ? "Lihat Karya Lainnya"
+                            : "View Other Works"}
+                        </Text>
+                      </VStack>
+                    </Box>
+                  </HStack>
+                </VStack>
+              </Box>
+            </>
+          ) : (
+            <>
+              <Container>
+                <VStack mb={6} className="sectionHeader">
+                  {/* <Box className={"sectionNavLabel"}>
+                <SectionNav>
+                  {landingData.designWorks.content[lang].nav}
+                </SectionNav>
+              </Box> */}
+                  <Heading as={"h1"} className="sectionTitle">
+                    {landingData.designWorks.content[lang].title}
+                  </Heading>
+                </VStack>
+              </Container>
+
+              {/* Carousel */}
+              <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
+                <VStack
+                  w={"100%"}
+                  className="noScroll"
+                  overflow={"auto"}
+                  ref={containerRef}
+                  scrollBehavior={"smooth"}
+                  align={"flex-start"}
+                  scrollSnapType={"x mandatory"}
+                >
+                  <HStack
+                    ref={carouselRef}
+                    minW={"100%"}
+                    w={"max-content"}
+                    justify={"center"}
+                    gap={5}
+                    px={[6, null, 14]}
+                    py={4}
+                    align={"stretch"}
+                  >
+                    {landingData.designWorks.worksItem[lang].map((work, i) => {
+                      const ok = i < 4;
+
+                      return (
+                        ok && (
+                          <Box className="workItem" key={i}>
+                            <PortfolioCard
+                              work={work}
+                              w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                            />
+                          </Box>
+                        )
+                      );
+                    })}
+
+                    <Box id="moreWorks">
+                      <VStack
+                        scrollSnapAlign={"center"}
+                        align={"center"}
+                        bg={"var(--divider)"}
+                        borderRadius={12}
+                        overflow={"clip"}
+                        w={"280px"}
+                        h={"400px"}
+                        p={5}
+                        transition={"200ms"}
+                        justify={"center"}
+                        role="group"
+                        gap={0}
+                        cursor={"pointer"}
+                        _hover={{ bg: "var(--divider3)" }}
+                        as={Link}
+                        to={"/works?search=&category=0"}
+                        position={"relative"}
+                        className="clicky"
+                      >
+                        <Icon
+                          as={ArrowUpRight}
+                          fontSize={600}
+                          // h={"0 !important"}
+                          _groupHover={{ transform: "scale(1.2)" }}
+                          transition={"200ms"}
+                          mb={4}
+                          position={"absolute"}
+                          bottom={"-150px"}
+                          right={"-100px"}
+                          zIndex={1}
+                          opacity={0.05}
+                          weight="bold"
+                        />
+                        <Text
+                          textAlign={"center"}
+                          fontSize={24}
+                          fontWeight={600}
+                        >
+                          {lang === "id"
+                            ? "Lihat Karya Lainnya"
+                            : "View Other Works"}
+                        </Text>
+                      </VStack>
+                    </Box>
+                  </HStack>
+                </VStack>
+              </Box>
+            </>
+          )}
 
           {/* carousel control */}
           <Stack

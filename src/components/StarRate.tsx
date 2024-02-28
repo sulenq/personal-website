@@ -1,6 +1,5 @@
 import { HStack, Icon } from "@chakra-ui/react";
 import { Star, StarHalf } from "@phosphor-icons/react";
-import React from "react";
 
 type Props = {
   rate: number;

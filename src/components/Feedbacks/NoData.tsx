@@ -1,4 +1,3 @@
-import React from "react";
 import { getLang } from "../../lib/lang";
 import { Text, VStack } from "@chakra-ui/react";
 

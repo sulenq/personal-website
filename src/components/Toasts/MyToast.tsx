@@ -1,5 +1,4 @@
 import { HStack, VStack, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
 
 export default function BlackToast({ children }: any) {
   return (

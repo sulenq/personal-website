@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Button, Text, Tooltip } from "@chakra-ui/react";
 import { getLang, setLang as setLangLocal } from "../lib/lang";
 import useTrigger from "../global/useTrigger";

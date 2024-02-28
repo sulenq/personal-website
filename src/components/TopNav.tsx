@@ -25,7 +25,6 @@ export default function TopNav(props: any) {
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-    console.log(scrollYPos, currentScrollY);
 
     if (scrollYPos < currentScrollY) {
       setScrollDirection("down");
