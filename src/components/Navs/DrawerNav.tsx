@@ -65,7 +65,7 @@ export default function DrawerNav(props: any) {
         });
       }
     },
-    { scope: "#MenuNav", dependencies: [isOpen, closing] }
+    { scope: "#menuNav", dependencies: [isOpen, closing] }
   );
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function DrawerNav(props: any) {
 
       {isOpen && (
         <VStack
-          id="MenuNav"
+          id="menuNav"
           w={"100vw"}
           minH={"100vh"}
           bg={bg}
