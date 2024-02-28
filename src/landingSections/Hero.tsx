@@ -52,7 +52,7 @@ export default function Hero3() {
           columns={[1, null, null, 3]}
           flex={1}
           pt={5}
-          pb={10}
+          pb={16}
           borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
           gap={5}
         >

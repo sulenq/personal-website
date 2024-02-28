@@ -64,6 +64,7 @@ export default function About() {
         px={[0, null, 6]}
         maxW={"1280px"}
         w={"100%"}
+        mx={"auto"}
         color={"white"}
         borderRadius={"24px 24px 0 0"}
       >
