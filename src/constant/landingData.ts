@@ -133,7 +133,7 @@ const landingData = {
     content: {
       id: {
         nav: "Portofolio",
-        title: "Hasil Kerjaku",
+        title: "Karya Web",
         otherWorks: {
           link: "",
           label: "Lihat Lainnya",
@@ -142,7 +142,31 @@ const landingData = {
       },
       en: {
         nav: "Portfolio",
-        title: "My Works",
+        title: "Web Works",
+        otherWorks: {
+          link: "",
+          label: "View Other",
+        },
+        viewDetail: "View Detail",
+      },
+    },
+    worksItem: worksData,
+  },
+
+  designWorks: {
+    content: {
+      id: {
+        nav: "Portofolio",
+        title: "Karya Desain",
+        otherWorks: {
+          link: "",
+          label: "Lihat Lainnya",
+        },
+        viewDetail: "Lihat Detail",
+      },
+      en: {
+        nav: "Portfolio",
+        title: "Design Works",
         otherWorks: {
           link: "",
           label: "View Other",

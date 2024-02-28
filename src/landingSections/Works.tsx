@@ -9,9 +9,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import SectionNav from "../components/SectionNav";
 import landingData from "../constant/landingData";
-
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import useScreenWidth from "../hooks/useScreenWidth";
 import { Link } from "react-router-dom";
@@ -65,7 +63,7 @@ export default function Works() {
   // Animation
   useGSAP(
     () => {
-      gsap.from([".sectionNavLabel", ".sectionTitle"], {
+      gsap.from([".sectionNavLabel", ".sectionTitle", "#carouselControl"], {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
         y: 50,
         opacity: 0,
@@ -73,11 +71,10 @@ export default function Works() {
           each: 0.2,
         },
       });
-      gsap.from([`.workItem`, "#moreWorks", "#carouselControl"], {
+      gsap.from([`.workItem`, "#moreWorks"], {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
-        x: 100,
+        scale: 0.5,
         opacity: 0,
-        // ease: "power3",
         stagger: {
           each: 0.2,
         },
@@ -109,11 +106,128 @@ export default function Works() {
         >
           <Container>
             <VStack mb={6} className="sectionHeader">
-              <Box className={"sectionNavLabel"}>
+              {/* <Box className={"sectionNavLabel"}>
                 <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
-              </Box>
+              </Box> */}
               <Heading as={"h1"} className="sectionTitle">
                 {landingData.works.content[lang].title}
+              </Heading>
+            </VStack>
+          </Container>
+
+          {/* Carousel */}
+          <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"} mb={24}>
+            <VStack
+              w={"100%"}
+              className="noScroll"
+              overflow={"auto"}
+              ref={containerRef}
+              scrollBehavior={"smooth"}
+              align={"flex-start"}
+              scrollSnapType={"x mandatory"}
+            >
+              <HStack
+                ref={carouselRef}
+                minW={"100%"}
+                w={"max-content"}
+                justify={"center"}
+                gap={5}
+                px={[6, null, 14]}
+                py={4}
+                align={"stretch"}
+              >
+                {landingData.works.worksItem[lang].map((work, i) => {
+                  const ok = i < 4;
+
+                  return (
+                    ok && (
+                      <Box className="workItem" key={i}>
+                        <PortfolioCard
+                          work={work}
+                          // setActiveWork={setActiveWork}
+                          w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                        />
+                      </Box>
+                    )
+                  );
+                })}
+
+                <Box id="moreWorks">
+                  <VStack
+                    scrollSnapAlign={"center"}
+                    align={"center"}
+                    bg={"var(--divider)"}
+                    borderRadius={12}
+                    overflow={"clip"}
+                    w={"280px"}
+                    h={"400px"}
+                    p={5}
+                    transition={"200ms"}
+                    justify={"center"}
+                    role="group"
+                    gap={0}
+                    cursor={"pointer"}
+                    _hover={{ bg: "var(--divider3)" }}
+                    as={Link}
+                    to={"/works?search=&category=0"}
+                    position={"relative"}
+                    className="clicky"
+                  >
+                    <Icon
+                      as={ArrowUpRight}
+                      fontSize={600}
+                      // h={"0 !important"}
+                      _groupHover={{ transform: "scale(1.2)" }}
+                      transition={"200ms"}
+                      mb={4}
+                      position={"absolute"}
+                      bottom={"-150px"}
+                      right={"-100px"}
+                      zIndex={1}
+                      opacity={0.05}
+                      weight="bold"
+                    />
+                    <Text textAlign={"center"} fontSize={24} fontWeight={600}>
+                      {lang === "id"
+                        ? "Lihat Karya Lainnya"
+                        : "View Other Works"}
+                    </Text>
+                  </VStack>
+                </Box>
+              </HStack>
+            </VStack>
+
+            {/* carousel control */}
+            <VStack id="carouselControl" mt={4} display={ccDisplay}>
+              <HStack>
+                <IconButton
+                  onClick={handlePrev}
+                  aria-label="Prev"
+                  icon={<Icon as={ArrowLeft} fontSize={20} />}
+                  className="btn clikcy"
+                  color={"white"}
+                />
+
+                <IconButton
+                  onClick={handleNext}
+                  aria-label="Prev"
+                  icon={<Icon as={ArrowRight} fontSize={20} />}
+                  className="btn clikcy"
+                  color={"white"}
+                />
+              </HStack>
+            </VStack>
+          </Box>
+
+          <Container>
+            <VStack mb={6} className="sectionHeader">
+              {/* <Box className={"sectionNavLabel"}>
+                <SectionNav>
+                  {landingData.designWorks.content[lang].nav}
+                </SectionNav>
+              </Box> */}
+              <Heading as={"h1"} className="sectionTitle">
+                {landingData.designWorks.content[lang].title}
               </Heading>
             </VStack>
           </Container>
@@ -139,7 +253,7 @@ export default function Works() {
                 py={4}
                 align={"stretch"}
               >
-                {landingData.works.worksItem[lang].map((work, i) => {
+                {landingData.designWorks.worksItem[lang].map((work, i) => {
                   const ok = i < 4;
 
                   return (

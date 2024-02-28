@@ -38,9 +38,7 @@ export default function WorksPage() {
   const lang = getLang();
   const categories = [
     lang === "id" ? "Semua Kategori" : "All Category",
-    landingData.services[lang].servicesItem[0].title,
-    landingData.services[lang].servicesItem[1].title,
-    landingData.services[lang].servicesItem[2].title,
+    "gatau",
   ];
 
   const navigate = useNavigate();

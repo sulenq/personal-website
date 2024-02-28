@@ -10,8 +10,6 @@ import {
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import landingData from "../constant/landingData";
-import SectionNav from "../components/SectionNav";
-
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { getLang } from "../lib/lang";
 import { iconSize } from "../constant/sizes";
@@ -70,9 +68,9 @@ export default function About() {
       >
         <Container transition={"200ms"} mb={12}>
           <VStack className="sectionHeader">
-            <Box className={"sectionNavLabel"}>
+            {/* <Box className={"sectionNavLabel"}>
               <SectionNav>{landingData.about[lang].nav}</SectionNav>
-            </Box>
+            </Box> */}
 
             <Heading as={"h1"} className="sectionTitle">
               {landingData.about[lang].title}
