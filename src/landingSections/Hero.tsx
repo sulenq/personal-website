@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <Box id="hero">
-      <Wrapper minH={"600px"}>
+      <Wrapper minH={"720px"}>
         <Container flex={1}>
           <SimpleGrid
             columns={[1, null, null, 3]}

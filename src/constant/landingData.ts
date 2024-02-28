@@ -91,24 +91,19 @@ const landingData = {
       },
       items: [
         {
-          title: "Keahlian, Strategi dan Fleksibilitas",
+          title: "Thinker",
           narative:
-            "Tim kami memiliki keterampilan khusus yang relevan dengan proyek, berkontribusi terhadap hasil yang efisien dan berkualitas tinggi, dan mampu menunjukkan keahlian dalam industri, memastikan pemahaman mendalam tentang persyaratan yang spesifik",
+            "Kepribadianku tercermin dalam kecenderunganku untuk selalu memikirkan solusi-solusi kreatif dan inovatif, serta mendekatinya dengan ketelitian dan kecermatan yang tinggi dalam setiap aspek pekerjaanku",
         },
         {
-          title: "Spesialisasi dan Akuntabilitas",
+          title: "Web Developer",
           narative:
-            "Distro Studio merupakan spesialis dalam pengembangan perangkat lunak dan memberikan akuntabilitas untuk proyek yang kami lakukan",
+            "Aku lulusan dari fakultas teknik informatika dan memilih jalan menjadi seorang web developer. Aku fokus di React karena aku lebih suka mengerjakan frontend",
         },
         {
-          title: "Perencanaan dan Eksekusi",
+          title: "Graphic Designer",
           narative:
-            "Strategi yang terdefinisi dengan baik sangat penting untuk perencanaan dan pelaksanaan proyek yang efektif, yang mencakup jadwal, alokasi sumber daya, dan manajemen risiko.",
-        },
-        {
-          title: "Kontrol Proyek Konsisten",
-          narative:
-            "Melakukan kontrol dengan konsisten atas kemajuan proyek, dan tidak perlu mengkhawatirkan aspek komunikasi.",
+            "Seni dan desain, aku menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW aku mampu membuat desain apapun yang aku mau",
         },
       ],
     },
@@ -121,24 +116,19 @@ const landingData = {
       },
       items: [
         {
-          title: "Expertise, Strategy and Flexibility",
+          title: "Thinker",
           narative:
-            "Our team possesses specialized skills relevant to the project, contributing to efficient and high-quality deliverables, and is capable of demonstrating expertise in the industry, ensuring a deep understanding of specific requirements",
+            "My personality is reflected in my tendency to always think of creative and innovative solutions, and to approach them with great care and precision in every aspect of my work.",
         },
         {
-          title: "Specialization and Accountability",
+          title: "Web Developer",
           narative:
-            "Distro Studio specialize in software development and provide accountability for the project our undertake",
+            "I graduated from the faculty of informatics engineering and chose the path of becoming a web developer. I focus on React because I prefer working on the frontend",
         },
         {
-          title: "Planning and Execution",
+          title: "Graphic Designer",
           narative:
-            "A well-defined strategy is essential for effective project planning and execution, encompassing timelines, resource allocation, and risk management.",
-        },
-        {
-          title: "Constant Project Control",
-          narative:
-            "Constant control over the progress of the project, and no need to worry about the communication aspect.",
+            "Art and design, I love both. Becoming a graphic designer is also accidental, by using CorelDRAW I am able to create any design I want",
         },
       ],
     },

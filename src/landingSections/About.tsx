@@ -99,7 +99,7 @@ export default function About() {
                   px={6}
                   borderRadius={16}
                 >
-                  <Text fontWeight={700} fontSize={24}>
+                  <Text fontWeight={700} fontSize={24} mt={"-2px"}>
                     {String(i + 1).padStart(2, "0")}
                   </Text>
 
@@ -125,14 +125,15 @@ export default function About() {
               minH={["700px", null, null, "100%"]}
               gap={3}
             >
-              <Box
+              {/* <Box
                 className="aboutImage"
-                bgImage={"/images/about/team2.jpg"}
+                bgImage={"/images/about/thinker.jpg"}
                 bgPos={"top"}
                 bgSize={"cover"}
-                h={"200px"}
+                h={"160px"}
+                w={"100%"}
                 borderRadius={12}
-              />
+              /> */}
 
               <HStack gap={3} flex={1} my={"auto"}>
                 <VStack gap={3} h={"100%"} w={"50%"}>
@@ -152,16 +153,16 @@ export default function About() {
                     className="aboutImage"
                     h={"50%"}
                     w={"100%"}
-                    bgImage="/images/about/hero3.jpg"
+                    bgImage="/images/about/thinker.jpg"
                     bgSize={"cover"}
                     bgPos={"center"}
                     borderRadius={12}
                   />
 
                   <VStack
+                    flex={1}
                     className="aboutImage"
                     align={"stretch"}
-                    h={"50%"}
                     w={"100%"}
                     borderRadius={12}
                     color={"white"}
@@ -169,14 +170,14 @@ export default function About() {
                   >
                     <Text fontSize={20} fontWeight={700}>
                       {lang === "id"
-                        ? "Kenali kami lebih dekat"
+                        ? "Kenali aku lebih dekat"
                         : "Get to know me better"}
                     </Text>
 
-                    <Text opacity={0.5}>
+                    <Text opacity={0.5} mb={2}>
                       {lang === "id"
-                        ? "Kenali anggota kami"
-                        : "Get to know our members"}
+                        ? "Cerita, latar belakang, hobi, kepribadian dll"
+                        : "Story, background, hobbies, personality etc"}
                     </Text>
 
                     <Button
@@ -192,6 +193,7 @@ export default function About() {
                       as={Link}
                       to={"/about"}
                       borderRadius={12}
+                      flexShrink={0}
                     >
                       {landingData.about[lang].ourMember.label}
                     </Button>
