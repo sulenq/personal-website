@@ -48,7 +48,7 @@ export default function TopNav(props: any) {
       animation={"float-in-from-top 1s"}
       zIndex={99}
       position={"sticky"}
-      top={0}
+      top={"-1px"}
       left={0}
       // p={1}
       transform={show ? "" : "translateY(-80px)"}
