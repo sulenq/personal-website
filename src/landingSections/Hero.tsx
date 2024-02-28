@@ -132,17 +132,27 @@ export default function Hero() {
             </VStack>
 
             <VStack align={"stretch"} justify={"center"} p={5} py={12} gap={5}>
-              <Text className="init" mt={[0, null, null, "50px"]}>
+              <Text
+                className="init"
+                mt={[0, null, null, "50px"]}
+                textAlign={["center", null, null, "left"]}
+                maxW={"600px"}
+                mx={"auto"}
+              >
                 {data.narative}
               </Text>
 
               <HStack className="init" align={"stretch"} mt={"auto"}>
                 {data.stats.map((stat, i) => (
                   <VStack key={i} borderRadius={12} w={"50%"}>
-                    <Text fontWeight={700} fontSize={32} mr={"auto"}>
+                    <Text
+                      fontWeight={700}
+                      fontSize={32}
+                      mr={["0", null, null, "auto"]}
+                    >
                       {stat.value}
                     </Text>
-                    <Text mr={"auto"}>{stat.name}</Text>
+                    <Text mr={["0", null, null, "auto"]}>{stat.name}</Text>
                   </VStack>
                 ))}
               </HStack>
