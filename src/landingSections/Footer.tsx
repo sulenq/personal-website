@@ -11,7 +11,6 @@ import {
   Stack,
   Center,
 } from "@chakra-ui/react";
-import React from "react";
 import Container from "../components/Container";
 import landingData from "../constant/landingData";
 
@@ -153,7 +152,7 @@ export default function Footer() {
 
             <VStack w={["100%", null, "35%"]} align={"stretch"} gap={3}>
               <SimpleGrid columns={[3]} gap={3}>
-                {landingData.sosmed.map((sosmed, i) => (
+                {landingData.sosmeds.map((sosmed, i) => (
                   <Center className="footerItem" w={"100%"} key={i}>
                     <IconButton
                       w={"100%"}

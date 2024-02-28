@@ -1,15 +1,4 @@
-import {
-  Buildings,
-  DeviceMobile,
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  Monitor,
-  SealCheck,
-  Smiley,
-  StarFour,
-  UsersThree,
-} from "@phosphor-icons/react";
+import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import worksData from "./worksData";
 
 const landingData = {
@@ -140,123 +129,11 @@ const landingData = {
     { name: "Github", link: "", icon: InstagramLogo },
   ],
 
-  stats: {
-    id: [
-      {
-        name: "Proyek Selesai",
-        value: 8,
-        icon: SealCheck,
-      },
-      {
-        name: "Tahun Pengalaman",
-        value: 2,
-        icon: StarFour,
-      },
-      {
-        name: "Klien Puas Hati",
-        value: 3,
-        icon: Smiley,
-      },
-      {
-        name: "Pakar di Bidangnya",
-        value: 3,
-        icon: UsersThree,
-      },
-    ],
-    en: [
-      {
-        name: "Projects Finished",
-        value: 8,
-        icon: SealCheck,
-      },
-      {
-        name: "Years Experience",
-        value: 2,
-        icon: StarFour,
-      },
-      {
-        name: "Clients Satisfied",
-        value: 3,
-        icon: Smiley,
-      },
-      {
-        name: "Expert in the Field",
-        value: 3,
-        icon: UsersThree,
-      },
-    ],
-  },
-
-  services: {
-    id: {
-      detail: "Lihat detail",
-      nav: "Layanan",
-      title: "Apa yang Kami Bantu?",
-      servicesItem: [
-        {
-          icon: Buildings,
-          title: "Company Profile/Landing Page",
-          image: "/images/services/compro.jpg",
-          narative:
-            "Kemembangkan website Anda untuk memberikan informasi yang berguna sekaligus memberikan pengalaman yang luar biasa saat diakses",
-          detailLink: "/services?section=0",
-        },
-        {
-          icon: Monitor,
-          title: "Web and Web App Development",
-          image: "/images/services/webapp.jpg",
-          narative:
-            "Bangun aplikasi bisnis Anda dengan pakar UX & UI kami yang fokus pada peningkatan pengalaman pengguna",
-          detailLink: "/services?section=1",
-        },
-        {
-          icon: DeviceMobile,
-          title: "Cross Platform Mobile App Development",
-          image: "/images/services/mobile.jpg",
-          narative:
-            "Buat situs profil perusahaan yang dinamis untuk pengalaman pengguna yang lancar dan menarik dengan penyampaian informasi yang mudah",
-          detailLink: "/services?section=2",
-        },
-      ],
-    },
-    en: {
-      detail: "View detail",
-      nav: "Services",
-      title: "What Do We Help?",
-      servicesItem: [
-        {
-          icon: Buildings,
-          title: "Company Profile/Landing Page",
-          image: "/images/services/compro.jpg",
-          narative:
-            "Create and develop your website to provide useful information while providing a great experience when accessed",
-          detailLink: "/services?section=0",
-        },
-        {
-          icon: Monitor,
-          title: "Web and Web App Development",
-          image: "/images/services/webapp.jpg",
-          narative:
-            "Build your business app with our UX & UI specialists who focus on improving user experience",
-          detailLink: "/services?section=1",
-        },
-        {
-          icon: DeviceMobile,
-          title: "Cross Platform Mobile App Development",
-          image: "/images/services/mobile.jpg",
-          narative:
-            "Create a dynamic company profile site for a seamless, engaging user experience with effortless information delivery",
-          detailLink: "/services?section=2",
-        },
-      ],
-    },
-  },
-
   works: {
     content: {
       id: {
         nav: "Portofolio",
-        title: "Karya-Karya Kami",
+        title: "Hasil Kerjaku",
         otherWorks: {
           link: "",
           label: "Lihat Lainnya",
@@ -265,7 +142,7 @@ const landingData = {
       },
       en: {
         nav: "Portfolio",
-        title: "Our Works",
+        title: "My Works",
         otherWorks: {
           link: "",
           label: "View Other",

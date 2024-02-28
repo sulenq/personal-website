@@ -8,7 +8,7 @@ import {
   IconButton,
   Heading,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionNav from "../components/SectionNav";
 import landingData from "../constant/landingData";
 
@@ -42,7 +42,7 @@ export default function Works() {
   };
 
   useEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) => {
+    const resizeObserver = new ResizeObserver(() => {
       const container = document.querySelector(
         "#worksContent"
       ) as HTMLDivElement;
@@ -75,7 +75,7 @@ export default function Works() {
       });
       gsap.from([`.workItem`, "#moreWorks", "#carouselControl"], {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
-        scale: 0,
+        x: 100,
         opacity: 0,
         // ease: "power3",
         stagger: {
@@ -98,8 +98,7 @@ export default function Works() {
         // color={useColorModeValue("white", "dark")}
       >
         <VStack
-          pt={10}
-          pb={16}
+          py={16}
           bg={"black"}
           color={"white"}
           borderRadius={"0 0 24px 24px"}

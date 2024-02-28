@@ -10,8 +10,7 @@ import {
   Tooltip,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
-import landingData from "../../constant/landingData";
+import { useEffect, useRef, useState } from "react";
 import { getLang } from "../../lib/lang";
 import useScreenWidth from "../../hooks/useScreenWidth";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -27,7 +26,7 @@ export default function FloatingPortfolioNav() {
 
   const [showNav, setShowNav] = useState<boolean>(true);
   const prevScrollY = useRef<number>(0);
-  const scrollTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
+  const scrollTimeout = useRef<any>(undefined);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,7 +208,7 @@ export default function FloatingPortfolioNav() {
             borderRadius={12}
             href="#contact"
           >
-            {landingData.hero[lang].contactUs.label}
+            Contact Me
           </Button>
         </HStack>
       </HStack>

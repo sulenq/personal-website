@@ -5,6 +5,7 @@ import useTrigger from "../global/useTrigger";
 import Hero from "../landingSections/Hero";
 import TopNav from "../components/TopNav";
 import About from "../landingSections/About";
+import Works from "../landingSections/Works";
 
 export default function Landing() {
   const { setTrigger } = useTrigger();
@@ -37,9 +38,9 @@ export default function Landing() {
 
           <About />
 
-          {/* <Services /> */}
+          <Works />
 
-          {/* <Works /> */}
+          {/* <Services /> */}
 
           {/* <OurClients /> */}
 

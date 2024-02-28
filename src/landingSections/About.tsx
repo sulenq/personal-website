@@ -60,7 +60,7 @@ export default function About() {
     <VStack id="about" align={"stretch"}>
       <VStack
         bg={"black"}
-        py={12}
+        py={16}
         px={[0, null, 6]}
         maxW={"1280px"}
         w={"100%"}
@@ -85,7 +85,6 @@ export default function About() {
             columns={[1, null, null, 2]}
             gap={5}
             // borderBottom={"1px solid var(--divider3)"}
-            pb={32}
           >
             <VStack id="aboutItemContainer" align={"stretch"} gap={5}>
               {landingData.about[lang].items.map((item, i) => (

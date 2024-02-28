@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import Container from "../components/Container";
-import FloatingNav from "../components/Navs/FloatingNav";
 import useTrigger from "../global/useTrigger";
 import landingData from "../constant/landingData";
 import { getLang } from "../lib/lang";
@@ -30,7 +29,7 @@ import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-export default function Works() {
+export default function WorksPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -68,9 +67,7 @@ export default function Works() {
     }
   }, [activeCategory]);
 
-  const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(
-    null
-  );
+  const [searchTimeout, setSearchTimeout] = useState<any>(null);
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (searchTimeout) {
       clearTimeout(searchTimeout);
@@ -142,8 +139,6 @@ export default function Works() {
   return (
     <VStack id="worksPage" gap={0} align={"stretch"} overflowX={"clip"}>
       <Text display={"none"}>{trigger}</Text>
-
-      <FloatingNav />
 
       <PageHeader>{landingData.works.content[lang].nav}</PageHeader>
 

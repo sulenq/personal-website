@@ -49,7 +49,7 @@ export default function DrawerNav(props: any) {
         });
       }
     },
-    { dependencies: [closing] }
+    { scope: "#menuNav", dependencies: [closing] }
   );
 
   useGSAP(
@@ -81,7 +81,7 @@ export default function DrawerNav(props: any) {
   }, [isOpen]);
 
   return (
-    <>
+    <Box id="menuNav">
       <IconButton
         {...props}
         aria-label="Nav Drawer"
@@ -94,160 +94,161 @@ export default function DrawerNav(props: any) {
         className="btn sm-clicky"
       />
 
-      {isOpen && (
-        <VStack
-          id="menuNav"
-          w={"100vw"}
-          minH={"100vh"}
-          bg={bg}
-          position={"fixed"}
-          left={0}
-          top={0}
-          justify={"center"}
-          zIndex={99}
-          color={"current"}
-          onClick={handleClose}
-        >
+      <Box>
+        {isOpen && (
           <VStack
-            minH={"100%"}
-            w={"100%"}
-            maxW={"500px"}
-            mx={"auto"}
-            py={6}
-            px={8}
-            align={"stretch"}
+            w={"100vw"}
+            minH={"100vh"}
+            bg={bg}
+            position={"fixed"}
+            left={0}
+            top={0}
             justify={"center"}
-            gap={3}
+            zIndex={99}
+            color={"current"}
+            onClick={handleClose}
           >
-            <VStack className="init" justify={"space-between"} mb={4}>
-              <Text>{formatDate(currentDate.toString())}</Text>
-            </VStack>
-            <HStack
-              color={"p.500"}
-              justify={"space-between"}
+            <VStack
+              minH={"100%"}
+              w={"100%"}
+              maxW={"500px"}
+              mx={"auto"}
+              py={6}
+              px={8}
+              align={"stretch"}
+              justify={"center"}
               gap={3}
-              onClick={(e) => e.stopPropagation()}
             >
+              <VStack className="init" justify={"space-between"} mb={4}>
+                <Text>{formatDate(currentDate.toString())}</Text>
+              </VStack>
               <HStack
-                w={"100%"}
+                color={"p.500"}
+                justify={"space-between"}
+                gap={3}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <HStack
+                  w={"100%"}
+                  className="init"
+                  justify={"space-between"}
+                  gap={3}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <ColorModeSwitcher
+                    w={"100%"}
+                    h={"50px"}
+                    fontSize={20}
+                    className="btn-solid"
+                    ml={"auto"}
+                  />
+
+                  <LangSwitcher
+                    ml={"auto"}
+                    w={"100%"}
+                    h={"50px"}
+                    className="btn-solid"
+                  />
+                </HStack>
+
+                <Box className="init">
+                  <IconButton
+                    aria-label="close drawer button"
+                    icon={<Icon as={X} fontSize={20} />}
+                    borderRadius={12}
+                    color={"s.500"}
+                    className="btn-solid sm-clicky"
+                    bg={"var(--divider)"}
+                    onClick={handleClose}
+                    w={"50px"}
+                    h={"50px"}
+                  />
+                </Box>
+              </HStack>
+
+              <VStack
+                justify={"center"}
+                align={"stretch"}
+                gap={3}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {landingData.landingNav[lang].map((nav, i) => (
+                  <Box className="init" key={i}>
+                    <HStack
+                      as={Link}
+                      p={4}
+                      borderRadius={12}
+                      bg={"var(--divider)"}
+                      to={nav.link}
+                      justify={"space-between"}
+                      _hover={{ bg: "var(--divider2)" }}
+                      transition={"200ms"}
+                    >
+                      <Text
+                        fontSize={32}
+                        fontWeight={600}
+                        transition={"200ms"}
+                        textAlign={"left"}
+                        wordBreak={"break-word"}
+                      >
+                        {nav.name}
+                      </Text>
+
+                      <Icon as={ArrowUpRight} fontSize={32} />
+                    </HStack>
+                  </Box>
+                ))}
+              </VStack>
+
+              <HStack
                 className="init"
                 justify={"space-between"}
                 gap={3}
                 onClick={(e) => e.stopPropagation()}
               >
-                <ColorModeSwitcher
-                  w={"100%"}
-                  h={"50px"}
-                  fontSize={20}
-                  className="btn-solid"
-                  ml={"auto"}
-                />
+                {landingData.sosmeds.map((sosmed, i) => (
+                  <IconButton
+                    w={"100%"}
+                    h={"50px"}
+                    key={i}
+                    aria-label={`${sosmed.name} link`}
+                    icon={
+                      <Icon
+                        as={sosmed.icon}
+                        fontSize={24}
 
-                <LangSwitcher
-                  ml={"auto"}
-                  w={"100%"}
-                  h={"50px"}
-                  className="btn-solid"
-                />
+                        // weight="fill"
+                      />
+                    }
+                    className="btn-solid"
+                  />
+                ))}
               </HStack>
 
               <Box className="init">
-                <IconButton
-                  aria-label="close drawer button"
-                  icon={<Icon as={X} fontSize={20} />}
-                  borderRadius={12}
-                  color={"s.500"}
-                  className="btn-solid sm-clicky"
-                  bg={"var(--divider)"}
-                  onClick={handleClose}
-                  w={"50px"}
-                  h={"50px"}
-                />
-              </Box>
-            </HStack>
-
-            <VStack
-              justify={"center"}
-              align={"stretch"}
-              gap={3}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {landingData.landingNav[lang].map((nav, i) => (
-                <Box className="init" key={i}>
-                  <HStack
-                    as={Link}
-                    p={4}
-                    borderRadius={12}
-                    bg={"var(--divider)"}
-                    to={nav.link}
-                    justify={"space-between"}
-                    _hover={{ bg: "var(--divider2)" }}
-                    transition={"200ms"}
-                  >
-                    <Text
-                      fontSize={32}
-                      fontWeight={600}
-                      transition={"200ms"}
-                      textAlign={"left"}
-                      wordBreak={"break-word"}
-                    >
-                      {nav.name}
-                    </Text>
-
-                    <Icon as={ArrowUpRight} fontSize={32} />
-                  </HStack>
-                </Box>
-              ))}
-            </VStack>
-
-            <HStack
-              className="init"
-              justify={"space-between"}
-              gap={3}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {landingData.sosmeds.map((sosmed, i) => (
-                <IconButton
+                <Button
                   w={"100%"}
                   h={"50px"}
-                  key={i}
-                  aria-label={`${sosmed.name} link`}
-                  icon={
-                    <Icon
-                      as={sosmed.icon}
-                      fontSize={24}
-
-                      // weight="fill"
-                    />
-                  }
-                  className="btn-solid"
-                />
-              ))}
-            </HStack>
-
-            <Box className="init">
-              <Button
-                w={"100%"}
-                h={"50px"}
-                px={6}
-                className="btn-ap clicky"
-                onClick={() => {
-                  setTimeout(() => {
-                    const contact = document.getElementById("contact");
-                    contact?.scrollIntoView({
-                      block: "nearest",
-                      inline: "center",
-                    });
-                  }, 300);
-                }}
-                fontSize={"18px !important"}
-              >
-                {lang === "id" ? "Hubungi Saya" : "Contact Me"}
-              </Button>
-            </Box>
+                  px={6}
+                  className="btn-ap clicky"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const contact = document.getElementById("contact");
+                      contact?.scrollIntoView({
+                        block: "nearest",
+                        inline: "center",
+                      });
+                    }, 300);
+                  }}
+                  fontSize={"18px !important"}
+                >
+                  {lang === "id" ? "Hubungi Saya" : "Contact Me"}
+                </Button>
+              </Box>
+            </VStack>
           </VStack>
-        </VStack>
-      )}
-    </>
+        )}
+      </Box>
+    </Box>
   );
 }
