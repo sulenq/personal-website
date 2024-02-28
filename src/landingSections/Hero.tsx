@@ -34,8 +34,8 @@ export default function Hero() {
           each: 0.2,
         },
       });
-    }
-    // { scope: "#hero" }
+    },
+    { scope: "#hero" }
   );
 
   return (
