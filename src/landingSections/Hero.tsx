@@ -9,7 +9,6 @@ import {
   Button,
   IconButton,
   Image,
-  useColorModeValue,
   Box,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
@@ -47,7 +46,7 @@ export default function Hero() {
             flex={1}
             pt={5}
             pb={16}
-            borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
+            // borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
             gap={5}
           >
             <VStack
