@@ -7,6 +7,8 @@ import {
   Box,
   IconButton,
   Heading,
+  Button,
+  Stack,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import landingData from "../constant/landingData";
@@ -26,6 +28,7 @@ export default function Works() {
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [ccDisplay, setCcDisplay] = useState("flex");
+  const [worksType, setWorksType] = useState<0 | 1>(0);
 
   const handlePrev = (): void => {
     if (containerRef.current) {
@@ -63,7 +66,7 @@ export default function Works() {
   // Animation
   useGSAP(
     () => {
-      gsap.from([".sectionNavLabel", ".sectionTitle", "#carouselControl"], {
+      gsap.from([".sectionNavLabel", ".sectionTitle"], {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
         y: 50,
         opacity: 0,
@@ -80,19 +83,219 @@ export default function Works() {
         },
       });
     },
-    { scope: "#works" }
+    { scope: "#works", dependencies: [worksType] }
+  );
+
+  useGSAP(() => {
+    gsap.from("#carouselControl", {
+      scrollTrigger: scrollTriggerConfig("#worksContent"),
+      y: 50,
+      opacity: 0,
+    });
+  });
+
+  const WebWorks = () => (
+    <>
+      <Container>
+        <VStack mb={6} className="sectionHeader">
+          {/* <Box className={"sectionNavLabel"}>
+                <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
+              </Box> */}
+          <Heading as={"h1"} className="sectionTitle">
+            {landingData.works.content[lang].title}
+          </Heading>
+        </VStack>
+      </Container>
+
+      {/* Carousel */}
+      <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
+        <VStack
+          w={"100%"}
+          className="noScroll"
+          overflow={"auto"}
+          ref={containerRef}
+          scrollBehavior={"smooth"}
+          align={"flex-start"}
+          scrollSnapType={"x mandatory"}
+        >
+          <HStack
+            ref={carouselRef}
+            minW={"100%"}
+            w={"max-content"}
+            justify={"center"}
+            gap={5}
+            px={[6, null, 14]}
+            py={4}
+            align={"stretch"}
+          >
+            {landingData.works.worksItem[lang].map((work, i) => {
+              const ok = i < 4;
+
+              return (
+                ok && (
+                  <Box className="workItem" key={i}>
+                    <PortfolioCard
+                      work={work}
+                      // setActiveWork={setActiveWork}
+                      w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                    />
+                  </Box>
+                )
+              );
+            })}
+
+            <Box id="moreWorks">
+              <VStack
+                scrollSnapAlign={"center"}
+                align={"center"}
+                bg={"var(--divider)"}
+                borderRadius={12}
+                overflow={"clip"}
+                w={"280px"}
+                h={"400px"}
+                p={5}
+                transition={"200ms"}
+                justify={"center"}
+                role="group"
+                gap={0}
+                cursor={"pointer"}
+                _hover={{ bg: "var(--divider3)" }}
+                as={Link}
+                to={"/works?search=&category=0"}
+                position={"relative"}
+                className="clicky"
+              >
+                <Icon
+                  as={ArrowUpRight}
+                  fontSize={600}
+                  // h={"0 !important"}
+                  _groupHover={{ transform: "scale(1.2)" }}
+                  transition={"200ms"}
+                  mb={4}
+                  position={"absolute"}
+                  bottom={"-150px"}
+                  right={"-100px"}
+                  zIndex={1}
+                  opacity={0.05}
+                  weight="bold"
+                />
+                <Text textAlign={"center"} fontSize={24} fontWeight={600}>
+                  {lang === "id" ? "Lihat Karya Lainnya" : "View Other Works"}
+                </Text>
+              </VStack>
+            </Box>
+          </HStack>
+        </VStack>
+      </Box>
+    </>
+  );
+
+  const DesignWorks = () => (
+    <>
+      <Container>
+        <VStack mb={6} className="sectionHeader">
+          {/* <Box className={"sectionNavLabel"}>
+                <SectionNav>
+                  {landingData.designWorks.content[lang].nav}
+                </SectionNav>
+              </Box> */}
+          <Heading as={"h1"} className="sectionTitle">
+            {landingData.designWorks.content[lang].title}
+          </Heading>
+        </VStack>
+      </Container>
+
+      {/* Carousel */}
+      <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
+        <VStack
+          w={"100%"}
+          className="noScroll"
+          overflow={"auto"}
+          ref={containerRef}
+          scrollBehavior={"smooth"}
+          align={"flex-start"}
+          scrollSnapType={"x mandatory"}
+        >
+          <HStack
+            ref={carouselRef}
+            minW={"100%"}
+            w={"max-content"}
+            justify={"center"}
+            gap={5}
+            px={[6, null, 14]}
+            py={4}
+            align={"stretch"}
+          >
+            {landingData.designWorks.worksItem[lang].map((work, i) => {
+              const ok = i < 4;
+
+              return (
+                ok && (
+                  <Box className="workItem" key={i}>
+                    <PortfolioCard
+                      work={work}
+                      // setActiveWork={setActiveWork}
+                      w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                    />
+                  </Box>
+                )
+              );
+            })}
+
+            <Box id="moreWorks">
+              <VStack
+                scrollSnapAlign={"center"}
+                align={"center"}
+                bg={"var(--divider)"}
+                borderRadius={12}
+                overflow={"clip"}
+                w={"280px"}
+                h={"400px"}
+                p={5}
+                transition={"200ms"}
+                justify={"center"}
+                role="group"
+                gap={0}
+                cursor={"pointer"}
+                _hover={{ bg: "var(--divider3)" }}
+                as={Link}
+                to={"/works?search=&category=0"}
+                position={"relative"}
+                className="clicky"
+              >
+                <Icon
+                  as={ArrowUpRight}
+                  fontSize={600}
+                  // h={"0 !important"}
+                  _groupHover={{ transform: "scale(1.2)" }}
+                  transition={"200ms"}
+                  mb={4}
+                  position={"absolute"}
+                  bottom={"-150px"}
+                  right={"-100px"}
+                  zIndex={1}
+                  opacity={0.05}
+                  weight="bold"
+                />
+                <Text textAlign={"center"} fontSize={24} fontWeight={600}>
+                  {lang === "id" ? "Lihat Karya Lainnya" : "View Other Works"}
+                </Text>
+              </VStack>
+            </Box>
+          </HStack>
+        </VStack>
+      </Box>
+    </>
   );
 
   return (
     <VStack id="works" gap={0} position={"relative"}>
       <VStack
-        // bgImage={activeWork?.image}
         bgSize={"cover"}
         bgPos={"bottom"}
         maxW={"1280px"}
         w={"100%"}
         borderRadius={"0 0 24px 24px"}
-        // color={useColorModeValue("white", "dark")}
       >
         <VStack
           py={16}
@@ -104,237 +307,56 @@ export default function Works() {
           align={"stretch"}
           id={"worksContent"}
         >
-          <Container>
-            <VStack mb={6} className="sectionHeader">
-              {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
-              </Box> */}
-              <Heading as={"h1"} className="sectionTitle">
-                {landingData.works.content[lang].title}
-              </Heading>
-            </VStack>
-          </Container>
+          {worksType === 0 ? <WebWorks /> : <DesignWorks />}
 
-          {/* Carousel */}
-          <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"} mb={24}>
-            <VStack
-              w={"100%"}
-              className="noScroll"
-              overflow={"auto"}
-              ref={containerRef}
-              scrollBehavior={"smooth"}
-              align={"flex-start"}
-              scrollSnapType={"x mandatory"}
-            >
-              <HStack
-                ref={carouselRef}
-                minW={"100%"}
-                w={"max-content"}
-                justify={"center"}
-                gap={5}
-                px={[6, null, 14]}
-                py={4}
-                align={"stretch"}
+          {/* carousel control */}
+          <Stack
+            flexDir={sw < 350 ? "column" : "row"}
+            justify={"space-between"}
+            id="carouselControl"
+            mt={4}
+            display={ccDisplay}
+            px={[6, null, 14]}
+          >
+            <HStack mx={sw < 350 ? "auto" : ""} mb={sw < 350 ? 4 : ""}>
+              <Button
+                className="btn-solid clicky"
+                color={worksType === 0 ? "p.500" : "white"}
+                onClick={() => {
+                  setWorksType(0);
+                }}
               >
-                {landingData.works.worksItem[lang].map((work, i) => {
-                  const ok = i < 4;
-
-                  return (
-                    ok && (
-                      <Box className="workItem" key={i}>
-                        <PortfolioCard
-                          work={work}
-                          // setActiveWork={setActiveWork}
-                          w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                        />
-                      </Box>
-                    )
-                  );
-                })}
-
-                <Box id="moreWorks">
-                  <VStack
-                    scrollSnapAlign={"center"}
-                    align={"center"}
-                    bg={"var(--divider)"}
-                    borderRadius={12}
-                    overflow={"clip"}
-                    w={"280px"}
-                    h={"400px"}
-                    p={5}
-                    transition={"200ms"}
-                    justify={"center"}
-                    role="group"
-                    gap={0}
-                    cursor={"pointer"}
-                    _hover={{ bg: "var(--divider3)" }}
-                    as={Link}
-                    to={"/works?search=&category=0"}
-                    position={"relative"}
-                    className="clicky"
-                  >
-                    <Icon
-                      as={ArrowUpRight}
-                      fontSize={600}
-                      // h={"0 !important"}
-                      _groupHover={{ transform: "scale(1.2)" }}
-                      transition={"200ms"}
-                      mb={4}
-                      position={"absolute"}
-                      bottom={"-150px"}
-                      right={"-100px"}
-                      zIndex={1}
-                      opacity={0.05}
-                      weight="bold"
-                    />
-                    <Text textAlign={"center"} fontSize={24} fontWeight={600}>
-                      {lang === "id"
-                        ? "Lihat Karya Lainnya"
-                        : "View Other Works"}
-                    </Text>
-                  </VStack>
-                </Box>
-              </HStack>
-            </VStack>
-
-            {/* carousel control */}
-            <VStack id="carouselControl" mt={4} display={ccDisplay}>
-              <HStack>
-                <IconButton
-                  onClick={handlePrev}
-                  aria-label="Prev"
-                  icon={<Icon as={ArrowLeft} fontSize={20} />}
-                  className="btn clikcy"
-                  color={"white"}
-                />
-
-                <IconButton
-                  onClick={handleNext}
-                  aria-label="Prev"
-                  icon={<Icon as={ArrowRight} fontSize={20} />}
-                  className="btn clikcy"
-                  color={"white"}
-                />
-              </HStack>
-            </VStack>
-          </Box>
-
-          <Container>
-            <VStack mb={6} className="sectionHeader">
-              {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>
-                  {landingData.designWorks.content[lang].nav}
-                </SectionNav>
-              </Box> */}
-              <Heading as={"h1"} className="sectionTitle">
-                {landingData.designWorks.content[lang].title}
-              </Heading>
-            </VStack>
-          </Container>
-
-          {/* Carousel */}
-          <Box w={"100%"} bottom={[10, null, 20]} mx={"auto"}>
-            <VStack
-              w={"100%"}
-              className="noScroll"
-              overflow={"auto"}
-              ref={containerRef}
-              scrollBehavior={"smooth"}
-              align={"flex-start"}
-              scrollSnapType={"x mandatory"}
-            >
-              <HStack
-                ref={carouselRef}
-                minW={"100%"}
-                w={"max-content"}
-                justify={"center"}
-                gap={5}
-                px={[6, null, 14]}
-                py={4}
-                align={"stretch"}
+                Web
+              </Button>
+              <Button
+                className="btn-solid clicky"
+                color={worksType === 1 ? "p.500" : "white"}
+                onClick={() => {
+                  setWorksType(1);
+                }}
               >
-                {landingData.designWorks.worksItem[lang].map((work, i) => {
-                  const ok = i < 4;
+                Design
+              </Button>
+            </HStack>
 
-                  return (
-                    ok && (
-                      <Box className="workItem" key={i}>
-                        <PortfolioCard
-                          work={work}
-                          // setActiveWork={setActiveWork}
-                          w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                        />
-                      </Box>
-                    )
-                  );
-                })}
+            <HStack mx={sw < 350 ? "auto" : ""}>
+              <IconButton
+                onClick={handlePrev}
+                aria-label="Prev"
+                icon={<Icon as={ArrowLeft} fontSize={20} />}
+                className="btn clikcy"
+                color={"white"}
+              />
 
-                <Box id="moreWorks">
-                  <VStack
-                    scrollSnapAlign={"center"}
-                    align={"center"}
-                    bg={"var(--divider)"}
-                    borderRadius={12}
-                    overflow={"clip"}
-                    w={"280px"}
-                    h={"400px"}
-                    p={5}
-                    transition={"200ms"}
-                    justify={"center"}
-                    role="group"
-                    gap={0}
-                    cursor={"pointer"}
-                    _hover={{ bg: "var(--divider3)" }}
-                    as={Link}
-                    to={"/works?search=&category=0"}
-                    position={"relative"}
-                    className="clicky"
-                  >
-                    <Icon
-                      as={ArrowUpRight}
-                      fontSize={600}
-                      // h={"0 !important"}
-                      _groupHover={{ transform: "scale(1.2)" }}
-                      transition={"200ms"}
-                      mb={4}
-                      position={"absolute"}
-                      bottom={"-150px"}
-                      right={"-100px"}
-                      zIndex={1}
-                      opacity={0.05}
-                      weight="bold"
-                    />
-                    <Text textAlign={"center"} fontSize={24} fontWeight={600}>
-                      {lang === "id"
-                        ? "Lihat Karya Lainnya"
-                        : "View Other Works"}
-                    </Text>
-                  </VStack>
-                </Box>
-              </HStack>
-            </VStack>
-
-            {/* carousel control */}
-            <VStack id="carouselControl" mt={4} display={ccDisplay}>
-              <HStack>
-                <IconButton
-                  onClick={handlePrev}
-                  aria-label="Prev"
-                  icon={<Icon as={ArrowLeft} fontSize={20} />}
-                  className="btn clikcy"
-                  color={"white"}
-                />
-
-                <IconButton
-                  onClick={handleNext}
-                  aria-label="Prev"
-                  icon={<Icon as={ArrowRight} fontSize={20} />}
-                  className="btn clikcy"
-                  color={"white"}
-                />
-              </HStack>
-            </VStack>
-          </Box>
+              <IconButton
+                onClick={handleNext}
+                aria-label="Prev"
+                icon={<Icon as={ArrowRight} fontSize={20} />}
+                className="btn clikcy"
+                color={"white"}
+              />
+            </HStack>
+          </Stack>
         </VStack>
       </VStack>
     </VStack>
