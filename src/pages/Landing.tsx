@@ -3,8 +3,8 @@ import { VStack } from "@chakra-ui/react";
 import { getLang, setLang as setLangLocal } from "../lib/lang";
 import useTrigger from "../global/useTrigger";
 import Hero from "../landingSections/Hero";
-import Services from "../landingSections/Services";
 import TopNav from "../components/TopNav";
+import About from "../landingSections/About";
 
 export default function Landing() {
   const { setTrigger } = useTrigger();
@@ -35,11 +35,11 @@ export default function Landing() {
         <>
           <Hero />
 
-          <Services />
+          <About />
+
+          {/* <Services /> */}
 
           {/* <Works /> */}
-
-          {/* <About /> */}
 
           {/* <OurClients /> */}
 

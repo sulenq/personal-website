@@ -9,6 +9,7 @@ import {
   Button,
   IconButton,
   Image,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { Sparkle } from "@phosphor-icons/react";
@@ -45,9 +46,16 @@ export default function Hero3() {
   );
 
   return (
-    <Wrapper id={"hero"} minH={"600px"} mb={12}>
+    <Wrapper id={"hero"} minH={"600px"}>
       <Container flex={1}>
-        <SimpleGrid columns={[1, null, null, 3]} flex={1} pt={5} gap={5}>
+        <SimpleGrid
+          columns={[1, null, null, 3]}
+          flex={1}
+          pt={5}
+          pb={10}
+          borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
+          gap={5}
+        >
           <VStack
             align={["center", null, null, "stretch"]}
             justify={"center"}

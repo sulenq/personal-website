@@ -81,6 +81,69 @@ const landingData = {
     },
   },
 
+  about: {
+    id: {
+      nav: "Tentang Saya",
+      title: "Siapa Aku?",
+      ourMember: {
+        label: "Tentang Kami",
+        link: "",
+      },
+      items: [
+        {
+          title: "Keahlian, Strategi dan Fleksibilitas",
+          narative:
+            "Tim kami memiliki keterampilan khusus yang relevan dengan proyek, berkontribusi terhadap hasil yang efisien dan berkualitas tinggi, dan mampu menunjukkan keahlian dalam industri, memastikan pemahaman mendalam tentang persyaratan yang spesifik",
+        },
+        {
+          title: "Spesialisasi dan Akuntabilitas",
+          narative:
+            "Distro Studio merupakan spesialis dalam pengembangan perangkat lunak dan memberikan akuntabilitas untuk proyek yang kami lakukan",
+        },
+        {
+          title: "Perencanaan dan Eksekusi",
+          narative:
+            "Strategi yang terdefinisi dengan baik sangat penting untuk perencanaan dan pelaksanaan proyek yang efektif, yang mencakup jadwal, alokasi sumber daya, dan manajemen risiko.",
+        },
+        {
+          title: "Kontrol Proyek Konsisten",
+          narative:
+            "Melakukan kontrol dengan konsisten atas kemajuan proyek, dan tidak perlu mengkhawatirkan aspek komunikasi.",
+        },
+      ],
+    },
+    en: {
+      nav: "About Me",
+      title: "Who am I?",
+      ourMember: {
+        label: "About Us",
+        link: "",
+      },
+      items: [
+        {
+          title: "Expertise, Strategy and Flexibility",
+          narative:
+            "Our team possesses specialized skills relevant to the project, contributing to efficient and high-quality deliverables, and is capable of demonstrating expertise in the industry, ensuring a deep understanding of specific requirements",
+        },
+        {
+          title: "Specialization and Accountability",
+          narative:
+            "Distro Studio specialize in software development and provide accountability for the project our undertake",
+        },
+        {
+          title: "Planning and Execution",
+          narative:
+            "A well-defined strategy is essential for effective project planning and execution, encompassing timelines, resource allocation, and risk management.",
+        },
+        {
+          title: "Constant Project Control",
+          narative:
+            "Constant control over the progress of the project, and no need to worry about the communication aspect.",
+        },
+      ],
+    },
+  },
+
   sosmeds: [
     { name: "Instagram", link: "", icon: GithubLogo },
     { name: "LinkedIn", link: "", icon: LinkedinLogo },
@@ -221,69 +284,6 @@ const landingData = {
       },
     },
     worksItem: worksData,
-  },
-
-  about: {
-    id: {
-      nav: "Tentang Kami",
-      title: "Mengapa Memilih Kami",
-      ourMember: {
-        label: "Tentang Kami",
-        link: "",
-      },
-      items: [
-        {
-          title: "Keahlian, Strategi dan Fleksibilitas",
-          narative:
-            "Tim kami memiliki keterampilan khusus yang relevan dengan proyek, berkontribusi terhadap hasil yang efisien dan berkualitas tinggi, dan mampu menunjukkan keahlian dalam industri, memastikan pemahaman mendalam tentang persyaratan yang spesifik",
-        },
-        {
-          title: "Spesialisasi dan Akuntabilitas",
-          narative:
-            "Distro Studio merupakan spesialis dalam pengembangan perangkat lunak dan memberikan akuntabilitas untuk proyek yang kami lakukan",
-        },
-        {
-          title: "Perencanaan dan Eksekusi",
-          narative:
-            "Strategi yang terdefinisi dengan baik sangat penting untuk perencanaan dan pelaksanaan proyek yang efektif, yang mencakup jadwal, alokasi sumber daya, dan manajemen risiko.",
-        },
-        {
-          title: "Kontrol Proyek Konsisten",
-          narative:
-            "Melakukan kontrol dengan konsisten atas kemajuan proyek, dan tidak perlu mengkhawatirkan aspek komunikasi.",
-        },
-      ],
-    },
-    en: {
-      nav: "About Us",
-      title: "Why Choose Us",
-      ourMember: {
-        label: "About Us",
-        link: "",
-      },
-      items: [
-        {
-          title: "Expertise, Strategy and Flexibility",
-          narative:
-            "Our team possesses specialized skills relevant to the project, contributing to efficient and high-quality deliverables, and is capable of demonstrating expertise in the industry, ensuring a deep understanding of specific requirements",
-        },
-        {
-          title: "Specialization and Accountability",
-          narative:
-            "Distro Studio specialize in software development and provide accountability for the project our undertake",
-        },
-        {
-          title: "Planning and Execution",
-          narative:
-            "A well-defined strategy is essential for effective project planning and execution, encompassing timelines, resource allocation, and risk management.",
-        },
-        {
-          title: "Constant Project Control",
-          narative:
-            "Constant control over the progress of the project, and no need to worry about the communication aspect.",
-        },
-      ],
-    },
   },
 
   clients: {
