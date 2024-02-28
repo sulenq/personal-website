@@ -10,6 +10,7 @@ import {
   IconButton,
   Image,
   useColorModeValue,
+  Box,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { Sparkle } from "@phosphor-icons/react";
@@ -19,7 +20,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Wrapper from "../components/Wrapper";
 
-export default function Hero3() {
+export default function Hero() {
   const lang = getLang();
   const data = landingData.hero[lang];
 
@@ -33,138 +34,137 @@ export default function Hero3() {
           each: 0.2,
         },
       });
-      gsap.from(".statsItem", {
-        delay: 1,
-        y: 100,
-        opacity: 0,
-        stagger: {
-          each: 0.2,
-        },
-      });
-    },
-    { scope: "#hero" }
+    }
+    // { scope: "#hero" }
   );
 
   return (
-    <Wrapper id={"hero"} minH={"600px"}>
-      <Container flex={1}>
-        <SimpleGrid
-          columns={[1, null, null, 3]}
-          flex={1}
-          pt={5}
-          pb={16}
-          borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
-          gap={5}
-        >
-          <VStack
-            align={["center", null, null, "stretch"]}
-            justify={"center"}
-            p={5}
-            py={12}
+    <Box id="hero">
+      <Wrapper minH={"600px"}>
+        <Container flex={1}>
+          <SimpleGrid
+            columns={[1, null, null, 3]}
+            flex={1}
+            pt={5}
+            pb={16}
+            borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
             gap={5}
           >
-            <Text fontSize={20}>{data.greeting}</Text>
-
-            <Heading
-              as={"h1"}
-              fontSize={52}
-              className="serif"
-              lineHeight={1.1}
-              textAlign={["center", null, null, "left"]}
-            >
-              Fatwa Linovera
-            </Heading>
-
-            <HStack>
-              <Text opacity={0.5}>#Web Developer</Text>
-              <Text opacity={0.5}>#Graphic Designer</Text>
-            </HStack>
-
-            <Text mt={"auto"} color={"p.500"}>
-              fatwalinovera@gmail.com
-            </Text>
-
-            <HStack w={"fit-content"}>
-              <Button
-                h={"50px"}
-                w={"100%"}
-                colorScheme="bnw"
-                fontSize={"18px !important"}
-              >
-                {data.contact}
-              </Button>
-
-              <Button
-                h={"50px"}
-                w={"100%"}
-                pl={4}
-                fontSize={"18px !important"}
-                className="btn-solid"
-                leftIcon={<Icon as={Sparkle} fontSize={20} />}
-              >
-                {data.portfolio}
-              </Button>
-            </HStack>
-          </VStack>
-
-          <VStack
-            w={"100%"}
-            h={"100%"}
-            justify={"center"}
-            p={5}
-            position={"relative"}
-          >
             <VStack
-              bg={"var(--divider)"}
-              flex={1}
-              maxH={"480px"}
-              pt={12}
-              px={2}
-              justify={"flex-end"}
-              borderRadius={"full"}
-              overflow={"clip"}
+              align={["center", null, null, "stretch"]}
+              justify={"center"}
+              p={5}
+              py={12}
+              gap={5}
             >
-              <Image
-                mt={"auto"}
-                alt="Fatwa Linovera"
-                src="/images/pas.png"
-                w={"100%"}
-                objectFit={"contain"}
-              />
-            </VStack>
-          </VStack>
+              <Text fontSize={20} className="init">
+                {data.greeting}
+              </Text>
 
-          <VStack align={"stretch"} justify={"center"} p={5} py={12} gap={5}>
-            <Text mt={[0, null, null, "50px"]}>{data.narative}</Text>
+              <Heading
+                as={"h1"}
+                fontSize={52}
+                className="serif init"
+                lineHeight={1.1}
+                textAlign={["center", null, null, "left"]}
+              >
+                Fatwa Linovera
+              </Heading>
 
-            <HStack align={"stretch"} mt={"auto"}>
-              {data.stats.map((stat, i) => (
-                <VStack key={i} borderRadius={12} w={"50%"}>
-                  <Text fontWeight={700} fontSize={32} mr={"auto"}>
-                    {stat.value}
-                  </Text>
-                  <Text mr={"auto"}>{stat.name}</Text>
-                </VStack>
-              ))}
-            </HStack>
+              <HStack className="init">
+                <Text opacity={0.5}>#Web Developer</Text>
+                <Text opacity={0.5}>#Graphic Designer</Text>
+              </HStack>
 
-            <HStack justify={"stretch"}>
-              {landingData.sosmeds.map((sosmed, i) => (
-                <IconButton
-                  flex={"1 0 50px"}
-                  key={i}
-                  as={ChakraLink}
-                  isExternal
-                  aria-label={sosmed.name}
-                  w={"fit-content"}
-                  icon={<Icon as={sosmed.icon} fontSize={24} />}
+              <Text className="init" mt={"auto"} color={"p.500"}>
+                fatwalinovera@gmail.com
+              </Text>
+
+              <HStack w={"fit-content"} className="init">
+                <Button
+                  h={"50px"}
+                  w={"100%"}
+                  colorScheme="bnw"
+                  fontSize={"18px !important"}
+                >
+                  {data.contact}
+                </Button>
+
+                <Button
+                  h={"50px"}
+                  w={"100%"}
+                  pl={4}
+                  fontSize={"18px !important"}
                   className="btn-solid"
+                  leftIcon={<Icon as={Sparkle} fontSize={20} />}
+                >
+                  {data.portfolio}
+                </Button>
+              </HStack>
+            </VStack>
+
+            <VStack
+              className="init"
+              w={"100%"}
+              h={"100%"}
+              justify={"center"}
+              p={5}
+              position={"relative"}
+            >
+              <VStack
+                bg={"var(--divider)"}
+                flex={1}
+                maxH={"480px"}
+                pt={12}
+                px={2}
+                justify={"flex-end"}
+                borderRadius={"full"}
+                overflow={"clip"}
+              >
+                <Image
+                  mt={"auto"}
+                  alt="Fatwa Linovera"
+                  src="/images/pas.png"
+                  w={"100%"}
+                  objectFit={"contain"}
                 />
-              ))}
-            </HStack>
-          </VStack>
-        </SimpleGrid>
-      </Container>
-    </Wrapper>
+              </VStack>
+            </VStack>
+
+            <VStack align={"stretch"} justify={"center"} p={5} py={12} gap={5}>
+              <Text className="init" mt={[0, null, null, "50px"]}>
+                {data.narative}
+              </Text>
+
+              <HStack className="init" align={"stretch"} mt={"auto"}>
+                {data.stats.map((stat, i) => (
+                  <VStack key={i} borderRadius={12} w={"50%"}>
+                    <Text fontWeight={700} fontSize={32} mr={"auto"}>
+                      {stat.value}
+                    </Text>
+                    <Text mr={"auto"}>{stat.name}</Text>
+                  </VStack>
+                ))}
+              </HStack>
+
+              <HStack className="init" justify={"stretch"}>
+                {landingData.sosmeds.map((sosmed, i) => (
+                  <IconButton
+                    flex={"1 0 50px"}
+                    key={i}
+                    as={ChakraLink}
+                    isExternal
+                    aria-label={sosmed.name}
+                    w={"fit-content"}
+                    icon={<Icon as={sosmed.icon} fontSize={24} />}
+                    className="btn-solid"
+                  />
+                ))}
+              </HStack>
+            </VStack>
+          </SimpleGrid>
+        </Container>
+      </Wrapper>
+    </Box>
   );
 }

@@ -86,7 +86,7 @@ const landingData = {
       nav: "Tentang Saya",
       title: "Siapa Aku?",
       ourMember: {
-        label: "Tentang Kami",
+        label: "Bio Saya",
         link: "",
       },
       items: [
@@ -116,7 +116,7 @@ const landingData = {
       nav: "About Me",
       title: "Who am I?",
       ourMember: {
-        label: "About Us",
+        label: "My Bio",
         link: "",
       },
       items: [

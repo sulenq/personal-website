@@ -24,7 +24,7 @@ import { useEffect, useState } from "react";
 
 export default function DrawerNav(props: any) {
   const [closing, setClosing] = useState(false);
-  console.log(closing);
+  const bg = useColorModeValue("white", "black");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const lang = getLang();
   const currentDate = new Date();
@@ -99,7 +99,7 @@ export default function DrawerNav(props: any) {
           id="MenuNav"
           w={"100vw"}
           minH={"100vh"}
-          bg={useColorModeValue("white", "black")}
+          bg={bg}
           position={"fixed"}
           left={0}
           top={0}
