@@ -20,27 +20,29 @@ export default function TopNav(props: any) {
   const sw = useScreenWidth();
   const lang = getLang();
 
-  const [show, setShow] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(
-    window.scrollY || document.documentElement.scrollTop
-  );
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
+  const [scrollYPos, setScrollYPos] = useState<number>(window.scrollY);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    console.log(scrollYPos, currentScrollY);
+
+    if (scrollYPos < currentScrollY) {
+      setScrollDirection("down");
+    } else {
+      setScrollDirection("up");
+    }
+
+    setScrollYPos(currentScrollY);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos =
-        window.scrollY || document.documentElement.scrollTop;
-      const isScrollingUp = prevScrollPos > currentScrollPos;
-
-      setShow(isScrollingUp || currentScrollPos === 0);
-      setPrevScrollPos(currentScrollPos);
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [scrollYPos]);
 
   return (
     <Box
@@ -51,7 +53,7 @@ export default function TopNav(props: any) {
       top={"-1px"}
       left={0}
       // p={1}
-      transform={show ? "" : "translateY(-80px)"}
+      transform={scrollDirection === "up" ? "" : "translateY(-80px)"}
       transition={"200ms"}
       {...props}
     >
