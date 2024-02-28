@@ -84,7 +84,7 @@ export default function About() {
           <SimpleGrid
             columns={[1, null, null, 2]}
             gap={5}
-            borderBottom={"1px solid var(--divider3)"}
+            // borderBottom={"1px solid var(--divider3)"}
             pb={32}
           >
             <VStack id="aboutItemContainer" align={"stretch"} gap={5}>
