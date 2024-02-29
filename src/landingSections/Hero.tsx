@@ -17,7 +17,7 @@ import landingData from "../constant/landingData";
 import { getLang } from "../lib/lang";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Wrapper from "../components/Wrapper";
+import PageContainer from "../components/PageContainer";
 
 export default function Hero() {
   const lang = getLang();
@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <Box id="hero">
-      <Wrapper minH={"720px"}>
+      <PageContainer minH={"720px"}>
         <Container flex={1}>
           <SimpleGrid
             columns={[1, null, null, 3]}
@@ -177,7 +177,7 @@ export default function Hero() {
             </VStack>
           </SimpleGrid>
         </Container>
-      </Wrapper>
+      </PageContainer>
     </Box>
   );
 }

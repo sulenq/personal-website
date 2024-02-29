@@ -1,4 +1,10 @@
-import { Box, Button, HStack, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import landingData from "../constant/landingData";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import useScreenWidth from "../hooks/useScreenWidth";
@@ -44,7 +50,7 @@ export default function TopNav(props: any) {
       position={"sticky"}
       top={"-1px"}
       left={0}
-      // p={1}
+      p={2}
       transform={scrollDirection === "up" ? "" : "translateY(-80px)"}
       transition={"200ms"}
       {...props}
@@ -52,13 +58,13 @@ export default function TopNav(props: any) {
       <HStack
         justify={"space-between"}
         py={2}
-        px={[5, 6, 8]}
+        px={[4, 5, 7]}
         w={"100%"}
         maxW={"1440px"}
         mx={"auto"}
-        // bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
-        // backdropFilter={"blur(5px)"}
-        borderRadius={"0 0 12px 12px"}
+        bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+        backdropFilter={"blur(5px)"}
+        borderRadius={12}
       >
         <HStack
           flexShrink={0}

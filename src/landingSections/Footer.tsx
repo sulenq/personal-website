@@ -24,8 +24,7 @@ export default function Footer(props: any) {
   return (
     <VStack
       id="footer"
-      bg={"black"}
-      color={"white"}
+      bg={"var(--divider2)"}
       p={5}
       align={"stretch"}
       {...props}
@@ -37,11 +36,11 @@ export default function Footer(props: any) {
 
         <HStack>
           <Box className="footerItem">
-            <ColorModeSwitcher color={props.color || "white"} />
+            <ColorModeSwitcher color={props.color || "current"} />
           </Box>
 
           <Box className="footerItem">
-            <LangSwitcher color={props.color || "white"} />
+            <LangSwitcher color={props.color || "current"} />
           </Box>
         </HStack>
       </HStack>

@@ -19,7 +19,7 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react";
 
-export default function Contact() {
+export default function Contact(props: any) {
   const lang = getLang();
   const data = landingData.contact[lang];
   const contacts = [
@@ -64,7 +64,7 @@ export default function Contact() {
       align={"stretch"}
       py={20}
       bg={"var(--divider2)"}
-      // color={"white"}
+      {...props}
     >
       <Container>
         <VStack>
