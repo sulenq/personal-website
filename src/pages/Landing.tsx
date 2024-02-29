@@ -36,13 +36,9 @@ export default function Landing() {
 
           <Works />
 
-          {/* <Services /> */}
-
-          {/* <OurClients /> */}
-
           <Contact />
 
-          <Footer />
+          <Footer bg={"var(--divider2)"} color={"current"} />
         </>
       )}
     </PageContainer>

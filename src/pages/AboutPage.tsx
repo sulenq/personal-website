@@ -163,7 +163,7 @@ export default function AboutPage() {
               justify={"center"}
               gap={0}
             >
-              <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+              <Text fontSize={28} mb={4} className="serif">
                 {data.background.title}
               </Text>
 
@@ -180,12 +180,7 @@ export default function AboutPage() {
           <Container>
             <SimpleGrid columns={[1, 2]} gap={24}>
               <VStack gap={0} align={"stretch"}>
-                <Text
-                  className="dataTitle_1 serif"
-                  fontSize={28}
-                  fontWeight={600}
-                  mb={4}
-                >
+                <Text className="dataTitle_1 serif" fontSize={28} mb={4}>
                   {data.skills.title}
                 </Text>
 
@@ -211,12 +206,7 @@ export default function AboutPage() {
               </VStack>
 
               <VStack gap={0} align={"stretch"}>
-                <Text
-                  className="dataTitle_2 serif"
-                  fontSize={28}
-                  fontWeight={600}
-                  mb={4}
-                >
+                <Text className="dataTitle_2 serif" fontSize={28} mb={4}>
                   {data.education.title}
                 </Text>
 
@@ -246,12 +236,7 @@ export default function AboutPage() {
               </VStack>
 
               <VStack gap={0} align={"stretch"}>
-                <Text
-                  className="dataTitle_3 serif"
-                  fontSize={28}
-                  fontWeight={600}
-                  mb={4}
-                >
+                <Text className="dataTitle_3 serif" fontSize={28} mb={4}>
                   {data.experience.title}
                 </Text>
 
@@ -287,12 +272,7 @@ export default function AboutPage() {
 
               <VStack align={"stretch"} gap={24}>
                 <VStack gap={0} align={"stretch"}>
-                  <Text
-                    className="dataTitle_4 serif"
-                    fontSize={28}
-                    fontWeight={600}
-                    mb={4}
-                  >
+                  <Text className="dataTitle_4 serif" fontSize={28} mb={4}>
                     {data.certificate.title}
                   </Text>
 
@@ -315,12 +295,7 @@ export default function AboutPage() {
                 </VStack>
 
                 <VStack gap={0} align={"stretch"}>
-                  <Text
-                    className="dataTitle_5 serif"
-                    fontSize={28}
-                    fontWeight={600}
-                    mb={4}
-                  >
+                  <Text className="dataTitle_5 serif" fontSize={28} mb={4}>
                     {data.interests.title}
                   </Text>
 
@@ -340,12 +315,7 @@ export default function AboutPage() {
                 </VStack>
 
                 <VStack gap={0} align={"stretch"}>
-                  <Text
-                    className="dataTitle_6 serif"
-                    fontSize={28}
-                    fontWeight={600}
-                    mb={4}
-                  >
+                  <Text className="dataTitle_6 serif" fontSize={28} mb={4}>
                     {data.contact.title}
                   </Text>
 

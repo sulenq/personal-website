@@ -59,7 +59,13 @@ export default function Contact() {
   );
 
   return (
-    <VStack id="contact" align={"stretch"} py={20} bg={"p.500"} color={"white"}>
+    <VStack
+      id="contact"
+      align={"stretch"}
+      py={20}
+      bg={"var(--divider2)"}
+      // color={"white"}
+    >
       <Container>
         <VStack>
           <Text
@@ -79,15 +85,15 @@ export default function Contact() {
                 p={5}
                 borderRadius={12}
                 cursor={"pointer"}
-                _hover={{ bg: "whiteAlpha.100" }}
-                // bg={"whiteAlpha.100"}
+                transition={"200ms"}
+                _hover={{ bg: "var(--divider)" }}
                 role="group"
                 className="clicky"
                 as={ChakraLink}
                 href={contact.link}
                 isExternal
               >
-                <Icon as={contact.icon} fontSize={72} />
+                <Icon as={contact.icon} fontSize={72} weight="thin" />
               </Center>
             ))}
           </Wrap>

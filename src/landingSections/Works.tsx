@@ -99,7 +99,7 @@ export default function Works() {
   );
 
   return (
-    <VStack id="works" gap={0} position={"relative"} bg={"p.500"}>
+    <VStack id="works" gap={0} position={"relative"} bg={"var(--divider2)"}>
       <VStack
         bgSize={"cover"}
         bgPos={"bottom"}

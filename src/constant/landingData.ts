@@ -180,116 +180,11 @@ const landingData = {
   contact: {
     id: {
       title: "Hubungi Saya",
-      cta: "Mari bekerja sama untuk membuat sesuatu yang luar biasa",
+      cta: "Suka dengan apa yang anda lihat? Mari bekerja sama",
     },
     en: {
       title: "Contact Me",
-      cta: "Let's work together to make something awesome",
-    },
-  },
-
-  footer: {
-    id: {
-      companyName: "PT. Kreasi Teknologi Kini",
-      email: "contact@distrostudio.id",
-      phone: "085877752503",
-      narative: {
-        title: "Kami Distro Studio",
-        description:
-          "Kami bukan sekedar tim, kami adalah manifestasi kreativitas tanpa batas di dunia digital. Di Distro Studio, kami merangkai kode menjadi seni, menciptakan pengalaman digital yang tak terlupakan. Inilah kami, sebuah studio distro yang tidak hanya membangun, tetapi juga merangkai kisah sukses.",
-      },
-      navs: {
-        company: {
-          label: "Perusahaan",
-          items: [
-            {
-              label: "Distro Studio",
-              link: "/",
-            },
-            {
-              label: "Tentang Kami",
-              link: "",
-            },
-            {
-              label: "Layanan",
-              link: "",
-            },
-            {
-              label: "Portofolio",
-              link: "",
-            },
-          ],
-        },
-        links: {
-          label: "Links",
-          items: [
-            {
-              label: "Pusat Bantuan",
-              link: "",
-            },
-            {
-              label: "Kebijakan Privasi",
-              link: "",
-            },
-            {
-              label: "Syarat & Ketentuan",
-              link: "",
-            },
-          ],
-        },
-      },
-      location: "Kami berbasis di Semarang",
-    },
-    en: {
-      companyName: "PT. Kreasi Teknologi Kini",
-      email: "contact@distrostudio.id",
-      phone: "085877752503",
-      narative: {
-        title: "We're Distro Studio",
-        description:
-          "We are not just a team, we are the embodiment of boundless creativity in the digital world. At Distro Studio, we weave code into art, creating unforgettable digital experiences.",
-      },
-      navs: {
-        company: {
-          label: "Company",
-          items: [
-            {
-              label: "Distro Studio",
-              link: "/",
-            },
-            {
-              label: "Services",
-              link: "/services",
-            },
-            {
-              label: "Portfolio",
-              link: "/works?search=&category=0",
-            },
-            {
-              label: "About Us",
-              link: "/about",
-            },
-          ],
-        },
-        links: {
-          label: "Links",
-          items: [
-            {
-              label: "Help Center",
-              link: "/help",
-            },
-            {
-              label: "Privacy Policy",
-              link: "/privacy-policy",
-            },
-            {
-              label: "Terms & Conditions",
-              link: "/term-and-conditions",
-            },
-          ],
-        },
-      },
-      location: "We are based on Semarang",
+      cta: "Like what you see? Let's work together",
     },
   },
 };
