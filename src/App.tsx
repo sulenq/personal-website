@@ -6,6 +6,8 @@ import MissingPage from "./pages/MissingPage";
 import Landing from "./pages/Landing";
 import AboutPage from "./pages/AboutPage.js";
 import { useEffect } from "react";
+import WorksPage from "./pages/WorksPage.js";
+import WorksDetailPage from "./pages/WorkDetailPage.js";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +34,10 @@ const App = () => {
           <Route path="/" element={<Landing />} />
 
           <Route path="/about" element={<AboutPage />} />
+
+          <Route path="/works" element={<WorksPage />} />
+
+          <Route path="/works/:index" element={<WorksDetailPage />} />
 
           <Route path="*" element={<MissingPage />} />
         </Routes>

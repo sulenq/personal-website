@@ -28,6 +28,7 @@ import { WorkData } from "../constant/types";
 import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import TopNav from "../components/TopNav";
 
 export default function WorksPage() {
   useEffect(() => {
@@ -38,7 +39,8 @@ export default function WorksPage() {
   const lang = getLang();
   const categories = [
     lang === "id" ? "Semua Kategori" : "All Category",
-    "gatau",
+    lang === "id" ? "Karya Web" : "Web Works",
+    lang === "id" ? "Karya Desain" : "Design Works",
   ];
 
   const navigate = useNavigate();
@@ -83,7 +85,6 @@ export default function WorksPage() {
     const filteredData = worksData[lang].filter((work) => {
       const searchTerm = search?.toLowerCase() as string;
       const categoryTerm = parseInt(category as string);
-      console.log(searchTerm);
 
       const ok =
         (work.title.toLowerCase().includes(searchTerm) ||
@@ -136,6 +137,8 @@ export default function WorksPage() {
 
   return (
     <VStack id="worksPage" gap={0} align={"stretch"} overflowX={"clip"}>
+      <TopNav />
+
       <Text display={"none"}>{trigger}</Text>
 
       <PageHeader>{landingData.works.content[lang].nav}</PageHeader>

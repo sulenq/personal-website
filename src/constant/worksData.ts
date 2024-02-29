@@ -4,7 +4,7 @@ const worksData: WorksData = {
   id: [
     {
       id: 0,
-      category: 1,
+      category: 0,
       clientLogo: "/images/clients/poltekkes.png",
       clientName: "POLTEKKES SEMARANG",
       title:
@@ -33,7 +33,7 @@ const worksData: WorksData = {
     },
     {
       id: 1,
-      category: 2,
+      category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "PARTAI GERINDRA",
       title:
@@ -53,7 +53,7 @@ const worksData: WorksData = {
     },
     {
       id: 2,
-      category: 1,
+      category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "PARTAI GERINDRA",
       title:
@@ -94,7 +94,7 @@ const worksData: WorksData = {
     },
     {
       id: 4,
-      category: 2,
+      category: 0,
       clientLogo: "/images/clients/bpjs.png",
       clientName: "AVANAFISH",
       title:
@@ -115,7 +115,7 @@ const worksData: WorksData = {
   en: [
     {
       id: 0,
-      category: 1,
+      category: 0,
       clientLogo: "/images/clients/poltekkes.png",
       clientName: "POLTEKKES SEMARANG",
       title:
@@ -144,7 +144,7 @@ const worksData: WorksData = {
     },
     {
       id: 1,
-      category: 2,
+      category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "PARTAI GERINDRA",
       title:
@@ -164,7 +164,7 @@ const worksData: WorksData = {
     },
     {
       id: 2,
-      category: 1,
+      category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "PARTAI GERINDRA",
       title:
@@ -205,7 +205,7 @@ const worksData: WorksData = {
     },
     {
       id: 4,
-      category: 2,
+      category: 0,
       clientLogo: "/images/clients/bpjs.png",
       clientName: "AVANAFISH",
       title:
