@@ -6,6 +6,8 @@ import TopNav from "../components/TopNav";
 import About from "../landingSections/About";
 import Works from "../landingSections/Works";
 import PageContainer from "../components/PageContainer";
+import Contact from "../landingSections/Contact";
+import Footer from "../landingSections/Footer";
 
 export default function Landing() {
   const { setTrigger } = useTrigger();
@@ -38,9 +40,9 @@ export default function Landing() {
 
           {/* <OurClients /> */}
 
-          {/* <Contact /> */}
+          <Contact />
 
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </PageContainer>

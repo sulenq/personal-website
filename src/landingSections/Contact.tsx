@@ -1,40 +1,44 @@
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  FormControl,
-  FormErrorMessage,
-  Heading,
-  Icon,
-  Input,
+  Center,
   Link as ChakraLink,
-  SimpleGrid,
+  Icon,
   Text,
-  Textarea,
   VStack,
   Wrap,
-  Button,
 } from "@chakra-ui/react";
 
 import Container from "../components/Container";
 import landingData from "../constant/landingData";
-
-import { ArrowUpRight } from "@phosphor-icons/react";
-import { iconSize } from "../constant/sizes";
 import { getLang } from "../lib/lang";
 import { useGSAP } from "@gsap/react";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
 import gsap from "gsap";
+import {
+  EnvelopeSimple,
+  LinkedinLogo,
+  WhatsappLogo,
+} from "@phosphor-icons/react";
 
-type Props = {
-  noFaqs?: boolean;
-};
-
-export default function Contact({ noFaqs }: Props) {
+export default function Contact() {
   const lang = getLang();
+  const data = landingData.contact[lang];
+  const contacts = [
+    {
+      icon: EnvelopeSimple,
+      name: "Email",
+      link: "mailto:fatwalinovera@gmail.com",
+    },
+    {
+      icon: LinkedinLogo,
+      name: "Linkedin",
+      link: "https://www.linkedin.com/in/fatwa-linovera-620672150/",
+    },
+    {
+      icon: WhatsappLogo,
+      name: "Whatsapp",
+      link: "https://api.whatsapp.com/send?phone=6285877752503",
+    },
+  ];
 
   // Animation
   useGSAP(
@@ -54,205 +58,40 @@ export default function Contact({ noFaqs }: Props) {
     { scope: "#contact" }
   );
 
-  const ContactUsComponent = () => {
-    return (
-      <VStack align={"stretch"}>
-        <Heading
-          as={"h1"}
-          className="sectionTitle"
-          mb={12}
-          textAlign={["center", null, "left"]}
-        >
-          {landingData.contact[lang].title}
-        </Heading>
-
-        <form id="contactForm">
-          <VStack align={"stretch"} gap={8}>
-            <SimpleGrid columns={[1, 2]} gap={8}>
-              <FormControl>
-                <Input
-                  className="inputContact"
-                  placeholder={landingData.contact[lang].form.name}
-                  variant={"flushed"}
-                />
-                <FormErrorMessage></FormErrorMessage>
-              </FormControl>
-
-              <FormControl>
-                <Input
-                  className="inputContact"
-                  placeholder={landingData.contact[lang].form.email}
-                  variant={"flushed"}
-                />
-                <FormErrorMessage></FormErrorMessage>
-              </FormControl>
-            </SimpleGrid>
-
-            <SimpleGrid columns={[1, 2]} gap={8}>
-              <FormControl>
-                <Input
-                  className="inputContact"
-                  placeholder={landingData.contact[lang].form.phone}
-                  variant={"flushed"}
-                />
-                <FormErrorMessage></FormErrorMessage>
-              </FormControl>
-
-              <FormControl>
-                {/* <Select
-                      className="inputContact"
-                      placeholder={landingData.contact[lang].form.country}
-                      variant={"flushed"}
-                    ></Select> */}
-                <Input
-                  className="inputContact"
-                  placeholder={landingData.contact[lang].form.country}
-                  variant={"flushed"}
-                />
-                <FormErrorMessage></FormErrorMessage>
-              </FormControl>
-            </SimpleGrid>
-
-            <FormControl>
-              <Input
-                className="inputContact"
-                placeholder={landingData.contact[lang].form.company}
-                variant={"flushed"}
-              />
-              <FormErrorMessage></FormErrorMessage>
-            </FormControl>
-
-            <FormControl>
-              <Textarea
-                className="inputContact"
-                placeholder={landingData.contact[lang].form.message}
-                variant={"flushed"}
-              />
-              <FormErrorMessage></FormErrorMessage>
-            </FormControl>
-          </VStack>
-        </form>
-
-        <Wrap my={8}>
-          <Text opacity={0.5}>{landingData.contact[lang].form.discalimer}</Text>
-          <Text
-            fontWeight={600}
-            as={ChakraLink}
-            href={landingData.contact[lang].form.termsAndConditionsLink}
-          >
-            {landingData.contact[lang].form.termsAndConditions}
-          </Text>
-        </Wrap>
-
-        <Button
-          type="submit"
-          form="contactForm"
-          rightIcon={<Icon as={ArrowUpRight} fontSize={iconSize} />}
-          w={"fit-content"}
-          pl={6}
-          mt={5}
-          color={"white"}
-          className="btn-ap clicky"
-          h={"50px"}
-          flexShrink={0}
-        >
-          {landingData.contact[lang].form.send}
-        </Button>
-      </VStack>
-    );
-  };
-
   return (
-    <VStack
-      id="contact"
-      align={"stretch"}
-      py={20}
-      // bg={"var(--darka)"}
-      bg={"black"}
-      color={"white"}
-      borderTop={"1px solid var(--divider3)"}
-    >
+    <VStack id="contact" align={"stretch"} py={20} bg={"p.500"} color={"white"}>
       <Container>
-        {noFaqs ? (
-          <Box id={"contactContent"}>
-            <ContactUsComponent />
-          </Box>
-        ) : (
-          <SimpleGrid columns={[1, null, 2]} gap={12}>
-            <Box id={"contactContent"}>
-              <ContactUsComponent />
-            </Box>
+        <VStack>
+          <Text
+            textAlign={"center"}
+            fontSize={38}
+            className="serif"
+            maxW={"800px"}
+            mb={4}
+          >
+            {data.cta}
+          </Text>
 
-            <Box id="faqsContent">
-              <VStack
-                id="faqs"
-                pt={6}
-                pb={2}
-                px={8}
-                borderRadius={8}
-                border={"1px solid var(--divider3)"}
-                align={"stretch"}
+          <Wrap justify={"center"} w={"100%"}>
+            {contacts.map((contact, i) => (
+              <Center
+                key={i}
+                p={5}
+                borderRadius={12}
+                cursor={"pointer"}
+                _hover={{ bg: "whiteAlpha.100" }}
+                // bg={"whiteAlpha.100"}
+                role="group"
+                className="clicky"
+                as={ChakraLink}
+                href={contact.link}
+                isExternal
               >
-                <Heading as={"h1"} mb={8} fontWeight={600}>
-                  FAQs
-                </Heading>
-
-                <Accordion defaultIndex={[0]} allowMultiple>
-                  {landingData.contact[lang].faqs.map((faq, i) => (
-                    <AccordionItem
-                      key={i}
-                      borderTop={i === 0 ? "none" : ""}
-                      borderBottom={
-                        i === landingData.contact[lang].faqs.length - 1
-                          ? "none"
-                          : ""
-                      }
-                      borderColor={"var(--divider3)"}
-                    >
-                      <h2>
-                        <AccordionButton py={4} px={0}>
-                          <Box as="span" flex="1" textAlign="left">
-                            {faq.title}
-                          </Box>
-                          <AccordionIcon />
-                        </AccordionButton>
-                      </h2>
-                      <AccordionPanel
-                        pb={4}
-                        opacity={0.5}
-                        lineHeight={1.6}
-                        px={0}
-                      >
-                        {faq.description}
-                      </AccordionPanel>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-
-                {/* <HStack
-              mt={"auto"}
-              as={Link}
-              to={landingData.contact[lang].allFaqs.link}
-              fontWeight={600}
-              role="group"
-              transition={"200ms"}
-              gap={1}
-              color={"p.400"}
-            >
-              <Text>{landingData.contact[lang].allFaqs.label}</Text>
-
-              <Icon
-                transition={"200ms"}
-                w={"0px"}
-                opacity={0}
-                _groupHover={{ w: "20px", opacity: 1 }}
-                as={ArrowUpRight}
-              />
-            </HStack> */}
-              </VStack>
-            </Box>
-          </SimpleGrid>
-        )}
+                <Icon as={contact.icon} fontSize={72} />
+              </Center>
+            ))}
+          </Wrap>
+        </VStack>
       </Container>
     </VStack>
   );
