@@ -6,7 +6,6 @@ import {
   IconButton,
   Link as ChakraLink,
   ListItem,
-  Progress,
   SimpleGrid,
   Text,
   UnorderedList,
@@ -33,15 +32,15 @@ export default function AboutPage() {
   const lang = getLang();
   const data = aboutData[lang];
   const skills = [
-    { name: "HTML", rate: 80 },
-    { name: "CSS", rate: 90 },
-    { name: "React", rate: 90 },
-    { name: "Typescript", rate: 75 },
-    { name: "ChakraUI", rate: 95 },
-    { name: "Tailwind CSS", rate: 75 },
-    { name: "Laravel", rate: 70 },
-    { name: "Code Igniter", rate: 70 },
-    { name: "CorelDRAW", rate: 95 },
+    { name: "HTML", rate: "Intermediate" },
+    { name: "CSS", rate: "Advance" },
+    { name: "React", rate: "Advance" },
+    { name: "Typescript", rate: "Intermediate" },
+    { name: "ChakraUI", rate: "Advance" },
+    { name: "Tailwind CSS", rate: "Intermediate" },
+    { name: "Laravel", rate: "Intermediate" },
+    { name: "Code Igniter", rate: "Intermediate" },
+    { name: "CorelDRAW", rate: "Advance" },
   ];
   const interests = [
     "Art",
@@ -58,7 +57,7 @@ export default function AboutPage() {
   // Animation
   const titleAnim = (triggerTarget: any) => ({
     scrollTrigger: scrollTriggerConfig(triggerTarget),
-    y: 50,
+    y: "Intermediate",
     opacity: 0,
     stagger: {
       each: 0.2,
@@ -191,15 +190,11 @@ export default function AboutPage() {
                       key={i}
                       justify={"space-between"}
                     >
-                      <Text w={"120px"}>{skill.name}</Text>
+                      <Text>{skill.name}</Text>
 
-                      <Progress
-                        flex={1}
-                        value={skill.rate}
-                        size="xs"
-                        colorScheme="bnw"
-                        bg={"var(--divider2)"}
-                      />
+                      <Box h={"1px"} flex={1} bg={"var(--divider3)"} mx={4} />
+
+                      <Text>{skill.rate}</Text>
                     </HStack>
                   ))}
                 </VStack>
