@@ -50,7 +50,7 @@ export default function TopNav(props: any) {
       position={"sticky"}
       top={"-1px"}
       left={0}
-      p={2}
+      // p={2}
       transform={scrollDirection === "up" ? "" : "translateY(-80px)"}
       transition={"200ms"}
       {...props}
@@ -58,13 +58,13 @@ export default function TopNav(props: any) {
       <HStack
         justify={"space-between"}
         py={2}
-        px={[4, 5, 7]}
+        px={[5, 6, 8]}
         w={"100%"}
-        maxW={"1440px"}
+        maxW={"1280px"}
         mx={"auto"}
-        bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+        bg={useColorModeValue("white", "blackAlpha.800")}
         backdropFilter={"blur(5px)"}
-        borderRadius={12}
+        // borderRadius={12}
       >
         <HStack
           flexShrink={0}

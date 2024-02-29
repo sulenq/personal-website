@@ -100,8 +100,8 @@ export default function DrawerNav(props: any) {
           minH={"100vh"}
           bg={bg}
           position={"fixed"}
-          top={-2}
-          left={-2}
+          top={0}
+          left={0}
           zIndex={99}
           color={"current"}
           onClick={handleClose}
