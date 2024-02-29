@@ -81,6 +81,12 @@ const WorksDetailPage = () => {
           each: 0.2,
         },
       });
+
+      gsap.from(".carouselControl", {
+        scrollTrigger: scrollTriggerConfig("#screenshots"),
+        y: 50,
+        opacity: 0,
+      });
     },
     { scope: "#workDetailPage" }
   );
@@ -125,26 +131,32 @@ const WorksDetailPage = () => {
           <VStack className="narativeContent" align={"stretch"}>
             <Wrap mb={20}>
               <Box className="narative" flex={["0 0 100%", null, "0 0 200px"]}>
-                <Text fontWeight={700} fontSize={24}>
-                  {lang === "id"
-                    ? "Penjelasan Singkat Proyek"
-                    : "Project Brief"}
+                <Text className="serif" fontSize={32}>
+                  {lang === "id" ? "Penjelasan Singkat" : "Brief"}
                 </Text>
               </Box>
 
-              <Box className="narative" flex={["0 0 100%", null, "1 0 600px"]}>
+              <Box
+                className="narative"
+                flex={["0 0 100%", null, "1 0 600px"]}
+                mt={2}
+              >
                 <Text fontSize={18}>{data.narative}</Text>
               </Box>
             </Wrap>
 
             <Wrap mb={20}>
               <Box className="narative" flex={["0 0 100%", null, "0 0 200px"]}>
-                <Text fontWeight={700} fontSize={24}>
-                  {lang === "id" ? "Solusi Kami" : "Our Solution"}
+                <Text className="serif" fontSize={32}>
+                  {lang === "id" ? "Yang saya lakukan" : "What i do"}
                 </Text>
               </Box>
 
-              <Box className="narative" flex={["0 0 100%", null, "1 0 600px"]}>
+              <Box
+                className="narative"
+                flex={["0 0 100%", null, "1 0 600px"]}
+                mt={2}
+              >
                 <Text fontSize={18}>{data.solution}</Text>
               </Box>
             </Wrap>
@@ -192,7 +204,7 @@ const WorksDetailPage = () => {
             </HStack>
           </VStack>
 
-          <VStack className="image" mt={4}>
+          <VStack className="carouselControl" mt={4}>
             <HStack>
               <IconButton
                 onClick={handlePrev}
