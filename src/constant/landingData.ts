@@ -10,7 +10,7 @@ const landingData = {
       },
       {
         name: "Portofolio",
-        link: "/works",
+        link: "/works?search=&category=0",
       },
     ],
     en: [
@@ -20,7 +20,7 @@ const landingData = {
       },
       {
         name: "Portfolio",
-        link: "/works",
+        link: "/works?search=&category=0",
       },
     ],
   },

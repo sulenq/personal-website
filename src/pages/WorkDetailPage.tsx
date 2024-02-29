@@ -18,7 +18,6 @@ import Container from "../components/Container";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import Contact from "../landingSections/Contact";
 import Footer from "../landingSections/Footer";
-import FloatingPortfolioNav from "../components/Navs/FloatingPortfolioNav";
 import useTrigger from "../global/useTrigger";
 import TopNav from "../components/TopNav";
 import { useGSAP } from "@gsap/react";
@@ -30,8 +29,8 @@ const WorksDetailPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { id } = useParams<{ id: string }>();
-  const worksId = parseInt(id as string);
+  const { workIndex } = useParams<{ workIndex: string }>();
+  const worksId = parseInt(workIndex as string);
   const lang = getLang();
   const { trigger } = useTrigger();
   const data = worksData[lang][worksId];
@@ -93,8 +92,6 @@ const WorksDetailPage = () => {
 
         <TopNav />
 
-        <FloatingPortfolioNav />
-
         <Container>
           <VStack
             mt={24}
@@ -102,27 +99,11 @@ const WorksDetailPage = () => {
             minH={"calc(100vh - 650px)"}
             justify={"center"}
           >
-            <HStack className="init" mb={4} gap={3} justify={"center"}>
-              <Image
-                loading={"lazy"}
-                src={data.clientLogo}
-                h={"20px"}
-                mb={"2px"}
-                borderRadius={"0 !important"}
-              />
-              <Text
-                fontWeight={700}
-                opacity={0.5}
-                fontSize={18}
-                // textAlign={"center"}
-              >
-                {data.clientName}
-              </Text>
-            </HStack>
-
             <Heading
-              className="init"
+              className="init serif"
               as={"h1"}
+              fontWeight={400}
+              lineHeight={1.4}
               textAlign={"center"}
               maxW={"820px"}
             >
@@ -138,6 +119,7 @@ const WorksDetailPage = () => {
             mb={20}
             maxH={"700px"}
             objectFit={"cover"}
+            objectPosition={"bottom"}
           />
 
           <VStack className="narativeContent" align={"stretch"}>

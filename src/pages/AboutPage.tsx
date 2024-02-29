@@ -124,6 +124,7 @@ export default function AboutPage() {
         <Container
           py={16}
           pt={10}
+          mb={8}
           flex={1}
           minH={"500px"}
           position={"relative"}
@@ -175,7 +176,7 @@ export default function AboutPage() {
           </SimpleGrid>
         </Container>
 
-        <VStack bg={"var(--divider)"} py={12}>
+        <VStack bg={"var(--divider)"} py={24}>
           <Container>
             <SimpleGrid columns={[1, 2]} gap={24}>
               <VStack gap={0} align={"stretch"}>

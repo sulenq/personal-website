@@ -31,10 +31,6 @@ import gsap from "gsap";
 import TopNav from "../components/TopNav";
 
 export default function WorksPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const { trigger } = useTrigger();
   const lang = getLang();
   const categories = [
@@ -42,13 +38,19 @@ export default function WorksPage() {
     lang === "id" ? "Karya Web" : "Web Works",
     lang === "id" ? "Karya Desain" : "Design Works",
   ];
-
   const navigate = useNavigate();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
   const category = query.get("category");
   const search = query.get("search");
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (location.pathname === "/works") {
+      // Ubah URL menjadi http://localhost:5173/works?search=&category=0
+      navigate("/works?search=&category=0");
+    }
+  }, [location.pathname, navigate]);
 
   useEffect(() => {
     if (category) {
@@ -122,9 +124,10 @@ export default function WorksPage() {
   useGSAP(
     () => {
       gsap.from(".workItem", {
-        scale: 0,
+        scale: 0.5,
+        opacity: 0,
         stagger: {
-          each: 0.2,
+          each: 0.05,
         },
       });
     },

@@ -29,7 +29,7 @@ export default function Footer(props: any) {
       align={"stretch"}
       {...props}
     >
-      <HStack justify={"space-between"} w={"100%"} maxW={"1440px"} mx={"auto"}>
+      <HStack justify={"space-between"} w={"100%"} maxW={"1280px"} mx={"auto"}>
         <Text className="footerItem">
           2024 © Fatwa Linovera. All right reserved.
         </Text>

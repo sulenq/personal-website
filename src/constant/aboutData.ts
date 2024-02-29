@@ -48,16 +48,16 @@ const aboutData = {
       title: "Pendidikan",
       items: [
         {
-          name: "SMA Negeri 4 Semarang",
-          year: "Agustus 2016 - Juli 2019",
-          field: "Matematika dan Ilmu Pengetahuan Alam",
-          narative: "Mengikuti ekstrakurikuler Pengurus Rohis",
-        },
-        {
           name: "Universitas Dian Nuswantoro",
           year: "Agustus 2019 - Juni 2023",
           field: "Teknik Informatika - IPK 3.52 dari 4.00",
           narative: "Mengambil spesialisasi Rekayasa Perangkat Lunak",
+        },
+        {
+          name: "SMA Negeri 4 Semarang",
+          year: "Agustus 2016 - Juli 2019",
+          field: "Matematika dan Ilmu Pengetahuan Alam",
+          narative: "Mengikuti ekstrakurikuler Pengurus Rohis",
         },
       ],
     },
@@ -102,7 +102,7 @@ const aboutData = {
       items: certificateItems,
     },
     interests: {
-      title: "Kesukaan",
+      title: "Hal yang Disukai",
     },
     contact: {
       title: "Kontak",
@@ -126,17 +126,17 @@ const aboutData = {
       title: "Education",
       items: [
         {
+          name: "Universitas Dian Nuswantoro",
+          year: "Agustus 2019 - Juni 2023",
+          field: "Informatics Engineering - GPA 3.52 of 4.00",
+          narative: "Specialized in Software Engineering",
+        },
+        {
           name: "SMA Negeri 4 Semarang",
           year: "Agustus 2016 - Juli 2019",
           field: "Mathematics and Natural Science",
           narative:
             "Participate in Rohis Management extracurricular activities",
-        },
-        {
-          name: "Universitas Dian Nuswantoro",
-          year: "Agustus 2019 - Juni 2023",
-          field: "Informatics Engineering - GPA 3.52 of 4.00",
-          narative: "Specialized in Software Engineering",
         },
       ],
     },

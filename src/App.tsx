@@ -37,7 +37,7 @@ const App = () => {
 
           <Route path="/works" element={<WorksPage />} />
 
-          <Route path="/works/:index" element={<WorksDetailPage />} />
+          <Route path="/works/:workIndex" element={<WorksDetailPage />} />
 
           <Route path="*" element={<MissingPage />} />
         </Routes>
