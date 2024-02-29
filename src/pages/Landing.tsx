@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { VStack } from "@chakra-ui/react";
 import { getLang, setLang as setLangLocal } from "../lib/lang";
 import useTrigger from "../global/useTrigger";
 import Hero from "../landingSections/Hero";
 import TopNav from "../components/TopNav";
 import About from "../landingSections/About";
 import Works from "../landingSections/Works";
+import PageContainer from "../components/PageContainer";
 
 export default function Landing() {
   const { setTrigger } = useTrigger();
@@ -23,13 +23,7 @@ export default function Landing() {
   }, [setTrigger]);
 
   return (
-    <VStack
-      gap={0}
-      minH={"100vh"}
-      w={"100%"}
-      align={"stretch"}
-      overflowX={"clip"}
-    >
+    <PageContainer>
       <TopNav />
 
       {lang && (
@@ -49,6 +43,6 @@ export default function Landing() {
           {/* <Footer /> */}
         </>
       )}
-    </VStack>
+    </PageContainer>
   );
 }

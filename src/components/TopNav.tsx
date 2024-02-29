@@ -4,7 +4,6 @@ import {
   HStack,
   Image,
   useColorModeValue,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 import landingData from "../constant/landingData";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
@@ -74,15 +73,20 @@ export default function TopNav(props: any) {
           to={"/"}
           w={[null, null, "300px"]}
         >
-          <Image loading={"lazy"} src="/logos/logoColor.svg" h={"24px"} />
+          <Image
+            loading={"lazy"}
+            src="/logos/logoColor.svg"
+            h={"24px"}
+            borderRadius={"0 !important"}
+          />
         </HStack>
 
         {sw > 850 ? (
           <HStack gap={0}>
             {landingData.landingNav[lang].map((nav, i) => (
               <Button
-                as={ChakraLink}
-                href={nav.link}
+                as={Link}
+                to={nav.link}
                 key={i}
                 flexShrink={0}
                 fontWeight={600}

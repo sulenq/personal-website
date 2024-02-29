@@ -6,29 +6,21 @@ const landingData = {
     id: [
       {
         name: "Tentang Saya",
-        link: "#about",
-      },
-      {
-        name: "Layanan",
-        link: "#services",
+        link: "/about",
       },
       {
         name: "Portofolio",
-        link: "#works",
+        link: "/works",
       },
     ],
     en: [
       {
         name: "About Me",
-        link: "#about",
-      },
-      {
-        name: "Services",
-        link: "#services",
+        link: "/about",
       },
       {
         name: "Portfolio",
-        link: "#works",
+        link: "/works",
       },
     ],
   },
@@ -73,7 +65,7 @@ const landingData = {
   about: {
     id: {
       nav: "Tentang Saya",
-      title: "Siapa Aku?",
+      title: "Siapa Saya?",
       ourMember: {
         label: "Bio Saya",
         link: "",
@@ -82,17 +74,17 @@ const landingData = {
         {
           title: "Thinker",
           narative:
-            "Kepribadianku tercermin dalam kecenderunganku untuk selalu memikirkan solusi-solusi kreatif dan inovatif, serta mendekatinya dengan ketelitian dan kecermatan yang tinggi dalam setiap aspek pekerjaanku",
+            "Memiliki kepribadian yang tercermin dalam kecenderungan saya untuk selalu memikirkan solusi-solusi kreatif dan inovatif, serta melakukannya dengan ketelitian dan kecermatan yang tinggi dalam setiap aspek pekerjaan saya",
         },
         {
           title: "Web Developer",
           narative:
-            "Aku lulusan dari fakultas teknik informatika dan memilih jalan menjadi seorang web developer. Aku fokus di React karena aku lebih suka mengerjakan frontend",
+            "Lulusan dari fakultas teknik informatika dan memilih jalan menjadi seorang web developer. Saya fokus di React karena lebih suka mengerjakan frontend",
         },
         {
           title: "Graphic Designer",
           narative:
-            "Seni dan desain, aku menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW aku mampu membuat desain apapun yang aku mau",
+            "Seni dan desain, saya menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW, saya mampu membuat desain apapun yang saya mau",
         },
       ],
     },
@@ -124,9 +116,17 @@ const landingData = {
   },
 
   sosmeds: [
-    { name: "Instagram", link: "", icon: GithubLogo },
-    { name: "LinkedIn", link: "", icon: LinkedinLogo },
-    { name: "Github", link: "", icon: InstagramLogo },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/_sulenq/",
+      icon: GithubLogo,
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/fatwa-linovera-620672150/",
+      icon: LinkedinLogo,
+    },
+    { name: "Github", link: "https://github.com/sulenq", icon: InstagramLogo },
   ],
 
   works: {

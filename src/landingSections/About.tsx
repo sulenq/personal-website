@@ -167,8 +167,8 @@ export default function About() {
                   >
                     <Text fontSize={20} fontWeight={700}>
                       {lang === "id"
-                        ? "Kenali aku lebih dekat"
-                        : "Get to know me better"}
+                        ? "Kenali lebih dekat"
+                        : "Get to know better"}
                     </Text>
 
                     <Text opacity={0.5} mb={2}>

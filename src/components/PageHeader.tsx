@@ -1,6 +1,5 @@
 import { Box, Heading, VStack } from "@chakra-ui/react";
 import Container from "./Container";
-import TopNav from "./TopNav";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -26,8 +25,6 @@ export default function PageHeader({ children }: Props) {
 
   return (
     <VStack id="pageHeader" position={"relative"} align={"stretch"}>
-      <TopNav />
-
       <Container
         bgSize={"cover"}
         bgPos={"top"}
@@ -41,14 +38,15 @@ export default function PageHeader({ children }: Props) {
               as={"h1"}
               className="serif"
               fontSize={[42, 48, 52]}
+              mb={4}
             >
               {children}
             </Heading>
 
             <Box
-              h={"3px"}
+              h={"2px"}
               w={"140px"}
-              bg={"p.500"}
+              bg={"var(--divider3)"}
               borderRadius={12}
               id="pageHeaderAccent"
             />

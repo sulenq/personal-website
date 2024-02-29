@@ -8,10 +8,9 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import useTrigger from "../global/useTrigger";
 import { getLang } from "../lib/lang";
-import FloatingNav from "../components/Navs/FloatingNav";
 import PageHeader from "../components/PageHeader";
 import Container from "../components/Container";
 import landingData from "../constant/landingData";
@@ -42,8 +41,6 @@ export default function FaqsPage() {
   return (
     <VStack gap={0} align={"stretch"} overflowX={"clip"}>
       <Text display={"none"}>{trigger}</Text>
-
-      <FloatingNav />
 
       <PageHeader>{"FAQs"}</PageHeader>
 

@@ -85,6 +85,7 @@ export default function Hero() {
                   w={"100%"}
                   colorScheme="bnw"
                   fontSize={"18px !important"}
+                  className="clicky"
                 >
                   {data.contact}
                 </Button>
@@ -94,8 +95,10 @@ export default function Hero() {
                   w={"100%"}
                   pl={4}
                   fontSize={"18px !important"}
-                  className="btn-solid"
+                  className="btn-solid clicky"
                   leftIcon={<Icon as={Sparkle} fontSize={20} />}
+                  as={ChakraLink}
+                  href="#works"
                 >
                   {data.portfolio}
                 </Button>
@@ -162,11 +165,12 @@ export default function Hero() {
                     flex={"1 0 50px"}
                     key={i}
                     as={ChakraLink}
+                    href={sosmed.link}
                     isExternal
                     aria-label={sosmed.name}
                     w={"fit-content"}
                     icon={<Icon as={sosmed.icon} fontSize={24} />}
-                    className="btn-solid"
+                    className="btn-solid clicky"
                   />
                 ))}
               </HStack>
