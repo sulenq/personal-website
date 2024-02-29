@@ -56,16 +56,30 @@ export default function AboutPage() {
   ];
 
   // Animation
+  const titleAnim = (triggerTarget: any) => ({
+    scrollTrigger: scrollTriggerConfig(triggerTarget),
+    y: 50,
+    opacity: 0,
+    stagger: {
+      each: 0.2,
+    },
+  });
+
+  const itemAnim = (triggerTarget: any) => ({
+    scrollTrigger: scrollTriggerConfig(triggerTarget),
+    scale: 0.5,
+    opacity: 0,
+    stagger: {
+      each: 0.2,
+    },
+  });
+
   useGSAP(
     () => {
       gsap.from(`.aboutNaratives`, {
         scrollTrigger: scrollTriggerConfig(".aboutNaratives"),
         x: 300,
         opacity: 0,
-        // ease: "back",
-        stagger: {
-          each: 0.2,
-        },
       });
 
       gsap.from(`.aboutImage`, {
@@ -74,27 +88,27 @@ export default function AboutPage() {
         opacity: 0,
         // ease: "back",
         stagger: {
-          each: 0.2,
+          each: 0.05,
         },
       });
 
-      gsap.from(".aboutMemberTitle", {
-        scrollTrigger: scrollTriggerConfig(".aboutMemberTitle"),
-        y: 50,
-        opacity: 0,
-        stagger: {
-          each: 0.2,
-        },
-      });
+      gsap.from(".dataTitle_1", titleAnim(".dataTitle_1"));
+      gsap.from(".dataItem_1", itemAnim(".dataItem_1"));
 
-      gsap.from(".member", {
-        scrollTrigger: scrollTriggerConfig(".members"),
-        scale: 0,
-        opacity: 0,
-        stagger: {
-          each: 0.2,
-        },
-      });
+      gsap.from(".dataTitle_2", titleAnim(".dataTitle_2"));
+      gsap.from(".dataItem_2", itemAnim(".dataItem_2"));
+
+      gsap.from(".dataTitle_3", titleAnim(".dataTitle_3"));
+      gsap.from(".dataItem_3", itemAnim(".dataItem_3"));
+
+      gsap.from(".dataTitle_4", titleAnim(".dataTitle_4"));
+      gsap.from(".dataItem_4", itemAnim(".dataItem_4"));
+
+      gsap.from(".dataTitle_5", titleAnim(".dataTitle_5"));
+      gsap.from(".dataItem_5", itemAnim(".dataItem_5"));
+
+      gsap.from(".dataTitle_6", titleAnim(".dataTitle_6"));
+      gsap.from(".dataItem_6", itemAnim(".dataItem_6"));
     },
     { scope: "#aboutPage" }
   );
@@ -166,13 +180,22 @@ export default function AboutPage() {
           <Container>
             <SimpleGrid columns={[1, 2]} gap={24}>
               <VStack gap={0} align={"stretch"}>
-                <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                <Text
+                  className="dataTitle_1 serif"
+                  fontSize={28}
+                  fontWeight={600}
+                  mb={4}
+                >
                   {data.skills.title}
                 </Text>
 
                 <VStack align={"stretch"}>
                   {skills.map((skill, i) => (
-                    <HStack key={i} justify={"space-between"}>
+                    <HStack
+                      className="dataItem_1"
+                      key={i}
+                      justify={"space-between"}
+                    >
                       <Text w={"120px"}>{skill.name}</Text>
 
                       <Progress
@@ -188,13 +211,22 @@ export default function AboutPage() {
               </VStack>
 
               <VStack gap={0} align={"stretch"}>
-                <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                <Text
+                  className="dataTitle_2 serif"
+                  fontSize={28}
+                  fontWeight={600}
+                  mb={4}
+                >
                   {data.education.title}
                 </Text>
 
                 <VStack align={"stretch"} gap={4}>
                   {data.education.items.map((educationPlace, i) => (
-                    <HStack key={i} justify={"space-between"}>
+                    <HStack
+                      className="dataItem_2"
+                      key={i}
+                      justify={"space-between"}
+                    >
                       <VStack align={"stretch"} gap={1} w={"100%"}>
                         <Text fontWeight={700} mr={"auto"}>
                           {educationPlace.name}
@@ -214,13 +246,22 @@ export default function AboutPage() {
               </VStack>
 
               <VStack gap={0} align={"stretch"}>
-                <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                <Text
+                  className="dataTitle_3 serif"
+                  fontSize={28}
+                  fontWeight={600}
+                  mb={4}
+                >
                   {data.experience.title}
                 </Text>
 
                 <VStack align={"stretch"} gap={4}>
                   {data.experience.items.map((exp, i) => (
-                    <HStack key={i} justify={"space-between"}>
+                    <HStack
+                      className="dataItem_3"
+                      key={i}
+                      justify={"space-between"}
+                    >
                       <VStack align={"stretch"} gap={1} w={"100%"}>
                         <Text fontWeight={700} mr={"auto"}>
                           {exp.title}
@@ -246,34 +287,47 @@ export default function AboutPage() {
 
               <VStack align={"stretch"} gap={24}>
                 <VStack gap={0} align={"stretch"}>
-                  <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                  <Text
+                    className="dataTitle_4 serif"
+                    fontSize={28}
+                    fontWeight={600}
+                    mb={4}
+                  >
                     {data.certificate.title}
                   </Text>
 
                   <UnorderedList>
                     {data.certificate.items.map((certificate, i) => (
-                      <ChakraLink isExternal href={certificate.link}>
-                        <ListItem
-                          key={i}
-                          mb={2}
-                          _hover={{ color: "p.500" }}
-                          w={"fit-content"}
-                        >
-                          {certificate.name}
-                        </ListItem>
-                      </ChakraLink>
+                      <Box className="dataItem_4">
+                        <ChakraLink isExternal href={certificate.link}>
+                          <ListItem
+                            key={i}
+                            mb={2}
+                            _hover={{ color: "p.500" }}
+                            w={"fit-content"}
+                          >
+                            {certificate.name}
+                          </ListItem>
+                        </ChakraLink>
+                      </Box>
                     ))}
                   </UnorderedList>
                 </VStack>
 
                 <VStack gap={0} align={"stretch"}>
-                  <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                  <Text
+                    className="dataTitle_5 serif"
+                    fontSize={28}
+                    fontWeight={600}
+                    mb={4}
+                  >
                     {data.interests.title}
                   </Text>
 
                   <Wrap>
                     {interests.map((interest, i) => (
                       <Badge
+                        className="dataItem_5"
                         key={i}
                         bg={"var(--divider)"}
                         fontSize={16}
@@ -286,37 +340,44 @@ export default function AboutPage() {
                 </VStack>
 
                 <VStack gap={0} align={"stretch"}>
-                  <Text fontSize={28} fontWeight={600} mb={4} className="serif">
+                  <Text
+                    className="dataTitle_6 serif"
+                    fontSize={28}
+                    fontWeight={600}
+                    mb={4}
+                  >
                     {data.contact.title}
                   </Text>
 
-                  <HStack mb={2}>
+                  <HStack mb={2} className="dataItem_6">
                     <Icon as={MapPinLine} fontSize={20} />
                     <Text>Semarang</Text>
                   </HStack>
 
-                  <HStack mb={2}>
+                  <HStack mb={2} className="dataItem_6">
                     <Icon as={Phone} fontSize={20} />
                     <Text>0858777525203</Text>
                   </HStack>
 
-                  <HStack mb={4}>
+                  <HStack mb={4} className="dataItem_6">
                     <Icon as={EnvelopeSimple} fontSize={20} />
                     <Text>contact@distrostudio.id</Text>
                   </HStack>
 
                   <HStack className="init">
                     {landingData.sosmeds.map((sosmed, i) => (
-                      <IconButton
-                        key={i}
-                        as={ChakraLink}
-                        href={sosmed.link}
-                        isExternal
-                        aria-label={sosmed.name}
-                        w={"fit-content"}
-                        icon={<Icon as={sosmed.icon} fontSize={24} />}
-                        className="btn-solid clicky"
-                      />
+                      <Box className="dataItem_6">
+                        <IconButton
+                          key={i}
+                          as={ChakraLink}
+                          href={sosmed.link}
+                          isExternal
+                          aria-label={sosmed.name}
+                          w={"fit-content"}
+                          icon={<Icon as={sosmed.icon} fontSize={24} />}
+                          className="btn-solid clicky"
+                        />
+                      </Box>
                     ))}
                   </HStack>
                 </VStack>
