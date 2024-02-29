@@ -147,8 +147,8 @@ export default function About() {
 
                 <VStack gap={3} h={"100%"} w={"50%"} justify={"center"}>
                   <Box
+                    flex={1}
                     className="aboutImage"
-                    h={"50%"}
                     w={"100%"}
                     bgImage="/images/about/thinker.jpg"
                     bgSize={"cover"}
@@ -157,7 +157,6 @@ export default function About() {
                   />
 
                   <VStack
-                    flex={1}
                     className="aboutImage"
                     align={"stretch"}
                     w={"100%"}
@@ -167,14 +166,14 @@ export default function About() {
                   >
                     <Text fontSize={20} fontWeight={700}>
                       {lang === "id"
-                        ? "Kenali lebih dekat"
-                        : "Get to know better"}
+                        ? "Kenali saya lebih dekat"
+                        : "Get to know me better"}
                     </Text>
 
-                    <Text opacity={0.5} mb={2}>
+                    <Text opacity={0.5} mb={4}>
                       {lang === "id"
-                        ? "Cerita, latar belakang, hobi, kepribadian dll"
-                        : "Story, background, hobbies, personality etc"}
+                        ? "Latar belakang, kemampuan, minat, pengalaman dll"
+                        : "Background, skills, interests, experience etc"}
                     </Text>
 
                     <Button
