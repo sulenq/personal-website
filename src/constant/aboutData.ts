@@ -141,7 +141,7 @@ const aboutData = {
       ],
     },
     experience: {
-      title: "Pengalaman Kerja",
+      title: "Work Experience",
       items: [
         {
           title: "Web Developer",

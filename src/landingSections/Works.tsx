@@ -10,7 +10,7 @@ import {
   Button,
   Stack,
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import landingData from "../constant/landingData";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import useScreenWidth from "../hooks/useScreenWidth";
@@ -27,7 +27,6 @@ export default function Works() {
   const sw = useScreenWidth();
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [ccDisplay, setCcDisplay] = useState("flex");
   const [worksType, setWorksType] = useState<0 | 1>(0);
 
   const handlePrev = (): void => {
@@ -41,27 +40,6 @@ export default function Works() {
       containerRef.current.scrollLeft += 300;
     }
   };
-
-  useEffect(() => {
-    const resizeObserver = new ResizeObserver(() => {
-      const container = document.querySelector(
-        "#worksContent"
-      ) as HTMLDivElement;
-
-      if (
-        carouselRef.current &&
-        container.offsetWidth < carouselRef.current.offsetWidth
-      ) {
-        setCcDisplay("flex");
-      } else {
-        setCcDisplay("none");
-      }
-    });
-
-    if (carouselRef.current) {
-      resizeObserver.observe(carouselRef.current);
-    }
-  }, [sw]);
 
   // Animation
   useGSAP(
@@ -121,9 +99,6 @@ export default function Works() {
             <>
               <Container>
                 <VStack mb={6} className="sectionHeader">
-                  {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>{landingData.works.content[lang].nav}</SectionNav>
-              </Box> */}
                   <Heading as={"h1"} className="sectionTitle">
                     {landingData.works.content[lang].title}
                   </Heading>
@@ -221,11 +196,6 @@ export default function Works() {
             <>
               <Container>
                 <VStack mb={6} className="sectionHeader">
-                  {/* <Box className={"sectionNavLabel"}>
-                <SectionNav>
-                  {landingData.designWorks.content[lang].nav}
-                </SectionNav>
-              </Box> */}
                   <Heading as={"h1"} className="sectionTitle">
                     {landingData.designWorks.content[lang].title}
                   </Heading>
@@ -326,7 +296,6 @@ export default function Works() {
             justify={"space-between"}
             id="carouselControl"
             mt={4}
-            display={ccDisplay}
             px={[6, null, 14]}
           >
             <HStack mx={sw < 350 ? "auto" : ""} mb={sw < 350 ? 4 : ""}>

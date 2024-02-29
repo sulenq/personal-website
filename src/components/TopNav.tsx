@@ -52,6 +52,7 @@ export default function TopNav(props: any) {
       left={0}
       // p={2}
       transform={scrollDirection === "up" ? "" : "translateY(-80px)"}
+      bg={useColorModeValue("white", "blackAlpha.800")}
       transition={"200ms"}
       {...props}
     >
@@ -62,7 +63,6 @@ export default function TopNav(props: any) {
         w={"100%"}
         maxW={"1280px"}
         mx={"auto"}
-        bg={useColorModeValue("white", "blackAlpha.800")}
         backdropFilter={"blur(5px)"}
         // borderRadius={12}
       >
