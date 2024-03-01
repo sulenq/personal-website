@@ -10,7 +10,6 @@ import {
   SimpleGrid,
   Text,
   Tooltip,
-  VStack,
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import Container from "../components/Container";
@@ -29,6 +28,7 @@ import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import TopNav from "../components/TopNav";
+import PageContainer from "../components/PageContainer";
 
 export default function WorksPage() {
   const { trigger } = useTrigger();
@@ -139,7 +139,7 @@ export default function WorksPage() {
   );
 
   return (
-    <VStack id="worksPage" gap={0} align={"stretch"} overflowX={"clip"}>
+    <PageContainer id="worksPage">
       <TopNav />
 
       <Text display={"none"}>{trigger}</Text>
@@ -219,6 +219,6 @@ export default function WorksPage() {
       <Contact />
 
       <Footer />
-    </VStack>
+    </PageContainer>
   );
 }

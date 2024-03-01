@@ -125,7 +125,7 @@ const WorksDetailPage = () => {
             mb={20}
             maxH={"700px"}
             objectFit={"cover"}
-            objectPosition={"bottom"}
+            objectPosition={"top"}
           />
 
           <VStack className="narativeContent" align={"stretch"}>
@@ -176,7 +176,7 @@ const WorksDetailPage = () => {
               ref={carouselRef}
               minW={"100%"}
               w={"max-content"}
-              justify={"center"}
+              // justify={"center"}
               gap={4}
               px={[4, 6, 8]}
               py={2}
