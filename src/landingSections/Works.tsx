@@ -126,21 +126,25 @@ export default function Works() {
                     py={4}
                     align={"stretch"}
                   >
-                    {landingData.works.worksItem[lang].map((work, i) => {
-                      const ok = i < 4;
+                    {landingData.works.worksItem[lang]
+                      .slice()
+                      .reverse()
+                      .map((work, i) => {
+                        const ok = i < 4;
 
-                      return (
-                        ok && (
-                          <Box className="workItem" key={i}>
-                            <PortfolioCard
-                              work={work}
-                              // setActiveWork={setActiveWork}
-                              w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                            />
-                          </Box>
-                        )
-                      );
-                    })}
+                        return (
+                          ok && (
+                            <Box className="workItem" key={i}>
+                              <PortfolioCard
+                                work={work}
+                                index={i}
+                                // setActiveWork={setActiveWork}
+                                w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                              />
+                            </Box>
+                          )
+                        );
+                      })}
 
                     <Box id="moreWorks">
                       <VStack
@@ -223,20 +227,23 @@ export default function Works() {
                     py={4}
                     align={"stretch"}
                   >
-                    {landingData.designWorks.worksItem[lang].map((work, i) => {
-                      const ok = i < 4;
+                    {landingData.designWorks.worksItem[lang]
+                      .slice()
+                      .reverse()
+                      .map((work, i) => {
+                        const ok = i < 4;
 
-                      return (
-                        ok && (
-                          <Box className="workItem" key={i}>
-                            <PortfolioCard
-                              work={work}
-                              w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                            />
-                          </Box>
-                        )
-                      );
-                    })}
+                        return (
+                          ok && (
+                            <Box className="workItem" key={i}>
+                              <PortfolioCard
+                                work={work}
+                                w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                              />
+                            </Box>
+                          )
+                        );
+                      })}
 
                     <Box id="moreWorks">
                       <VStack

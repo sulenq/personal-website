@@ -46,8 +46,7 @@ export default function WorksPage() {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
 
   useEffect(() => {
-    if (location.pathname === "/works") {
-      // Ubah URL menjadi http://localhost:5173/works?search=&category=0
+    if (location.pathname === "/works" && !location.search) {
       navigate("/works?search=&category=0");
     }
   }, [location.pathname, navigate]);
@@ -99,7 +98,7 @@ export default function WorksPage() {
       return ok;
     });
 
-    setData(filteredData);
+    setData(filteredData.reverse());
   }, [category, lang, search]);
 
   const onReset = () => {
@@ -204,11 +203,16 @@ export default function WorksPage() {
         {data && data.length > 0 ? (
           <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
             {data.map((work, i) => {
-              return (
-                <Box className={"workItem"} key={i}>
-                  <PortfolioCard work={work} />
-                </Box>
-              );
+              // 0 = web works | 1 = design works
+              if (work.category === 0) {
+                return (
+                  <Box className={"workItem"} key={i}>
+                    <PortfolioCard work={work} index={i} />
+                  </Box>
+                );
+              } else {
+                return null;
+              }
             })}
           </SimpleGrid>
         ) : (

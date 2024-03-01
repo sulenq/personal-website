@@ -9,7 +9,7 @@ import {
   VStack,
   Wrap,
 } from "@chakra-ui/react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useParams } from "react-router-dom";
 import worksData from "../constant/worksData";
 import MissingPage from "./MissingPage";
@@ -25,15 +25,11 @@ import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
 
 const WorksDetailPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const { workIndex } = useParams<{ workIndex: string }>();
-  const worksId = parseInt(workIndex as string);
+  const index = parseInt(workIndex as string);
   const lang = getLang();
   const { trigger } = useTrigger();
-  const data = worksData[lang][worksId];
+  const data = worksData[lang].slice().reverse()[index];
 
   const handlePrev = () => {
     if (containerRef.current) {
@@ -91,7 +87,7 @@ const WorksDetailPage = () => {
     { scope: "#workDetailPage" }
   );
 
-  if (!isNaN(worksId) && data) {
+  if (!isNaN(index) && data) {
     return (
       <VStack id="workDetailPage" gap={0} align={"stretch"} overflowX={"clip"}>
         <Text display={"none"}>{trigger}</Text>

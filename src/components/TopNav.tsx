@@ -45,7 +45,7 @@ export default function TopNav(props: any) {
   return (
     <Box
       id="topNav"
-      animation={"float-in-from-top 1s"}
+      animation={"float-in-from-top 0.5s"}
       zIndex={99}
       position={"sticky"}
       top={"-1px"}

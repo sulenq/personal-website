@@ -66,9 +66,9 @@ export default function PortfolioCard(props: any) {
             w={"100%"}
             mt={"auto"}
             as={Link}
-            to={`/works/${work?.id}`}
+            to={`/works/${props.index}`}
             className="btn"
-            color={"p.300"}
+            color={"p.500"}
             rightIcon={<Icon as={ArrowUpRight} fontSize={iconSize} />}
           >
             Detail

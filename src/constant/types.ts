@@ -17,7 +17,6 @@ export type ServicesData = {
 };
 
 export type WorkData = {
-  id: number;
   category: number;
   clientLogo: string;
   clientName: string;
