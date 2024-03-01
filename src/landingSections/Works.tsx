@@ -44,7 +44,7 @@ export default function Works() {
   // Animation
   useGSAP(
     () => {
-      gsap.from([".sectionNavLabel", ".sectionTitle"], {
+      gsap.from(".sectionTitle", {
         scrollTrigger: scrollTriggerConfig("#worksContent"),
         y: 50,
         opacity: 0,
@@ -62,7 +62,7 @@ export default function Works() {
         },
       });
     },
-    { scope: "#works", dependencies: [worksType] }
+    { scope: "#works", dependencies: [worksType], revertOnUpdate: true }
   );
 
   useGSAP(
@@ -163,7 +163,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=0"}
+                        to={"/works?search=&category=1"}
                         position={"relative"}
                         className="clicky"
                       >
@@ -262,7 +262,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=0"}
+                        to={"/works?search=&category=2"}
                         position={"relative"}
                         className="clicky"
                       >
