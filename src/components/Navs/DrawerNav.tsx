@@ -113,6 +113,7 @@ export default function DrawerNav(props: any) {
             mx={"auto"}
             my={"auto"}
             py={6}
+            pb={12}
             px={8}
             align={"stretch"}
             justify={"center"}
