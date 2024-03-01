@@ -28,7 +28,7 @@ export default function Works() {
   const sw = useScreenWidth();
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [worksType, setWorksType] = useState<0 | 1>(1);
+  const [worksType, setWorksType] = useState<0 | 1>(0);
 
   const handlePrev = (): void => {
     if (containerRef.current) {
@@ -155,7 +155,7 @@ export default function Works() {
                         borderRadius={12}
                         overflow={"clip"}
                         w={"280px"}
-                        h={"400px"}
+                        h={"456px"}
                         p={5}
                         transition={"200ms"}
                         justify={"center"}
@@ -164,7 +164,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=1"}
+                        to={"/works?search=&category=0"}
                         position={"relative"}
                         className="clicky"
                       >
@@ -176,7 +176,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          bottom={"-150px"}
+                          bottom={"-120px"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}
@@ -231,7 +231,7 @@ export default function Works() {
                     {landingData.designWorks.worksItem
                       .slice()
                       .reverse()
-                      .map((url, i) => {
+                      .map((work, i) => {
                         const ok = i < 4;
 
                         return (
@@ -245,7 +245,7 @@ export default function Works() {
                               overflow={"clip"}
                               borderRadius={12}
                             >
-                              <InstagramEmbed url={url} width={"100%"} />
+                              <InstagramEmbed url={work.url} width={"100%"} />
                             </Box>
                           )
                         );
@@ -268,7 +268,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=2"}
+                        to={"/works?search=&category=1"}
                         position={"relative"}
                         className="clicky"
                       >
@@ -280,7 +280,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          bottom={"-150px"}
+                          bottom={"-120px"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}

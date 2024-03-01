@@ -4,6 +4,7 @@ import {
   HStack,
   Icon,
   IconButton,
+  Image,
   Input,
   InputGroup,
   InputLeftElement,
@@ -23,27 +24,26 @@ import NoData from "../components/Feedbacks/NoData";
 import Contact from "../landingSections/Contact";
 import Footer from "../landingSections/Footer";
 import PageHeader from "../components/PageHeader";
-import { WorkData } from "../constant/types";
+import { DesignWorkData, WorkData } from "../constant/types";
 import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import TopNav from "../components/TopNav";
 import PageContainer from "../components/PageContainer";
+import designWorksData from "../constant/designWorksData";
 
 export default function WorksPage() {
   const { trigger } = useTrigger();
   const lang = getLang();
   const categories = [
-    lang === "id" ? "Semua Kategori" : "All Category",
     lang === "id" ? "Karya Web" : "Web Works",
     lang === "id" ? "Karya Desain" : "Design Works",
   ];
   const navigate = useNavigate();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const category = query.get("category");
+  const activeCategory = parseInt(query.get("category") as string);
   const search = query.get("search");
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
 
   useEffect(() => {
     if (location.pathname === "/works" && !location.search) {
@@ -51,13 +51,8 @@ export default function WorksPage() {
     }
   }, [location.pathname, navigate]);
 
-  useEffect(() => {
-    if (category) {
-      setActiveCategory(parseInt(category as string));
-    }
-  }, [category]);
-
   const activeRef = useRef<any>(null);
+  // Active Category scroll to view
   useEffect(() => {
     if (activeRef.current) {
       activeRef.current.scrollIntoView({
@@ -81,25 +76,39 @@ export default function WorksPage() {
       }, 500)
     );
   };
-  const [data, setData] = useState<WorkData[] | null>(null);
-  useEffect(() => {
-    const filteredData = worksData[lang].filter((work) => {
-      const searchTerm = search?.toLowerCase() as string;
-      const categoryTerm = parseInt(category as string);
 
-      const ok =
-        (work.title.toLowerCase().includes(searchTerm) ||
+  const [data0, setData0] = useState<WorkData[] | null>(null);
+  const [data1, setData1] = useState<DesignWorkData[] | null>(null);
+
+  // Data Setter
+  useEffect(() => {
+    if (activeCategory === 0) {
+      const filteredData = worksData[lang].filter((work: WorkData) => {
+        const searchTerm = search?.toLowerCase() as string;
+
+        const ok =
+          work.title.toLowerCase().includes(searchTerm) ||
           work.clientName.toLowerCase().includes(searchTerm) ||
           work.narative.toLowerCase().includes(searchTerm) ||
           work.solution.toLowerCase().includes(searchTerm) ||
-          searchTerm === undefined) &&
-        (work.category + 1 === categoryTerm || categoryTerm === 0);
+          searchTerm === undefined;
 
-      return ok;
-    });
+        return ok;
+      });
 
-    setData(filteredData.reverse());
-  }, [category, lang, search]);
+      setData0(filteredData.reverse());
+    } else {
+      const filteredData = designWorksData.filter((work: DesignWorkData) => {
+        const searchTerm = search?.toLowerCase() as string;
+
+        const ok = work.title.toLowerCase().includes(searchTerm);
+
+        return ok;
+      });
+
+      setData1(filteredData);
+    }
+  }, [activeCategory, lang, search]);
 
   const onReset = () => {
     query.set("search", "");
@@ -131,7 +140,7 @@ export default function WorksPage() {
       });
     },
     {
-      dependencies: [data],
+      dependencies: [activeCategory],
       scope: "#worksPage",
       revertOnUpdate: true,
     }
@@ -182,11 +191,11 @@ export default function WorksPage() {
             <Box
               className="categoryChip"
               key={i}
-              ref={parseInt(category as string) === i ? activeRef : null}
+              ref={activeCategory === i ? activeRef : null}
             >
               <Button
                 className="btn-solid clicky"
-                color={parseInt(category as string) === i ? "p.500" : ""}
+                color={activeCategory === i ? "p.500" : ""}
                 onClick={() => {
                   query.set("category", i.toString());
                   navigate(`${location.pathname}?${query.toString()}`);
@@ -200,20 +209,34 @@ export default function WorksPage() {
       </Box>
 
       <Container py={16} pt={10} flex={1} minH={"500px"}>
-        {data && data.length > 0 ? (
+        {activeCategory === 0 && data0 && data0.length > 0 ? (
           <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
-            {data.map((work, i) => {
-              // 0 = web works | 1 = design works
-              if (work.category === 0) {
-                return (
-                  <Box className={"workItem"} key={i}>
-                    <PortfolioCard work={work} index={i} />
-                  </Box>
-                );
-              } else {
-                return null;
-              }
-            })}
+            {data0.map((work, i) => (
+              <Box className={"workItem"} key={i}>
+                <PortfolioCard work={work} index={i} />
+              </Box>
+            ))}
+          </SimpleGrid>
+        ) : (
+          <NoData />
+        )}
+
+        {activeCategory === 1 && data1 && data1.length > 0 ? (
+          <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
+            {data1.map((work, i) => (
+              <Box
+                scrollSnapAlign={"center"}
+                className="workItem"
+                key={i}
+                width={"100%"}
+                h={"456px"}
+                overflow={"clip"}
+                borderRadius={12}
+              >
+                {/* <InstagramEmbed url={work.url} width={"100%"} /> */}
+                <Image src={work.url} />
+              </Box>
+            ))}
           </SimpleGrid>
         ) : (
           <NoData />

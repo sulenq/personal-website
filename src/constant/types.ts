@@ -32,7 +32,11 @@ export type WorksData = {
   [lang in LanguageOptions]: WorkData[];
 };
 
-export type DesignWorksData = string[];
+export type DesignWorkData = {
+  title: string;
+  url: string;
+};
+export type DesignWorksData = DesignWorkData[];
 
 export type AboutData = {
   [lang in LanguageOptions]: {
