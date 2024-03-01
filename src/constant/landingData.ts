@@ -1,5 +1,6 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import worksData from "./worksData";
+import designWorksData from "./designWorksData";
 
 const landingData = {
   landingNav: {
@@ -174,7 +175,7 @@ const landingData = {
         viewDetail: "View Detail",
       },
     },
-    worksItem: worksData,
+    worksItem: designWorksData,
   },
 
   contact: {

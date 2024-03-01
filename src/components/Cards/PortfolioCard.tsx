@@ -32,7 +32,7 @@ export default function PortfolioCard(props: any) {
       overflow={"clip"}
       className="clicky"
       w={props?.w}
-      h={"400px"}
+      h={"456px"}
       _hover={{ opacity: isOpen ? 1 : 0.8 }}
       transition={"200ms"}
       gap={0}

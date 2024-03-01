@@ -21,13 +21,14 @@ import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
+import { InstagramEmbed } from "react-social-media-embed";
 
 export default function Works() {
   const lang = getLang();
   const sw = useScreenWidth();
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [worksType, setWorksType] = useState<0 | 1>(0);
+  const [worksType, setWorksType] = useState<0 | 1>(1);
 
   const handlePrev = (): void => {
     if (containerRef.current) {
@@ -227,19 +228,24 @@ export default function Works() {
                     py={4}
                     align={"stretch"}
                   >
-                    {landingData.designWorks.worksItem[lang]
+                    {landingData.designWorks.worksItem
                       .slice()
                       .reverse()
-                      .map((work, i) => {
+                      .map((url, i) => {
                         const ok = i < 4;
 
                         return (
                           ok && (
-                            <Box className="workItem" key={i}>
-                              <PortfolioCard
-                                work={work}
-                                w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
-                              />
+                            <Box
+                              scrollSnapAlign={"center"}
+                              className="workItem"
+                              key={i}
+                              width={sw < 350 ? "calc(100vw - 40px)" : "328px"}
+                              h={"456px"}
+                              overflow={"clip"}
+                              borderRadius={12}
+                            >
+                              <InstagramEmbed url={url} width={"100%"} />
                             </Box>
                           )
                         );
@@ -253,7 +259,7 @@ export default function Works() {
                         borderRadius={12}
                         overflow={"clip"}
                         w={"280px"}
-                        h={"400px"}
+                        h={"100%"}
                         p={5}
                         transition={"200ms"}
                         justify={"center"}
