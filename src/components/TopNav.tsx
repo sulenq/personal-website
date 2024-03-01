@@ -66,19 +66,15 @@ export default function TopNav(props: any) {
         backdropFilter={"blur(5px)"}
         // borderRadius={12}
       >
-        <HStack
-          flexShrink={0}
-          cursor={"pointer"}
-          as={Link}
-          to={"/"}
-          w={[null, null, "300px"]}
-        >
-          <Image
-            loading={"lazy"}
-            src="/logos/logoColor.svg"
-            h={"24px"}
-            borderRadius={"0 !important"}
-          />
+        <HStack flexShrink={0} w={[null, null, "300px"]}>
+          <Link to={"/"}>
+            <Image
+              loading={"lazy"}
+              src="/logos/logo.svg"
+              h={"24px"}
+              borderRadius={"0 !important"}
+            />
+          </Link>
         </HStack>
 
         {sw > 850 ? (
