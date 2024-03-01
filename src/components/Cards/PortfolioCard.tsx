@@ -24,7 +24,7 @@ export default function PortfolioCard(props: any) {
       {...props}
       bgImage={work.image}
       bgSize={"cover"}
-      bgPos={"center"}
+      bgPos={"top"}
       cursor={"pointer"}
       scrollSnapAlign={"center"}
       align={"stretch"}
