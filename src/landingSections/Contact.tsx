@@ -1,4 +1,5 @@
 import {
+  Box,
   Center,
   Link as ChakraLink,
   Icon,
@@ -43,35 +44,32 @@ export default function Contact(props: any) {
   // Animation
   useGSAP(
     () => {
-      gsap.from("#contactContent", {
+      gsap.from(".contactContent", {
         scrollTrigger: scrollTriggerConfig("#contactContent"),
-        x: -300,
+        y: 50,
         opacity: 0,
       });
 
-      gsap.from("#faqs", {
-        scrollTrigger: scrollTriggerConfig("#faqsContent"),
-        x: 300,
+      gsap.from(".contactItem", {
+        scrollTrigger: scrollTriggerConfig("#contactContent"),
+        scale: 0.5,
         opacity: 0,
+        stagger: {
+          each: 0.2,
+        },
       });
     },
     { scope: "#contact" }
   );
 
   return (
-    <VStack
-      id="contact"
-      align={"stretch"}
-      py={20}
-      bg={"var(--divider2)"}
-      {...props}
-    >
+    <VStack id="contact" align={"stretch"} bg={"var(--divider2)"} {...props}>
       <Container>
-        <VStack>
+        <VStack id="contactContent" py={20}>
           <Text
             textAlign={"center"}
             fontSize={38}
-            className="serif"
+            className="serif contactContent"
             maxW={"800px"}
             mb={4}
           >
@@ -80,21 +78,26 @@ export default function Contact(props: any) {
 
           <Wrap justify={"center"} w={"100%"}>
             {contacts.map((contact, i) => (
-              <Center
-                key={i}
-                p={5}
-                borderRadius={12}
-                cursor={"pointer"}
-                transition={"200ms"}
-                _hover={{ bg: "var(--divider)" }}
-                role="group"
-                className="clicky"
-                as={ChakraLink}
-                href={contact.link}
-                isExternal
-              >
-                <Icon as={contact.icon} fontSize={72} weight="thin" />
-              </Center>
+              <Box className="contactItem" key={i}>
+                <Center
+                  p={5}
+                  borderRadius={12}
+                  cursor={"pointer"}
+                  transition={"200ms"}
+                  _hover={{ bg: "var(--divider)" }}
+                  role="group"
+                  className="clicky"
+                  as={ChakraLink}
+                  href={contact.link}
+                  isExternal
+                >
+                  <Icon
+                    as={contact.icon}
+                    fontSize={[48, 64, 72]}
+                    weight="thin"
+                  />
+                </Center>
+              </Box>
             ))}
           </Wrap>
         </VStack>

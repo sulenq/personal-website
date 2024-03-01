@@ -116,7 +116,7 @@ export default function Hero() {
               <VStack
                 bg={"var(--divider)"}
                 flex={1}
-                maxH={"480px"}
+                maxH={"520px"}
                 pt={12}
                 px={2}
                 justify={"flex-end"}
@@ -127,7 +127,7 @@ export default function Hero() {
                   mt={"auto"}
                   alt="Fatwa Linovera"
                   src="/images/pas.png"
-                  w={"100%"}
+                  maxW={"300px"}
                   objectFit={"contain"}
                 />
               </VStack>

@@ -125,12 +125,12 @@ const WorksDetailPage = () => {
             mb={20}
             maxH={"700px"}
             objectFit={"cover"}
-            objectPosition={"top"}
+            // objectPosition={"top"}
           />
 
           <VStack className="narativeContent" align={"stretch"}>
-            <Wrap mb={20}>
-              <Box className="narative" flex={["0 0 100%", null, "0 0 200px"]}>
+            <Wrap mb={20} spacingX={5}>
+              <Box className="narative" flex={["0 0 100%", null, "0 0 320px"]}>
                 <Text className="serif" fontSize={32}>
                   {lang === "id" ? "Penjelasan Singkat" : "Brief"}
                 </Text>
@@ -145,8 +145,8 @@ const WorksDetailPage = () => {
               </Box>
             </Wrap>
 
-            <Wrap mb={20}>
-              <Box className="narative" flex={["0 0 100%", null, "0 0 200px"]}>
+            <Wrap mb={20} spacingX={5}>
+              <Box className="narative" flex={["0 0 100%", null, "0 0 320px"]}>
                 <Text className="serif" fontSize={32}>
                   {lang === "id" ? "Yang saya lakukan" : "What i do"}
                 </Text>

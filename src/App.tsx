@@ -13,7 +13,9 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   }, [pathname]);
 
   return null;
@@ -30,6 +32,7 @@ const App = () => {
     <ChakraProvider theme={globalTheme}>
       <BrowserRouter>
         <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Landing />} />
 
