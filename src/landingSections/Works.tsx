@@ -9,6 +9,7 @@ import {
   Heading,
   Button,
   Stack,
+  Image,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import landingData from "../constant/landingData";
@@ -21,7 +22,6 @@ import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
-import { InstagramEmbed } from "react-social-media-embed";
 
 export default function Works() {
   const lang = getLang();
@@ -154,8 +154,8 @@ export default function Works() {
                         bg={"var(--divider)"}
                         borderRadius={12}
                         overflow={"clip"}
-                        w={"280px"}
-                        h={"456px"}
+                        w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                        h={"100%"}
                         p={5}
                         transition={"200ms"}
                         justify={"center"}
@@ -176,7 +176,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          bottom={"-120px"}
+                          top={"0"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}
@@ -241,11 +241,10 @@ export default function Works() {
                               className="workItem"
                               key={i}
                               width={sw < 350 ? "calc(100vw - 40px)" : "328px"}
-                              h={"456px"}
                               overflow={"clip"}
                               borderRadius={12}
                             >
-                              <InstagramEmbed url={work.url} width={"100%"} />
+                              <Image src={work.imageUrl} width={"100%"} />
                             </Box>
                           )
                         );
@@ -258,7 +257,7 @@ export default function Works() {
                         bg={"var(--divider)"}
                         borderRadius={12}
                         overflow={"clip"}
-                        w={"280px"}
+                        w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
                         h={"100%"}
                         p={5}
                         transition={"200ms"}
@@ -280,7 +279,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          bottom={"-120px"}
+                          top={"0"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}

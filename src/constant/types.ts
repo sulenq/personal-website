@@ -34,6 +34,7 @@ export type WorksData = {
 
 export type DesignWorkData = {
   title: string;
+  imageUrl: string;
   url: string;
 };
 export type DesignWorksData = DesignWorkData[];
