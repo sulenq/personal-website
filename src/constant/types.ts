@@ -22,7 +22,7 @@ export type WorkData = {
   clientName: string;
   title: string;
   image: string;
-  narative: string;
+  narrative: string;
   solution: string;
   ss: string[];
   ssScrollLength: number;

@@ -9,7 +9,7 @@ import {
   VStack,
   Wrap,
 } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import worksData from "../constant/worksData";
 import MissingPage from "./MissingPage";
@@ -31,6 +31,15 @@ const WorksDetailPage = () => {
   const { trigger } = useTrigger();
   const data = worksData[lang].slice().reverse()[index];
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current && carouselRef.current) {
+      containerRef.current.scrollLeft = 0;
+    }
+  }, []);
+
   const handlePrev = () => {
     if (containerRef.current) {
       containerRef.current.scrollLeft -= data.ssScrollLength;
@@ -46,9 +55,6 @@ const WorksDetailPage = () => {
   const handleOpenImg = (l: string) => {
     window.open(l);
   };
-
-  const containerRef = useRef<HTMLDivElement>(null);
-  const carouselRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -137,7 +143,7 @@ const WorksDetailPage = () => {
                 flex={["0 0 100%", null, "1 0 600px"]}
                 mt={2}
               >
-                <Text fontSize={18}>{data.narative}</Text>
+                <Text fontSize={18}>{data.narrative}</Text>
               </Box>
             </Wrap>
 
