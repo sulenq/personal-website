@@ -86,6 +86,8 @@ export default function Hero() {
                   colorScheme="bnw"
                   fontSize={"18px !important"}
                   className="clicky"
+                  as={ChakraLink}
+                  href="#contact"
                 >
                   {data.contact}
                 </Button>

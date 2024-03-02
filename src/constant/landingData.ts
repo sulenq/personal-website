@@ -45,7 +45,7 @@ const landingData = {
       ],
     },
     en: {
-      greeting: "Hi there, i'm",
+      greeting: "Hi there, I'm",
       narative:
         "A web developer who focuses on React is also skilled in graphic design to create visually unique designs",
       contact: "Contact Me",
