@@ -220,7 +220,7 @@ export default function WorksPage() {
                   width={"100%"}
                   overflow={"clip"}
                   borderRadius={12}
-                  bg={"black"}
+                  bg={"var(--divider)"}
                 >
                   <Image
                     src={work.imageUrl}
