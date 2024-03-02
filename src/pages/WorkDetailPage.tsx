@@ -172,7 +172,7 @@ const WorksDetailPage = () => {
               ref={carouselRef}
               minW={"100%"}
               w={"max-content"}
-              // justify={"center"}
+              justify={"flex-start"}
               gap={4}
               px={[4, 6, 8]}
               py={2}
