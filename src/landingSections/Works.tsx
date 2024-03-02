@@ -176,7 +176,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          top={"0"}
+                          top={"-50px"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}
@@ -279,7 +279,7 @@ export default function Works() {
                           transition={"200ms"}
                           mb={4}
                           position={"absolute"}
-                          top={"0"}
+                          top={"-50px"}
                           right={"-100px"}
                           zIndex={1}
                           opacity={0.05}
