@@ -161,7 +161,7 @@ export default function WorksPage() {
         )}
 
         {activeCategory === 1 && (
-          <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
+          <SimpleGrid columns={[3, 2, 3, null, 4]} gap={5} zIndex={1}>
             {designWorksData
               .slice()
               .reverse()
