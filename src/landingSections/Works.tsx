@@ -164,7 +164,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=0"}
+                        to={"/works?category=0"}
                         position={"relative"}
                         className="clicky"
                       >
@@ -267,7 +267,7 @@ export default function Works() {
                         cursor={"pointer"}
                         _hover={{ bg: "var(--divider3)" }}
                         as={Link}
-                        to={"/works?search=&category=1"}
+                        to={"/works?category=1"}
                         position={"relative"}
                         className="clicky"
                       >

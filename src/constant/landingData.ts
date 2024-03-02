@@ -11,7 +11,7 @@ const landingData = {
       },
       {
         name: "Portofolio",
-        link: "/works?search=&category=0",
+        link: "/works?category=0",
       },
     ],
     en: [
@@ -21,7 +21,7 @@ const landingData = {
       },
       {
         name: "Portfolio",
-        link: "/works?search=&category=0",
+        link: "/works?category=0",
       },
     ],
   },

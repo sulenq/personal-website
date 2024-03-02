@@ -1,16 +1,22 @@
-import { Box, Button, HStack, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import {
+  Box,
+  Button,
+  HStack,
+  Image,
+  Link as ChakraLink,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
 import Container from "../components/Container";
 import useTrigger from "../global/useTrigger";
 import landingData from "../constant/landingData";
 import { getLang } from "../lib/lang";
 import { useLocation, useNavigate } from "react-router-dom";
 import worksData from "../constant/worksData";
-import NoData from "../components/Feedbacks/NoData";
 import Contact from "../landingSections/Contact";
 import Footer from "../landingSections/Footer";
 import PageHeader from "../components/PageHeader";
-import { DesignWorkData, WorkData } from "../constant/types";
 import PortfolioCard from "../components/Cards/PortfolioCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -29,11 +35,10 @@ export default function WorksPage() {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
   const activeCategory = parseInt(query.get("category") as string);
-  const search = query.get("search");
 
   useEffect(() => {
     if (location.pathname === "/works" && !location.search) {
-      navigate("/works?search=&category=0");
+      navigate("/works?category=0");
     }
   }, [location.pathname, navigate]);
 
@@ -48,59 +53,6 @@ export default function WorksPage() {
       });
     }
   }, [activeCategory]);
-
-  // const [searchTimeout, setSearchTimeout] = useState<any>(null);
-  // const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (searchTimeout) {
-  //     clearTimeout(searchTimeout);
-  //   }
-
-  //   setSearchTimeout(
-  //     setTimeout(() => {
-  //       query.set("search", e.target.value);
-  //       navigate(`${location.pathname}?${query.toString()}`);
-  //     }, 500)
-  //   );
-  // };
-
-  const [data0, setData0] = useState<WorkData[] | null>(null);
-  const [data1, setData1] = useState<DesignWorkData[] | null>(null);
-
-  // Data Setter
-  useEffect(() => {
-    if (activeCategory === 0) {
-      const filteredData = worksData[lang].filter((work: WorkData) => {
-        const searchTerm = search?.toLowerCase() as string;
-
-        const ok =
-          work.title.toLowerCase().includes(searchTerm) ||
-          work.clientName.toLowerCase().includes(searchTerm) ||
-          work.narative.toLowerCase().includes(searchTerm) ||
-          work.solution.toLowerCase().includes(searchTerm) ||
-          searchTerm === undefined;
-
-        return ok;
-      });
-
-      setData0(filteredData.reverse());
-    } else {
-      const filteredData = designWorksData.filter((work: DesignWorkData) => {
-        const searchTerm = search?.toLowerCase() as string;
-
-        const ok = work.title.toLowerCase().includes(searchTerm);
-
-        return ok;
-      });
-
-      setData1(filteredData.reverse());
-    }
-  }, [activeCategory, lang, search]);
-
-  // const onReset = () => {
-  //   query.set("search", "");
-  //   query.set("category", "0");
-  //   navigate(`${location.pathname}?${query.toString()}`);
-  // };
 
   useGSAP(() => {
     gsap.from("#worksControl", {
@@ -195,46 +147,49 @@ export default function WorksPage() {
       </Box>
 
       <Container py={16} pt={10} flex={1} minH={"500px"}>
-        {activeCategory === 0 ? (
-          data0 && data0.length > 0 ? (
-            <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
-              {data0.map((work, i) => (
+        {activeCategory === 0 && (
+          <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
+            {worksData[lang]
+              .slice()
+              .reverse()
+              .map((work, i) => (
                 <Box className={"workItem"} key={i}>
                   <PortfolioCard work={work} index={i} />
                 </Box>
               ))}
-            </SimpleGrid>
-          ) : (
-            <NoData />
-          )
-        ) : null}
+          </SimpleGrid>
+        )}
 
-        {activeCategory === 1 ? (
-          data1 && data1.length > 0 ? (
-            <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
-              {data1.map((work, i) => (
-                <Box
-                  scrollSnapAlign={"center"}
-                  className="workItem"
-                  key={i}
-                  width={"100%"}
-                  overflow={"clip"}
-                  borderRadius={12}
-                  bg={"var(--divider)"}
-                >
-                  <Image
-                    src={work.imageUrl}
-                    h={"100%"}
-                    w={"100%"}
-                    objectFit={"contain"}
-                  />
+        {activeCategory === 1 && (
+          <SimpleGrid columns={[1, 2, 3, null, 4]} gap={5} zIndex={1}>
+            {designWorksData
+              .slice()
+              .reverse()
+              .map((work, i) => (
+                <Box className="workItem">
+                  <ChakraLink
+                    scrollSnapAlign={"center"}
+                    key={i}
+                    width={"100%"}
+                    overflow={"clip"}
+                    borderRadius={12}
+                    bg={"var(--divider)"}
+                    _hover={{ opacity: 0.8 }}
+                    transition={"200ms"}
+                    href={work.url}
+                    isExternal
+                  >
+                    <Image
+                      src={work.imageUrl}
+                      h={"100%"}
+                      w={"100%"}
+                      objectFit={"contain"}
+                    />
+                  </ChakraLink>
                 </Box>
               ))}
-            </SimpleGrid>
-          ) : (
-            <NoData />
-          )
-        ) : null}
+          </SimpleGrid>
+        )}
       </Container>
 
       <Contact />
