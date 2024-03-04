@@ -35,8 +35,8 @@ const landingData = {
       portfolio: "Portofolio",
       stats: [
         {
-          name: "Portofolio",
-          value: 7,
+          name: "Portofolio (web & desain)",
+          value: "6 & 50",
         },
         {
           name: "Tahun Pengalaman",
@@ -52,8 +52,8 @@ const landingData = {
       portfolio: "Portfolio",
       stats: [
         {
-          name: "Portfolio",
-          value: 7,
+          name: "Portfolio (web & design)",
+          value: "6 & 50",
         },
         {
           name: "Years Experience",
