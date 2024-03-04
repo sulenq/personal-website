@@ -66,7 +66,7 @@ export default function TopNav(props: any) {
         backdropFilter={"blur(5px)"}
         // borderRadius={12}
       >
-        <HStack flexShrink={0} w={[null, null, "300px"]}>
+        <HStack flexShrink={0} w={[null, null, "200px"]}>
           <Link to={"/"}>
             <Image
               loading={"lazy"}
@@ -100,7 +100,7 @@ export default function TopNav(props: any) {
           ""
         )}
 
-        <HStack flexShrink={0} w={[null, null, "300px"]} justify={"flex-end"}>
+        <HStack flexShrink={0} w={[null, null, "200px"]} justify={"flex-end"}>
           <ColorModeSwitcher ml={0} color={props?.color || "current"} />
 
           <LangSwitcher color={props?.color || "current"} />
