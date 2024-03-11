@@ -18,10 +18,12 @@ import { getLang } from "../lib/lang";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import PageContainer from "../components/PageContainer";
+import useScreenWidth from "../hooks/useScreenWidth";
 
 export default function Hero() {
   const lang = getLang();
   const data = landingData.hero[lang];
+  const sw = useScreenWidth();
 
   // Animation
   useGSAP(
@@ -146,7 +148,7 @@ export default function Hero() {
                 {data.narative}
               </Text>
 
-              <HStack className="init" align={"stretch"} mt={"auto"}>
+              <HStack className="init" align={"stretch"} mt={"auto"} gap={5}>
                 {data.stats.map((stat, i) => (
                   <VStack key={i} borderRadius={12} w={"50%"}>
                     <Text
@@ -156,7 +158,12 @@ export default function Hero() {
                     >
                       {stat.value}
                     </Text>
-                    <Text mr={["0", null, null, "auto"]}>{stat.name}</Text>
+                    <Text
+                      mr={["0", null, null, "auto"]}
+                      textAlign={sw < 405 ? "center" : "left"}
+                    >
+                      {stat.name}
+                    </Text>
                   </VStack>
                 ))}
               </HStack>
