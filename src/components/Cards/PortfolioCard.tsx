@@ -32,11 +32,11 @@ export default function PortfolioCard(props: any) {
       overflow={"clip"}
       className="clicky"
       w={props?.w}
-      h={"406px"}
       _hover={{ opacity: isOpen ? 1 : 0.8 }}
       transition={"200ms"}
       gap={0}
       onClick={handleOnClick}
+      aspectRatio={"164 / 203.4"}
     >
       <VStack
         transition={"200ms"}

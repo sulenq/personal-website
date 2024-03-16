@@ -166,10 +166,9 @@ export default function WorksPage() {
               .slice()
               .reverse()
               .map((work, i) => (
-                <Box className="workItem">
+                <Box className="workItem" key={i}>
                   <ChakraLink
                     scrollSnapAlign={"center"}
-                    key={i}
                     width={"100%"}
                     overflow={"clip"}
                     borderRadius={12}

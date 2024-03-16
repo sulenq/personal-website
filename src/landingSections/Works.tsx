@@ -3,7 +3,7 @@ import {
   Icon,
   Text,
   VStack,
-  // Link as ChakraLink,
+  Link as ChakraLink,
   Box,
   IconButton,
   Heading,
@@ -140,7 +140,7 @@ export default function Works() {
                                 work={work}
                                 index={i}
                                 // setActiveWork={setActiveWork}
-                                w={sw < 350 ? "calc(100vw - 40px)" : "300px"}
+                                w={sw < 350 ? "calc(100vw - 80px)" : "300px"}
                               />
                             </Box>
                           )
@@ -237,14 +237,28 @@ export default function Works() {
                         return (
                           ok && (
                             <Box
-                              scrollSnapAlign={"center"}
                               className="workItem"
+                              width={sw < 350 ? "calc(100vw - 80px)" : "328px"}
+                              scrollSnapAlign={"center"}
                               key={i}
-                              width={sw < 350 ? "calc(100vw - 40px)" : "328px"}
-                              overflow={"clip"}
-                              borderRadius={12}
                             >
-                              <Image src={work.imageUrl} width={"100%"} />
+                              <ChakraLink
+                                width={"100%"}
+                                overflow={"clip"}
+                                borderRadius={12}
+                                bg={"var(--divider)"}
+                                _hover={{ opacity: 0.8 }}
+                                transition={"200ms"}
+                                href={work.url}
+                                isExternal
+                              >
+                                <Image
+                                  src={work.imageUrl}
+                                  h={"100%"}
+                                  w={"100%"}
+                                  objectFit={"contain"}
+                                />
+                              </ChakraLink>
                             </Box>
                           )
                         );
