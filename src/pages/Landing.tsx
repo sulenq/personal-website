@@ -36,9 +36,9 @@ export default function Landing() {
 
           <Works />
 
-          <Contact bg={"var(--divider)"} />
+          <Contact />
 
-          <Footer bg={"var(--divider)"} />
+          <Footer />
         </>
       )}
     </PageContainer>

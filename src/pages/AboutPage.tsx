@@ -47,8 +47,7 @@ export default function AboutPage() {
     "Music",
     "Game",
     "Crypto",
-    "Coding",
-    "Programming",
+    "Tech",
     "Education System",
     "Economics",
     "Pokemon",
@@ -176,7 +175,7 @@ export default function AboutPage() {
           </SimpleGrid>
         </Container>
 
-        <VStack bg={"var(--divider)"} py={24}>
+        <VStack py={24}>
           <Container>
             <SimpleGrid columns={[1, 2]} gap={24}>
               <VStack gap={0} align={"stretch"}>

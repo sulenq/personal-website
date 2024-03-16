@@ -120,7 +120,7 @@ export default function DrawerNav(props: any) {
             gap={3}
           >
             <VStack className="init" justify={"space-between"} mb={4}>
-              <Text>{formatDate(currentDate.toString())}</Text>
+              <Text fontSize={16}>{formatDate(currentDate.toString())}</Text>
             </VStack>
             <HStack
               color={"p.500"}
@@ -246,6 +246,10 @@ export default function DrawerNav(props: any) {
                 {lang === "id" ? "Hubungi Saya" : "Contact Me"}
               </Button>
             </Box>
+
+            <Text textAlign={"center"} mt={5} className="init" opacity={0.5}>
+              2024 © Fatwa Linovera. All right reserved.
+            </Text>
           </VStack>
         </VStack>
       )}
