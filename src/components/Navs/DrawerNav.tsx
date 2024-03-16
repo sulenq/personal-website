@@ -120,7 +120,12 @@ export default function DrawerNav(props: any) {
             gap={3}
           >
             <VStack className="init" justify={"space-between"} mb={4}>
-              <Text fontSize={16}>{formatDate(currentDate.toString())}</Text>
+              <Text fontSize={16}>
+                {formatDate(
+                  currentDate.toString(),
+                  lang === "id" ? "id-ID" : "en-EN"
+                )}
+              </Text>
             </VStack>
             <HStack
               color={"p.500"}

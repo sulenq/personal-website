@@ -68,7 +68,7 @@ const aboutData = {
           title: "Web Developer",
           company: "Business Watch Indonesia",
           location: "Semarang, Indonesia",
-          periode: "Desember 2022 -  Sekarang",
+          periode: "Desember 2022 -  sekarang",
           jobs: [
             "Memperbaiki bug dan menambah fitur pagination pada web admin lama yang dikembangkan menggunakan React, Redux dan Code Igniter 3. ",
             "Mengembangkan web dengan React, Typescript dan Laravel yang meliputi: Landing page, Blog, Online Course, Webapp admin untuk mengelola web tersebut. ",
@@ -78,7 +78,7 @@ const aboutData = {
           title: "Frontend Developer",
           company: "Distro Studio",
           location: "Semarang, Indonesia",
-          periode: "Oktober 2022 -  Sekarang",
+          periode: "Oktober 2022 -  sekarang",
           jobs: [
             "Mengerjakan proyek dari client Distro Studio",
             "Membuat frontend (membuat tampilan dan implementasi API) menggunakan React dari desain yang dibuat oleh rekan tim",
@@ -147,7 +147,7 @@ const aboutData = {
           title: "Web Developer",
           company: "Business Watch Indonesia",
           location: "Semarang, Indonesia",
-          periode: "Desember 2022 -  Sekarang",
+          periode: "Desember 2022 - current",
           jobs: [
             "Memperbaiki bug dan menambah fitur pagination pada web admin lama yang dikembangkan menggunakan React, Redux dan Code Igniter 3. ",
             "Mengembangkan web dengan React, Typescript dan Laravel yang meliputi: Landing page, Blog, Online Course, Webapp admin untuk mengelola web tersebut. ",
@@ -157,7 +157,7 @@ const aboutData = {
           title: "Frontend Developer",
           company: "Distro Studio",
           location: "Semarang, Indonesia",
-          periode: "Oktober 2022 -  Sekarang",
+          periode: "Oktober 2022 - current",
           jobs: [
             "Mengerjakan proyek dari client Distro Studio",
             "Membuat frontend (membuat tampilan dan implementasi API) menggunakan React dari desain yang dibuat oleh rekan tim",
