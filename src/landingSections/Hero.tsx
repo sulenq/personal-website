@@ -46,8 +46,8 @@ export default function Hero() {
           <SimpleGrid
             columns={[1, null, null, 3]}
             flex={1}
-            pt={5}
-            pb={16}
+            py={[5, null, 20]}
+            pb={[16, null, 28]}
             // borderBottom={useColorModeValue("", "1px solid var(--divider3)")}
             gap={5}
           >
