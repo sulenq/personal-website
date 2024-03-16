@@ -120,14 +120,7 @@ export default function AboutPage() {
       <PageHeader>{landingData.about[lang].nav}</PageHeader>
 
       <VStack align={"stretch"} overflow={"hidden"} gap={0}>
-        <Container
-          py={16}
-          pt={10}
-          mb={8}
-          flex={1}
-          minH={"500px"}
-          position={"relative"}
-        >
+        <Container pt={10} flex={1} minH={"500px"} position={"relative"}>
           <SimpleGrid columns={[1, null, null, 2]} gap={12}>
             <HStack
               className="aboutImage"
@@ -175,7 +168,7 @@ export default function AboutPage() {
           </SimpleGrid>
         </Container>
 
-        <VStack py={24}>
+        <VStack py={24} pt={16}>
           <Container>
             <SimpleGrid columns={[1, 2]} gap={24}>
               <VStack gap={0} align={"stretch"}>
