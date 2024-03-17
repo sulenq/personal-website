@@ -63,7 +63,7 @@ export default function Contact(props: any) {
   );
 
   return (
-    <VStack id="contact" align={"stretch"} bg={"var(--divider2)"} {...props}>
+    <VStack id="contact" align={"stretch"} bg={"var(--divider)"} {...props}>
       <Container>
         <VStack id="contactContent" py={20}>
           <Text

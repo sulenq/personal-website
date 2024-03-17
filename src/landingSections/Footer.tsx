@@ -24,7 +24,7 @@ export default function Footer(props: any) {
   return (
     <VStack
       id="footer"
-      bg={"var(--divider2)"}
+      bg={"var(--divider)"}
       p={5}
       align={"stretch"}
       {...props}

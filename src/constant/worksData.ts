@@ -83,9 +83,9 @@ const worksData: WorksData = {
         "Landing Page Kubu.id yang Berisi Semua Web Kubu.id (Kubu Mobile App, Blog, Online Course)",
       image: "/images/works/4.png",
       solution:
-        "Membuat backend menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
+        "Membuat backend CMS (Content Management System) menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
       narrative:
-        "Web online course ini ditujukan untuk orang yang ingin mengikuti proses pembelajaran dengan cara daring. Kurikulum terstruktur dan akses video selanjutnya bisa diakses hanya dengan cara menyelesaikan video yang tersedia. Playback video tidak bisa dimajukan namun bisa disimpan max played nya.",
+        "Kubu.id adalah aplikasi dengan basis komunitas online untuk kamu yang sudah bekerja dan bagi calon pekerja. Tujuannya menjadi pusat pengetahuan dan informasi terkait ketenagakerjaan, sebagai media untuk konsultasi online dengan profesional, mengembangkan jaringan dan saling berbagi informasi.",
       ss: [
         "/images/works/4/ss/0.png",
         "/images/works/4/ss/1.png",
@@ -103,9 +103,9 @@ const worksData: WorksData = {
       title: "Blog Kubu.id yang Berisi Artikel Menarik",
       image: "/images/works/3.png",
       solution:
-        "Membuat backend menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
+        "Membuat backend manajemen blog menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
       narrative:
-        "Web online course ini ditujukan untuk orang yang ingin mengikuti proses pembelajaran dengan cara daring. Kurikulum terstruktur dan akses video selanjutnya bisa diakses hanya dengan cara menyelesaikan video yang tersedia. Playback video tidak bisa dimajukan namun bisa disimpan max played nya.",
+        "Kubu.id menawarkan platform web blog yang unik, berfokus pada ketenagakerjaan untuk para profesional yang sudah bekerja maupun calon pekerja. Di sini, pengguna dapat menemukan beragam artikel, panduan, dan tips terkait dunia kerja, serta konsultasi online dengan para profesional terkait. Selain itu, kubu.id juga menjadi tempat untuk membangun jaringan dan berbagi pengalaman antara sesama anggota komunitas. Dengan kombinasi pengetahuan, konsultasi, dan interaksi antaranggota, kubu.id menjadi sumber daya yang berharga bagi siapa pun yang ingin sukses dalam karir mereka.",
       ss: [
         "/images/works/3/ss/0.png",
         "/images/works/3/ss/1.png",
@@ -138,6 +138,7 @@ const worksData: WorksData = {
       ssScrollLength: 450,
     },
   ],
+
   en: [
     {
       category: 0,
@@ -220,9 +221,9 @@ const worksData: WorksData = {
         "All-in-One Landing Page for Kubu.id Websites (Kubu Mobile App, Blog, Online Course)",
       image: "/images/works/4.png",
       solution:
-        "Creating the backend using Laravel and creating the frontend for end users using React and ChakraUI (+ dark mode).",
+        "Create a CMS (Content Management System) backend using Laravel and create a user frontend using React and ChakraUI (+dark mode)",
       narrative:
-        "This online course website is intended for people who want to follow the learning process online. The curriculum is structured and access to the next video can only be accessed by completing the available video. Video playback cannot be fast-forwarded but the maximum play count can be saved.",
+        "Kubu.id is an application with an online community base for those of you who are already working and for prospective workers. The aim is to become a center for knowledge and information related to employment, as a medium for online consultations with professionals, developing networks and sharing information.",
       ss: [
         "/images/works/4/ss/0.png",
         "/images/works/4/ss/1.png",
@@ -240,9 +241,9 @@ const worksData: WorksData = {
       title: "Kubu.id Blog Featuring Interesting Articles",
       image: "/images/works/3.png",
       solution:
-        "Creating the backend using Laravel and creating the frontend for end users using React and ChakraUI (+ dark mode).",
+        "Create a blog management backend using Laravel and create a user frontend using React and ChakraUI (+dark mode)",
       narrative:
-        "This online course website is intended for people who want to follow the learning process online. The curriculum is structured and access to the next video can only be accessed by completing the available video. Video playback cannot be fast-forwarded but the maximum play count can be saved.",
+        "Kubu.id offers a unique web blog platform, focused on employment for working professionals and prospective workers. Here, users can find various articles, guides and tips related to the world of work, as well as online consultations with related professionals. Apart from that, Kubu.id is also a place to build networks and share experiences between fellow community members. With a combination of knowledge, consultation, and member-to-member interaction,buku.id becomes a valuable resource for anyone who wants to be successful in their career.",
       ss: [
         "/images/works/3/ss/0.png",
         "/images/works/3/ss/1.png",
