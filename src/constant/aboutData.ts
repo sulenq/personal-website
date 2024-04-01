@@ -147,7 +147,7 @@ const aboutData = {
           title: "Web Developer",
           company: "Business Watch Indonesia",
           location: "Semarang, Indonesia",
-          period: "December 2022 - Present",
+          periode: "December 2022 - Present",
           jobs: [
             "Fixed bugs and added pagination feature to an old admin web developed using React, Redux, and Code Igniter 3.",
             "Developed web applications using React, Typescript, and Laravel including: Landing page, Blog, Online Course, Webapp admin to manage the website.",
@@ -157,7 +157,7 @@ const aboutData = {
           title: "Frontend Developer",
           company: "Distro Studio",
           location: "Semarang, Indonesia",
-          period: "October 2022 - Present",
+          periode: "October 2022 - Present",
           jobs: [
             "Worked on projects from Distro Studio clients.",
             "Developed frontends (UI design and API implementation) using React from designs provided by team members.",
@@ -167,7 +167,7 @@ const aboutData = {
           title: "Graphic Designer",
           company: "Public Relations, Dian Nuswantoro University",
           location: "Semarang, Indonesia",
-          period: "May 2022 - April 2023",
+          periode: "May 2022 - April 2023",
           jobs: [
             "Created vector assets with unique styles using CorelDRAW.",
             "Designed content for Dian Nuswantoro University's official Instagram account.",
