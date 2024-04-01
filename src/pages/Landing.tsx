@@ -16,7 +16,6 @@ export default function Landing() {
   useEffect(() => {
     const lang = getLang();
     if (!lang) {
-      console.log("tes");
       setLangLocal("en");
       setTrigger(true);
     } else {

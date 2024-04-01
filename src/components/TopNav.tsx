@@ -79,7 +79,7 @@ export default function TopNav(props: any) {
 
         {sw > 850 ? (
           <HStack gap={0}>
-            {landingData.landingNav[lang].map((nav, i) => (
+            {landingData.landingNav[lang]?.map((nav, i) => (
               <Button
                 as={Link}
                 to={nav.link}
