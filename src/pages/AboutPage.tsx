@@ -43,14 +43,13 @@ export default function AboutPage() {
     { name: "CorelDRAW", rate: "Advance" },
   ];
   const interests = [
-    "Art",
-    "Music",
     "Game",
-    "Crypto",
+    "Game Development",
+    "Design",
+    "Nature",
     "Tech",
-    "Education System",
+    "Education",
     "Economics",
-    "Pokemon",
   ];
 
   // Animation
@@ -314,7 +313,7 @@ export default function AboutPage() {
 
                   <HStack mb={2} className="dataItem_6">
                     <Icon as={Phone} fontSize={20} />
-                    <Text>0858777525203</Text>
+                    <Text>085877752503</Text>
                   </HStack>
 
                   <HStack mb={4} className="dataItem_6">
