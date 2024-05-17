@@ -131,7 +131,7 @@ export default function Works() {
                       .slice()
                       .reverse()
                       .map((work, i) => {
-                        const ok = i < 4;
+                        const ok = i < 5;
 
                         return (
                           ok && (

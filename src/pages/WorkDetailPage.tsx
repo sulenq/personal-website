@@ -9,20 +9,21 @@ import {
   VStack,
   Wrap,
 } from "@chakra-ui/react";
+import { useGSAP } from "@gsap/react";
+import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import worksData from "../constant/worksData";
-import MissingPage from "./MissingPage";
-import { getLang } from "../lib/lang";
 import Container from "../components/Container";
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import ImageView from "../components/ImageView";
+import TopNav from "../components/TopNav";
+import worksData from "../constant/worksData";
+import useTrigger from "../global/useTrigger";
 import Contact from "../landingSections/Contact";
 import Footer from "../landingSections/Footer";
-import useTrigger from "../global/useTrigger";
-import TopNav from "../components/TopNav";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { getLang } from "../lib/lang";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
+import MissingPage from "./MissingPage";
 
 const WorksDetailPage = () => {
   const { workIndex } = useParams<{ workIndex: string }>();
@@ -50,10 +51,6 @@ const WorksDetailPage = () => {
     if (containerRef.current) {
       containerRef.current.scrollLeft += data.ssScrollLength;
     }
-  };
-
-  const handleOpenImg = (l: string) => {
-    window.open(l);
   };
 
   useGSAP(
@@ -122,7 +119,7 @@ const WorksDetailPage = () => {
           <Image
             className="init"
             loading={"lazy"}
-            src={data.image}
+            src={data.imageAlter}
             borderRadius={24}
             mb={20}
             maxH={"700px"}
@@ -185,22 +182,7 @@ const WorksDetailPage = () => {
             >
               {data.ss.map((imagePath, i) => (
                 <Box className="image" key={i}>
-                  <Image
-                    loading={"lazy"}
-                    transition={"200ms"}
-                    _hover={{ opacity: 0.8 }}
-                    boxShadow={"0 0 10px 0 #00000010"}
-                    cursor={"pointer"}
-                    onClick={() => {
-                      handleOpenImg(imagePath);
-                    }}
-                    src={imagePath}
-                    h={["", "420px"]}
-                    w={["80vw", null, null, "fit-content"]}
-                    objectFit={"contain"}
-                    borderRadius={24}
-                    scrollSnapAlign={"center"}
-                  />
+                  <ImageView data={data} imagePath={imagePath} index={i} />
                 </Box>
               ))}
             </HStack>

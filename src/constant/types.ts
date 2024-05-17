@@ -22,6 +22,7 @@ export type WorkData = {
   clientName: string;
   title: string;
   image: string;
+  imageAlter: string;
   narrative: string;
   solution: string;
   ss: string[];
