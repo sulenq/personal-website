@@ -30,8 +30,8 @@ const worksData: WorksData = {
       clientName: "POLTEKKES SEMARANG",
       title:
         "Platform untuk Transaksi Pengujian Laboratorium dan Dasboard Admin untuk Mengelola Sistem",
-      image: "/images/works/1.webp",
-      imageAlter: "/images/works/1_alter.webp",
+      image: "/images/works/1.png",
+      imageAlter: "/images/works/1_alter.png",
       solution:
         "Saya sebagai frontend developer mengerjakan tampilan sesuai dengan desain yang sudah dibuat oleh rekan tim dan juga implementasi request API",
       narrative:
@@ -64,8 +64,8 @@ const worksData: WorksData = {
       clientName: "Bussiness Watch Indonesia",
       title:
         "Webapp Admin untuk Mengelola Situs Web Landing Page, Blog, Online Course",
-      image: "/images/works/2.webp",
-      imageAlter: "/images/works/2_alter.webp",
+      image: "/images/works/2.png",
+      imageAlter: "/images/works/2_alter.png",
       solution:
         "Membuat backend menggunakan laravel, yang pertama dibuat adalah sistem role dulu (create akun admin). Kemudian membuat logic CRUD blog dan course.",
       narrative:
@@ -89,8 +89,8 @@ const worksData: WorksData = {
       clientName: "Bussiness Watch Indonesia",
       title:
         "Landing Page Kubu.id yang Berisi Semua Web Kubu.id (Kubu Mobile App, Blog, Online Course)",
-      image: "/images/works/3.webp",
-      imageAlter: "/images/works/3_alter.webp",
+      image: "/images/works/3.png",
+      imageAlter: "/images/works/3_alter.png",
       solution:
         "Membuat backend CMS (Content Management System) menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
       narrative:
@@ -110,8 +110,8 @@ const worksData: WorksData = {
       clientLogo: "/logos/logo.png",
       clientName: "Bussiness Watch Indonesia",
       title: "Blog Kubu.id yang Berisi Artikel Menarik",
-      image: "/images/works/4.webp",
-      imageAlter: "/images/works/4_alter.webp",
+      image: "/images/works/4.png",
+      imageAlter: "/images/works/4_alter.png",
       solution:
         "Membuat backend manajemen blog menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI (+dark mode)",
       narrative:
@@ -131,8 +131,8 @@ const worksData: WorksData = {
       clientLogo: "/logos/logo.png",
       clientName: "Bussiness Watch Indonesia",
       title: "Online Course dari Kubu.id Berbasis Web",
-      image: "/images/works/5.webp",
-      imageAlter: "/images/works/5_alter.webp",
+      image: "/images/works/5.png",
+      imageAlter: "/images/works/5_alter.png",
       solution:
         "Membuat beberapa backend menggunakan laravel dan membuat frontend end user menggunakan React dan ChakraUI",
       narrative:
@@ -154,8 +154,8 @@ const worksData: WorksData = {
       clientLogo: "/images/clients/rski.png",
       clientName: "RUMAH SAKIT KASIH IBU",
       title: "Aplikasi HR untuk Rumah Sakit Kasih Ibu",
-      image: "/images/works/6.webp",
-      imageAlter: "/images/works/6_alter.webp",
+      image: "/images/works/6.png",
+      imageAlter: "/images/works/6_alter.png",
       solution:
         "Membuat webapp admin untuk mengelola master data dan presensi karyawab. Terdapat fitur pembuatan master data data karyawan, shift, keuangan,penggajian hingga pengaturan THR",
       narrative:
@@ -188,8 +188,8 @@ const worksData: WorksData = {
       clientLogo: "/images/clients/rski.png",
       clientName: "RUMAH SAKIT KASIH IBU",
       title: "Aplikasi Karyawan untuk Rumah Sakit Kasih Ibu",
-      image: "/images/works/7.webp",
-      imageAlter: "/images/works/7_alter.webp",
+      image: "/images/works/7.png",
+      imageAlter: "/images/works/7_alter.png",
       solution:
         "Membuat mobile app dan PWA untuk digunakan karyawan. Fitur utama pada aplikasi ini adalah presensi dengan foto dan geolokasi. Terdapat fitur lain dari permohonan cuti/izin, tukar shift, slip gaji. laporan hingga koperasi. Terintegrasi dengan alat fingerprint",
       narrative:
@@ -235,8 +235,8 @@ const worksData: WorksData = {
       clientName: "POLTEKKES SEMARANG",
       title:
         "Platform for Laboratory Testing Transactions and Admin Dashboard to Manage the System",
-      image: "/images/works/1.webp",
-      imageAlter: "/images/works/1_alter.webp",
+      image: "/images/works/1.png",
+      imageAlter: "/images/works/1_alter.png",
       solution:
         "As a frontend developer, I worked on the interface according to the design provided by the team and also implemented API requests.",
       narrative:
@@ -264,8 +264,8 @@ const worksData: WorksData = {
       clientName: "Bussiness Watch Indonesia",
       title:
         "Admin Webapp to Manage Landing Page, Blog, Online Course Websites",
-      image: "/images/works/2.webp",
-      imageAlter: "/images/works/2_alter.webp",
+      image: "/images/works/2.png",
+      imageAlter: "/images/works/2_alter.png",
       solution:
         "Creating the backend using Laravel. First, the role system was created (creating admin accounts). Then, CRUD logic for blogs and courses was implemented.",
       narrative:
@@ -289,8 +289,8 @@ const worksData: WorksData = {
       clientName: "Bussiness Watch Indonesia",
       title:
         "All-in-One Landing Page for Kubu.id Websites (Kubu Mobile App, Blog, Online Course)",
-      image: "/images/works/3.webp",
-      imageAlter: "/images/works/3_alter.webp",
+      image: "/images/works/3.png",
+      imageAlter: "/images/works/3_alter.png",
       solution:
         "Create a CMS (Content Management System) backend using Laravel and create a user frontend using React and ChakraUI (+dark mode)",
       narrative:
@@ -310,8 +310,8 @@ const worksData: WorksData = {
       clientLogo: "/logos/logo.png",
       clientName: "Bussiness Watch Indonesia",
       title: "Kubu.id Blog Featuring Interesting Articles",
-      image: "/images/works/4.webp",
-      imageAlter: "/images/works/4_alter.webp",
+      image: "/images/works/4.png",
+      imageAlter: "/images/works/4_alter.png",
       solution:
         "Create a blog management backend using Laravel and create a user frontend using React and ChakraUI (+dark mode)",
       narrative:
@@ -331,8 +331,8 @@ const worksData: WorksData = {
       clientLogo: "/logos/logo.png",
       clientName: "Bussiness Watch Indonesia",
       title: "Online Course dari Kubu.id Berbasis Web",
-      image: "/images/works/5.webp",
-      imageAlter: "/images/works/5_alter.webp",
+      image: "/images/works/5.png",
+      imageAlter: "/images/works/5_alter.png",
       solution:
         "Developed several backends using Laravel and created the end user frontend using React and ChakraUI.",
       narrative:
@@ -354,8 +354,8 @@ const worksData: WorksData = {
       clientLogo: "/images/clients/rski.png",
       clientName: "RUMAH SAKIT KASIH IBU",
       title: "HR Application for Rumah Sakit Kasih Ibu",
-      image: "/images/works/6.webp",
-      imageAlter: "/images/works/6_alter.webp",
+      image: "/images/works/6.png",
+      imageAlter: "/images/works/6_alter.png",
       solution:
         "Creating an admin webapp to manage employee master data and attendance. It includes features for creating employee master data, shifts, finances, payroll, and setting THR.",
       narrative:
@@ -388,8 +388,8 @@ const worksData: WorksData = {
       clientLogo: "/images/clients/rski.png",
       clientName: "RUMAH SAKIT KASIH IBU",
       title: "Employee Application for Rumah Sakit Kasih Ibu",
-      image: "/images/works/7.webp",
-      imageAlter: "/images/works/7_alter.webp",
+      image: "/images/works/7.png",
+      imageAlter: "/images/works/7_alter.png",
       solution:
         "Creating a mobile app and PWA for employee use. The main feature of this application is attendance with photo and geolocation. Other features include leave/permit requests, shift exchange, salary slip, reports, and cooperatives. Integrated with fingerprint devices.",
       narrative:

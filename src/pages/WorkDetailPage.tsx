@@ -124,7 +124,7 @@ const WorksDetailPage = () => {
             mb={20}
             maxH={"700px"}
             objectFit={"cover"}
-            // objectPosition={"top"}
+            objectPosition={"0 30%"}
           />
 
           <VStack className="narativeContent" align={"stretch"}>
