@@ -37,7 +37,7 @@ const aboutData = {
       title: "Latar Belakang",
       naratives: [
         "Saya menyukai komputer sejak SD, setelah lulus SMA saya bersekolah di Udinus yang menurut orang kampus komputer terbaik se-Jawa Tengah. Saya menyukai seni dan visual yang indah, makanya saya suka menggambar dan mendesain. .Karena saya mendesain, saya lebih memilih menjadi frontend developer menggunakan React. Saya belajar React melalui program Studi Mandiri (MSIB) angkatan 3 pada tanggal 8 Agustus 2022 - 28 Desember 2022.",
-        "Saya lebih suka belajar mandiri, menyelesaikan masalah sendiri, menganalisis bug dan error sendiri hingga saat ini. Saya bisa menelusuri desain hingga kode yang sesuai dengan desain dalam waktu yang relatif singkat dan juga memperhatikan komponen yang bisa digunakan kembali.",
+        "Saya lebih suka belajar mandiri, menyelesaikan masalah sendiri, menganalisis bug dan error sendiri hingga saat ini. Saya bisa membuat desain menjadi kode frontend yang sesuai dengan desain dalam waktu yang relatif singkat dan juga memperhatikan komponen yang bisa digunakan kembali.",
         "Saya ingin berkontribusi, ingin membangun sesuatu sekecil apapun untuk memajukan peradaban manusia. Oleh karena itu saya mempunyai impian agar manusia saling memahami dan ikhlas.",
       ],
     },
