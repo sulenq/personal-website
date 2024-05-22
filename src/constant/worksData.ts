@@ -212,8 +212,8 @@ const worksData: WorksData = {
       clientLogo: "/images/clients/gerindra.png",
       clientName: "Myself",
       title: "Just My Old Personal Website",
-      image: "/images/works/1.png",
-      imageAlter: "/images/works/1.png",
+      image: "/images/works/0.png",
+      imageAlter: "/images/works/0.png",
       solution:
         "Creating a minimalist design using React and ChakraUI. The content data for this personal website is static and there are 2 language versions (Indonesian and English).",
       narrative:
