@@ -77,6 +77,7 @@ export default function ImageView({ data, imagePath, index }: Props) {
                 transition={"200ms"}
                 src={data.ss[active]}
                 w={"100%"}
+                maxW={"80vw"}
                 objectFit={"contain"}
                 borderRadius={"0 !important"}
                 aspectRatio={"16/9"}

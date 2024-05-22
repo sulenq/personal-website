@@ -157,7 +157,7 @@ const worksData: WorksData = {
       image: "/images/works/6.png",
       imageAlter: "/images/works/6_alter.png",
       solution:
-        "Membuat webapp admin untuk mengelola master data dan presensi karyawab. Terdapat fitur pembuatan master data data karyawan, shift, keuangan,penggajian hingga pengaturan THR",
+        "Membuat webapp admin untuk mengelola master data dan presensi karyawan. Terdapat fitur pembuatan master data data karyawan, shift, keuangan,penggajian hingga pengaturan THR",
       narrative:
         "Data yang tersebar di berbagai departemen menyebabkan pengolahan informasi menjadi lambat dan rentan terhadap kesalahan. Untuk mengatasi masalah ini, RSKI memutuskan untuk membuat sebuah webapp admin yang mampu mengelola seluruh master data dan presensi karyawan secara terpusat dan otomatis.",
       ss: [
