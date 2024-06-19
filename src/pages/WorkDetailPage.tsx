@@ -32,6 +32,7 @@ const WorksDetailPage = () => {
   const { trigger } = useTrigger();
   const data = worksData[lang].slice().reverse()[index];
 
+  const workDetailContainerRef = useRef(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -87,12 +88,18 @@ const WorksDetailPage = () => {
         opacity: 0,
       });
     },
-    { scope: "#workDetailPage" }
+    { scope: workDetailContainerRef }
   );
 
   if (!isNaN(index) && data) {
     return (
-      <VStack id="workDetailPage" gap={0} align={"stretch"} overflowX={"clip"}>
+      <VStack
+        ref={workDetailContainerRef}
+        id="workDetailPage"
+        gap={0}
+        align={"stretch"}
+        overflowX={"clip"}
+      >
         <Text display={"none"}>{trigger}</Text>
 
         <TopNav />
