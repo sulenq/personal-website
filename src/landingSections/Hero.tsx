@@ -19,11 +19,13 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import PageContainer from "../components/PageContainer";
 import useScreenWidth from "../hooks/useScreenWidth";
+import { useRef } from "react";
 
 export default function Hero() {
   const lang = getLang();
   const data = landingData.hero[lang];
   const sw = useScreenWidth();
+  const containerRef = useRef(null);
 
   // Animation
   useGSAP(
@@ -36,11 +38,11 @@ export default function Hero() {
         },
       });
     },
-    { scope: "#hero" }
+    { scope: containerRef }
   );
 
   return (
-    <Box id="hero">
+    <Box id="hero" ref={containerRef}>
       <PageContainer minH={"720px"}>
         <Container flex={1}>
           <SimpleGrid

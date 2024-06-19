@@ -17,9 +17,11 @@ import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
+import { useRef } from "react";
 
 export default function About() {
   const lang = getLang();
+  const containerRef = useRef(null);
 
   // Animation
   useGSAP(
@@ -51,11 +53,11 @@ export default function About() {
         },
       });
     },
-    { scope: "#about" }
+    { scope: containerRef }
   );
 
   return (
-    <VStack id="about" align={"stretch"}>
+    <VStack id="about" ref={containerRef} align={"stretch"}>
       <VStack
         bg={"black"}
         py={16}

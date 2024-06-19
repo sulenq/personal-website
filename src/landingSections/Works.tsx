@@ -29,6 +29,7 @@ export default function Works() {
   const containerRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [worksType, setWorksType] = useState<0 | 1>(0);
+  const worksContainerRef = useRef(null);
 
   const handlePrev = (): void => {
     if (containerRef.current) {
@@ -63,7 +64,11 @@ export default function Works() {
         },
       });
     },
-    { scope: "#works", dependencies: [worksType], revertOnUpdate: true }
+    {
+      scope: worksContainerRef,
+      dependencies: [worksType],
+      revertOnUpdate: true,
+    }
   );
 
   useGSAP(
@@ -74,11 +79,17 @@ export default function Works() {
         opacity: 0,
       });
     },
-    { scope: "#works" }
+    { scope: worksContainerRef }
   );
 
   return (
-    <VStack id="works" gap={0} position={"relative"} bg={"var(--divider)"}>
+    <VStack
+      id="works"
+      ref={worksContainerRef}
+      gap={0}
+      position={"relative"}
+      bg={"var(--divider)"}
+    >
       <VStack
         bgSize={"cover"}
         bgPos={"bottom"}

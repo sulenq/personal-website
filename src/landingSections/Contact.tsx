@@ -19,10 +19,13 @@ import {
   LinkedinLogo,
   WhatsappLogo,
 } from "@phosphor-icons/react";
+import { useRef } from "react";
 
 export default function Contact(props: any) {
   const lang = getLang();
   const data = landingData.contact[lang];
+  const containerRef = useRef(null);
+
   const contacts = [
     {
       icon: EnvelopeSimple,
@@ -59,11 +62,17 @@ export default function Contact(props: any) {
         },
       });
     },
-    { scope: "#contact" }
+    { scope: containerRef }
   );
 
   return (
-    <VStack id="contact" align={"stretch"} bg={"var(--divider)"} {...props}>
+    <VStack
+      id="contact"
+      ref={containerRef}
+      align={"stretch"}
+      bg={"var(--divider)"}
+      {...props}
+    >
       <Container>
         <VStack id="contactContent" py={20}>
           <Text

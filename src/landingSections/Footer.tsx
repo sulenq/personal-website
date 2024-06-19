@@ -5,8 +5,10 @@ import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
 import LangSwitcher from "../components/LangSwitcher";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { useRef } from "react";
 
 export default function Footer(props: any) {
+  const containerRef = useRef(null);
   useGSAP(
     () => {
       gsap.from(".footerItem", {
@@ -18,18 +20,25 @@ export default function Footer(props: any) {
         },
       });
     },
-    { scope: "#footer" }
+    { scope: containerRef }
   );
 
   return (
     <VStack
       id="footer"
+      ref={containerRef}
       bg={"var(--divider)"}
       p={5}
       align={"stretch"}
       {...props}
     >
-      <HStack justify={"space-between"} w={"100%"} maxW={"1280px"} mx={"auto"}>
+      <HStack
+        id="footerContent"
+        justify={"space-between"}
+        w={"100%"}
+        maxW={"1280px"}
+        mx={"auto"}
+      >
         <Text className="footerItem">
           2024 © Fatwa Linovera. All right reserved.
         </Text>
