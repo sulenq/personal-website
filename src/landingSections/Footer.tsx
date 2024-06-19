@@ -5,13 +5,14 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import LangSwitcher from "../components/LangSwitcher";
+import scrollTriggerConfig from "../lib/scrollTriggerConfig";
 
 export default function Footer(props: any) {
   const containerRef = useRef(null);
   useGSAP(
     () => {
       gsap.from(".footerItem", {
-        // scrollTrigger: scrollTriggerConfig("#footerContent"),
+        scrollTrigger: scrollTriggerConfig("#contact"),
         y: 50,
         opacity: 0,
         stagger: {
