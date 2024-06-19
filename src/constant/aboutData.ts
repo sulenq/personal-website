@@ -70,8 +70,8 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "Desember 2022 -  sekarang",
           jobs: [
-            "Memperbaiki bug dan menambah fitur pagination pada web admin lama yang dikembangkan menggunakan React, Redux dan Code Igniter 3. ",
-            "Mengembangkan web dengan React, Typescript dan Laravel yang meliputi: Landing page, Blog, Online Course, Webapp admin untuk mengelola web tersebut. ",
+            "Mengembangkan website landingpage, blog dan online course. ",
+            "Mengembangkan website admin untuk mengelola website landing page, blog dan online course.",
           ],
         },
         {
@@ -80,8 +80,10 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "Oktober 2022 -  sekarang",
           jobs: [
-            "Mengerjakan proyek dari client Distro Studio",
-            "Membuat frontend (membuat tampilan dan implementasi API) menggunakan React dari desain yang dibuat oleh rekan tim",
+            "Mengembangkan frontend dengan React dan ChakraUI.",
+            "Bekerja sebagai tim, frontend dibuat sesuai dengan desain dari UI/UX designer.",
+            "Ikut serta diskusi untuk merencanakan kebutuhan sistem.",
+            "Co-Founder",
           ],
         },
         {
@@ -90,9 +92,9 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "Mei 2022 -  April 2023",
           jobs: [
-            "Membuat aset vector dengan gaya yang unik menggunakan CorelDRAW",
-            "Membuat desain untuk akun instagram resmi Universitas Dian Nuswantoro",
-            "Saya membuat desain sesuai dengan brief yang diberikan dari copywriter",
+            "Membuat aset vector dengan CorelDRAW.",
+            "Membuat desain post untuk instagram official kampus.",
+            "Bekerja sebagai tim, desain dibuat sesuai dengan brief yang diberikan copywriter.",
           ],
         },
       ],
@@ -149,8 +151,8 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "December 2022 - Present",
           jobs: [
-            "Fixed bugs and added pagination feature to an old admin web developed using React, Redux, and Code Igniter 3.",
-            "Developed web applications using React, Typescript, and Laravel including: Landing page, Blog, Online Course, Webapp admin to manage the website.",
+            "Developed landing page websites, blogs, and online courses.",
+            "Created admin websites to manage landing pages, blogs, and online courses.",
           ],
         },
         {
@@ -159,8 +161,10 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "October 2022 - Present",
           jobs: [
-            "Worked on projects from Distro Studio clients.",
-            "Developed frontends (UI design and API implementation) using React from designs provided by team members.",
+            "Developed Frontend with React and ChakraUI.",
+            "Worked as part of a team, implementing Frontend according to the UI/UX designer's specifications.",
+            "Participated in discussions to plan system requirements.",
+            "Co-Founder",
           ],
         },
         {
@@ -169,9 +173,9 @@ const aboutData = {
           location: "Semarang, Indonesia",
           periode: "May 2022 - April 2023",
           jobs: [
-            "Created vector assets with unique styles using CorelDRAW.",
-            "Designed content for Dian Nuswantoro University's official Instagram account.",
-            "Designed according to briefs provided by copywriters.",
+            "Created vector assets using CorelDRAW.",
+            "Designed posts for the official campus Instagram account.",
+            "Worked as part of a team, creating designs according to the copywriter's briefs.",
           ],
         },
       ],

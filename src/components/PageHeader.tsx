@@ -2,12 +2,14 @@ import { Box, Heading, VStack } from "@chakra-ui/react";
 import Container from "./Container";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRef } from "react";
 
 type Props = {
   children: any;
 };
 
 export default function PageHeader({ children }: Props) {
+  const containerRef = useRef(null);
   // Animation
   useGSAP(
     () => {
@@ -20,11 +22,16 @@ export default function PageHeader({ children }: Props) {
         scale: 0,
       });
     },
-    { scope: "#pageHeader" }
+    { scope: containerRef }
   );
 
   return (
-    <VStack id="pageHeader" position={"relative"} align={"stretch"}>
+    <VStack
+      id="pageHeader"
+      ref={containerRef}
+      position={"relative"}
+      align={"stretch"}
+    >
       <Container
         bgSize={"cover"}
         bgPos={"top"}

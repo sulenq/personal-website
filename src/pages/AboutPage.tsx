@@ -26,11 +26,14 @@ import gsap from "gsap";
 import scrollTriggerConfig from "../lib/scrollTriggerConfig";
 import TopNav from "../components/TopNav";
 import PageContainer from "../components/PageContainer";
+import { useRef } from "react";
 
 export default function AboutPage() {
   const { trigger } = useTrigger();
   const lang = getLang();
   const data = aboutData[lang];
+  const containerRef = useRef(null);
+
   const skills = [
     { name: "HTML", rate: "Intermediate" },
     { name: "CSS", rate: "Advance" },
@@ -38,16 +41,16 @@ export default function AboutPage() {
     { name: "Typescript", rate: "Intermediate" },
     { name: "ChakraUI", rate: "Advance" },
     { name: "Tailwind CSS", rate: "Intermediate" },
+    { name: "GSAP", rate: "Novice" },
     { name: "Laravel", rate: "Intermediate" },
     { name: "Code Igniter", rate: "Intermediate" },
     { name: "CorelDRAW", rate: "Advance" },
   ];
   const interests = [
     "Game",
-    "Game Development",
+    "Tech",
     "Design",
     "Nature",
-    "Tech",
     "Education",
     "Economics",
   ];
@@ -107,7 +110,7 @@ export default function AboutPage() {
       gsap.from(".dataTitle_6", titleAnim(".dataTitle_6"));
       gsap.from(".dataItem_6", itemAnim(".dataItem_6"));
     },
-    { scope: "#aboutPage" }
+    { scope: containerRef }
   );
 
   return (
@@ -118,7 +121,7 @@ export default function AboutPage() {
 
       <PageHeader>{landingData.about[lang].nav}</PageHeader>
 
-      <VStack align={"stretch"} overflow={"hidden"} gap={0}>
+      <VStack align={"stretch"} ref={containerRef} overflow={"hidden"} gap={0}>
         <Container pt={10} flex={1} minH={"500px"} position={"relative"}>
           <SimpleGrid columns={[1, null, null, 2]} gap={12}>
             <HStack
@@ -265,10 +268,9 @@ export default function AboutPage() {
 
                   <UnorderedList>
                     {data.certificate.items.map((certificate, i) => (
-                      <Box className="dataItem_4">
+                      <Box className="dataItem_4" key={i}>
                         <ChakraLink isExternal href={certificate.link}>
                           <ListItem
-                            key={i}
                             mb={2}
                             _hover={{ color: "p.500" }}
                             w={"fit-content"}
@@ -323,9 +325,8 @@ export default function AboutPage() {
 
                   <HStack className="init">
                     {landingData.sosmeds.map((sosmed, i) => (
-                      <Box className="dataItem_6">
+                      <Box className="dataItem_6" key={i}>
                         <IconButton
-                          key={i}
                           as={ChakraLink}
                           href={sosmed.link}
                           isExternal
