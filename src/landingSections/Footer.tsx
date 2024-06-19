@@ -1,18 +1,17 @@
-import { VStack, Text, HStack, Box } from "@chakra-ui/react";
+import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import scrollTriggerConfig from "../lib/scrollTriggerConfig";
-import LangSwitcher from "../components/LangSwitcher";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import { useRef } from "react";
+import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import LangSwitcher from "../components/LangSwitcher";
 
 export default function Footer(props: any) {
   const containerRef = useRef(null);
   useGSAP(
     () => {
       gsap.from(".footerItem", {
-        scrollTrigger: scrollTriggerConfig("#footerContent"),
+        // scrollTrigger: scrollTriggerConfig("#footerContent"),
         y: 50,
         opacity: 0,
         stagger: {
