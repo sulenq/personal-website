@@ -102,9 +102,14 @@ export default function Hero() {
                   className="btn-solid clicky"
                   leftIcon={<Icon as={Sparkle} fontSize={20} />}
                   as={ChakraLink}
-                  href="#works"
+                  href={
+                    lang === "id"
+                      ? "../../public/Resume Fatwa Linovera - id.pdf"
+                      : "../../public/Resume Fatwa Linovera - en.pdf"
+                  }
+                  isExternal
                 >
-                  {data.portfolio}
+                  Resume
                 </Button>
               </HStack>
             </VStack>
