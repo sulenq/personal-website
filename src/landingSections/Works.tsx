@@ -252,6 +252,7 @@ export default function Works() {
                               width={sw < 350 ? "calc(100vw - 80px)" : "328px"}
                               scrollSnapAlign={"center"}
                               key={i}
+                              aspectRatio={"4 / 5"}
                             >
                               <ChakraLink
                                 width={"100%"}

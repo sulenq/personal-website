@@ -21,7 +21,6 @@ export default function PortfolioCard(props: any) {
 
   return (
     <VStack
-      {...props}
       bgImage={work.image}
       bgSize={"cover"}
       bgPos={"top"}
@@ -36,7 +35,9 @@ export default function PortfolioCard(props: any) {
       transition={"200ms"}
       gap={0}
       onClick={handleOnClick}
-      aspectRatio={"164 / 203.4"}
+      aspectRatio={"4 / 5"}
+      minW={"328px"}
+      {...props}
     >
       <VStack
         transition={"200ms"}
