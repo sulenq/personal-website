@@ -4,6 +4,7 @@ export const globalTheme = extendTheme({
   config: {
     initialColorMode: "dark",
   },
+
   colors: {
     p: {
       50: "#d7f3ff",
