@@ -106,8 +106,8 @@ export default function Hero() {
                   as={ChakraLink}
                   href={
                     lang === "id"
-                      ? "../../public/Resume Fatwa Linovera - id.pdf"
-                      : "../../public/Resume Fatwa Linovera - en.pdf"
+                      ? "/Resume Fatwa Linovera - id.pdf"
+                      : "/Resume Fatwa Linovera - en.pdf"
                   }
                   isExternal
                 >
