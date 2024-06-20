@@ -30,7 +30,7 @@ const landingData = {
     id: {
       greeting: "Halo, saya",
       narative:
-        "SSaya seorang web developer yang fokus dalam pengembangan Frontend dengan React. Saya menggambarkan diri saya sebagai manifestasi kreativitas tanpa batas dalam pengembangan Frontend.",
+        "Saya seorang web developer yang fokus dalam pengembangan Frontend dengan React. Saya menggambarkan diri saya sebagai manifestasi kreativitas tanpa batas dalam pengembangan Frontend.",
       contact: "Hubungi Saya",
       portfolio: "Portofolio",
       stats: [
