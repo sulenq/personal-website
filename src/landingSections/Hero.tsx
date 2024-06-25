@@ -10,6 +10,7 @@ import {
   IconButton,
   Image,
   Box,
+  Wrap,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { Sparkle } from "@phosphor-icons/react";
@@ -74,10 +75,10 @@ export default function Hero() {
                 Fatwa Linovera
               </Heading>
 
-              <HStack className="init">
+              <Wrap className="init" spacingY={0}>
                 <Text opacity={0.5}>#Web Developer</Text>
                 <Text opacity={0.5}>#Graphic Designer</Text>
-              </HStack>
+              </Wrap>
 
               <Text className="init" mt={"auto"} color={"p.500"}>
                 fatwalinovera@gmail.com

@@ -40,7 +40,7 @@ const landingData = {
         },
         {
           name: "Tahun Pengalaman",
-          value: 1,
+          value: "2",
         },
       ],
     },
@@ -57,7 +57,7 @@ const landingData = {
         },
         {
           name: "Years Experience",
-          value: 1,
+          value: "2",
         },
       ],
     },
@@ -75,17 +75,22 @@ const landingData = {
         {
           title: "Thinker",
           narative:
-            "Memiliki kepribadian yang tercermin dalam kecenderungan saya untuk selalu memikirkan solusi-solusi kreatif dan inovatif, serta melakukannya dengan ketelitian dan kecermatan yang tinggi dalam setiap aspek pekerjaan saya",
+            "Memiliki kepribadian yang tercermin dalam kecenderungan saya untuk selalu memikirkan solusi-solusi kreatif dan inovatif, serta melakukannya dengan ketelitian dan kecermatan yang tinggi dalam setiap aspek pekerjaan saya.",
         },
         {
           title: "Web Developer",
           narative:
-            "Lulusan dari fakultas teknik informatika dan memilih jalan menjadi seorang web developer. Saya fokus di React karena lebih suka mengerjakan frontend",
+            "Lulusan dari fakultas teknik informatika dan memilih jalan menjadi seorang web developer. Saya fokus di React karena lebih suka mengerjakan frontend.",
         },
         {
           title: "Graphic Designer",
           narative:
-            "Seni dan desain, saya menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW, saya mampu membuat desain apapun yang saya mau",
+            "Seni dan desain, saya menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW, saya mampu membuat desain apapun yang saya mau.",
+        },
+        {
+          title: "Co-Founder of Distro Studio",
+          narative:
+            "Distro Studio adalah agensi pengembangan perangkat lunak yang menyediakan layanan pembuatan webapp (PWA) lintas platform.",
         },
       ],
     },
@@ -105,12 +110,17 @@ const landingData = {
         {
           title: "Web Developer",
           narative:
-            "I graduated from the faculty of informatics engineering and chose the path of becoming a web developer. I focus on React because I prefer working on the frontend",
+            "I graduated from the faculty of informatics engineering and chose the path of becoming a web developer. I focus on React because I prefer working on the frontend.",
         },
         {
           title: "Graphic Designer",
           narative:
-            "Art and design, I love both. Becoming a graphic designer is also accidental, by using CorelDRAW I am able to create any design I want",
+            "Art and design, I love both. Becoming a graphic designer is also accidental, by using CorelDRAW I am able to create any design I want.",
+        },
+        {
+          title: "Co-Founder of Distro Studio",
+          narative:
+            "Distro Studio is a software development agency that provides cross-platform webapp (PWA) creation services.",
         },
       ],
     },
