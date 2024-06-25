@@ -60,7 +60,7 @@ export default function Works() {
         scale: 0.5,
         opacity: 0,
         stagger: {
-          each: 0.2,
+          each: 0.05,
         },
       });
     },
