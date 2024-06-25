@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   HStack,
   Heading,
   Icon,
@@ -10,10 +11,10 @@ import {
   Wrap,
 } from "@chakra-ui/react";
 import { useGSAP } from "@gsap/react";
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Container from "../components/Container";
 import ImageView from "../components/ImageView";
 import TopNav from "../components/TopNav";
@@ -121,6 +122,40 @@ const WorksDetailPage = () => {
             >
               {data.title}
             </Heading>
+
+            {data.demo && (
+              <Box className="init">
+                <Button
+                  rightIcon={<Icon as={ArrowUpRight} fontSize={20} />}
+                  className="clicky"
+                  as={Link}
+                  to={data.demo}
+                  target="_blank"
+                  mt={2}
+                  colorScheme="ap"
+                  variant={"ghost"}
+                >
+                  <Text fontSize={20}>Demo</Text>
+                </Button>
+              </Box>
+            )}
+
+            {data.link && (
+              <Box className="init">
+                <Button
+                  rightIcon={<Icon as={ArrowUpRight} fontSize={20} />}
+                  className="clicky"
+                  as={Link}
+                  to={data.link}
+                  target="_blank"
+                  mt={2}
+                  colorScheme="ap"
+                  variant={"ghost"}
+                >
+                  <Text fontSize={20}>Link</Text>
+                </Button>
+              </Box>
+            )}
           </VStack>
 
           <Image

@@ -1,23 +1,21 @@
-import { Button, Icon, Text, VStack, useDisclosure } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "@phosphor-icons/react";
-import { iconSize } from "../../constant/sizes";
 
 export default function PortfolioCard(props: any) {
   const work = props?.work;
-  const setActiveWork = props?.setActiveWork;
+  // const setActiveWork = props?.setActiveWork;
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleOnClick = () => {
-    if (isOpen) {
-      onClose();
-    } else {
-      onOpen();
-    }
-    if (setActiveWork) {
-      setActiveWork(work);
-    }
-  };
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const handleOnClick = () => {
+  //   if (isOpen) {
+  //     onClose();
+  //   } else {
+  //     onOpen();
+  //   }
+  //   if (setActiveWork) {
+  //     setActiveWork(work);
+  //   }
+  // };
 
   return (
     <VStack
@@ -31,15 +29,16 @@ export default function PortfolioCard(props: any) {
       overflow={"clip"}
       className="clicky"
       w={props?.w}
-      _hover={{ opacity: isOpen ? 1 : 0.8 }}
+      // _hover={{ opacity: isOpen ? 1 : 0.8 }}
       transition={"200ms"}
       gap={0}
-      onClick={handleOnClick}
+      as={Link}
+      to={`/works/${props.index}`}
       aspectRatio={"4 / 5"}
       minW={"328px"}
       {...props}
     >
-      <VStack
+      {/* <VStack
         transition={"200ms"}
         align={"stretch"}
         justify={"center"}
@@ -75,7 +74,7 @@ export default function PortfolioCard(props: any) {
             Detail
           </Button>
         </VStack>
-      </VStack>
+      </VStack> */}
     </VStack>
   );
 }

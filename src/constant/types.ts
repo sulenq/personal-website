@@ -27,6 +27,8 @@ export type WorkData = {
   solution: string;
   ss: string[];
   ssScrollLength: number;
+  demo?: string;
+  link?: string;
 };
 
 export type WorksData = {

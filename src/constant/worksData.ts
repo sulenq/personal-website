@@ -6,11 +6,11 @@ const worksData: WorksData = {
       category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "Myself",
-      title: "Hanya Personal Website Lama Saya",
+      title: "Hanya Personal Website Lama Saya yang Pertama",
       image: "/images/works/0.png",
       imageAlter: "/images/works/0.png",
       solution:
-        "Membuat tampilan rengan React dan ChakraUI. Data konten dari personal website tersebut statis dan terdapat 2 versi bahasa (indonesia dan inggris)",
+        "Membuat tampilan dengan gaya minimalis dengan React dan ChakraUI. Data konten dari personal website tersebut statis dan terdapat 2 versi bahasa (indonesia dan inggris)",
       narrative:
         "Sebagai seorang fresh graduate saya sebagai web developer ingin memiliki personal website. Saat itu pengetahuan React saya masih pemula namun memiliki sense of design yang sudah bagus karena pengalaman saya sebagai desainer grafis dalam 1 tahun. Jadi saya membuat personal website saya dengan kemampuan yang saya miliki saat itu.",
       ss: [
@@ -23,7 +23,32 @@ const worksData: WorksData = {
         "/images/works/0/ss/6.png",
       ],
       ssScrollLength: 450,
+      link: "https://fatwalinoveraold.netlify.app/",
     },
+    {
+      category: 0,
+      clientLogo: "/images/clients/gerindra.png",
+      clientName: "Myself",
+      title: "Just My Second Old Personal Website",
+      image: "/images/works/-1.png",
+      imageAlter: "/images/works/-1.png",
+      solution:
+        "Membuat desain dengan gaya exploded menggunakan React dan ChakraUI. Data konten website pribadi ini bersifat statis dan terdapat 2 versi bahasa (Indonesia dan Inggris).",
+      narrative:
+        "Sebagai seorang freshgraduate, saya ingin mempunyai website pribadi. Pada saat itu, pengetahuan saya tentang React masih dasar tetapi saya memiliki pemahaman yang baik tentang desain karena pengalaman saya selama 1 tahun sebagai desainer grafis. Jadi, saya membuat website pribadi dengan keterampilan yang saya miliki saat itu.",
+      ss: [
+        "/images/works/-1/ss/0.png",
+        "/images/works/-1/ss/1.png",
+        "/images/works/-1/ss/2.png",
+        "/images/works/-1/ss/3.png",
+        "/images/works/-1/ss/4.png",
+        "/images/works/-1/ss/5.png",
+        "/images/works/-1/ss/6.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://fatwalinoveraold2.netlify.app/",
+    },
+
     {
       category: 0,
       clientLogo: "/images/clients/poltekkes.png",
@@ -57,6 +82,7 @@ const worksData: WorksData = {
         "/images/works/1/ss/17.png",
       ],
       ssScrollLength: 450,
+      link: "https://lab.distrostudio.org/",
     },
     {
       category: 0,
@@ -82,6 +108,7 @@ const worksData: WorksData = {
         "/images/works/5/ss/8.png",
       ],
       ssScrollLength: 450,
+      link: "https://admin2.kubu.id/",
     },
     {
       category: 0,
@@ -104,6 +131,7 @@ const worksData: WorksData = {
         "/images/works/4/ss/5.png",
       ],
       ssScrollLength: 450,
+      link: "https://kubu.id/",
     },
     {
       category: 0,
@@ -125,6 +153,7 @@ const worksData: WorksData = {
         "/images/works/3/ss/5.png",
       ],
       ssScrollLength: 450,
+      link: "https://blog.kubu.id/",
     },
     {
       category: 0,
@@ -147,6 +176,7 @@ const worksData: WorksData = {
         "/images/works/2/ss/6.png",
       ],
       ssScrollLength: 450,
+      link: "https://course.kubu.id/",
     },
 
     {
@@ -182,6 +212,7 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
+      demo: "https://adminattendancedistro.netlify.app/",
     },
     {
       category: 0,
@@ -203,6 +234,7 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
+      demo: "https://attendancedistro.netlify.app/",
     },
   ],
 
@@ -211,7 +243,7 @@ const worksData: WorksData = {
       category: 0,
       clientLogo: "/images/clients/gerindra.png",
       clientName: "Myself",
-      title: "Just My Old Personal Website",
+      title: "Just My First Old Personal Website",
       image: "/images/works/0.png",
       imageAlter: "/images/works/0.png",
       solution:
@@ -228,7 +260,32 @@ const worksData: WorksData = {
         "/images/works/0/ss/6.png",
       ],
       ssScrollLength: 450,
+      link: "https://fatwalinoveraold.netlify.app/",
     },
+    {
+      category: 0,
+      clientLogo: "/images/clients/gerindra.png",
+      clientName: "Myself",
+      title: "Just My Second Old Personal Website",
+      image: "/images/works/-1.png",
+      imageAlter: "/images/works/-1.png",
+      solution:
+        "Creating a minimalist design using React and ChakraUI. The content data for this personal website is static and there are 2 language versions (Indonesian and English).",
+      narrative:
+        "As a fresh graduate, I wanted to have my own personal website. At that time, my knowledge of React was still basic but I had a good sense of design due to my 1-year experience as a graphic designer. So, I created my personal website with the skills I had at that time.",
+      ss: [
+        "/images/works/-1/ss/0.png",
+        "/images/works/-1/ss/1.png",
+        "/images/works/-1/ss/2.png",
+        "/images/works/-1/ss/3.png",
+        "/images/works/-1/ss/4.png",
+        "/images/works/-1/ss/5.png",
+        "/images/works/-1/ss/6.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://fatwalinoveraold2.netlify.app/",
+    },
+
     {
       category: 0,
       clientLogo: "/images/clients/poltekkes.png",
@@ -257,6 +314,7 @@ const worksData: WorksData = {
         "/images/works/0/ss/12.png",
       ],
       ssScrollLength: 450,
+      link: "https://lab.distrostudio.org/",
     },
     {
       category: 0,
@@ -282,6 +340,7 @@ const worksData: WorksData = {
         "/images/works/5/ss/8.png",
       ],
       ssScrollLength: 450,
+      link: "https://admin2.kubu.id/",
     },
     {
       category: 0,
@@ -304,6 +363,7 @@ const worksData: WorksData = {
         "/images/works/4/ss/5.png",
       ],
       ssScrollLength: 450,
+      link: "https://kubu.id/",
     },
     {
       category: 0,
@@ -325,6 +385,7 @@ const worksData: WorksData = {
         "/images/works/3/ss/5.png",
       ],
       ssScrollLength: 450,
+      link: "https://blog.kubu.id/",
     },
     {
       category: 0,
@@ -347,6 +408,7 @@ const worksData: WorksData = {
         "/images/works/2/ss/6.png",
       ],
       ssScrollLength: 450,
+      link: "https://course.kubu.id/",
     },
 
     {
@@ -382,6 +444,7 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
+      demo: "https://adminattendancedistro.netlify.app/",
     },
     {
       category: 0,
@@ -403,6 +466,7 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
+      demo: "https://attendancedistro.netlify.app/",
     },
   ],
 };
