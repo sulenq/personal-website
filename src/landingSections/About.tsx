@@ -114,7 +114,12 @@ export default function About() {
                     </Text>
                     <Text opacity={0.5}>{item.narative}</Text>
                     {i == 3 && (
-                      <Text as={Link} target="_blank" color={"p.500"}>
+                      <Text
+                        as={Link}
+                        to={"https://distrostudio.org/"}
+                        target="_blank"
+                        color={"p.500"}
+                      >
                         https://distrostudio.org/
                       </Text>
                     )}
