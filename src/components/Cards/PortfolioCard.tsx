@@ -34,8 +34,7 @@ export default function PortfolioCard(props: any) {
       gap={0}
       as={Link}
       to={`/works/${props.index}`}
-      aspectRatio={"4 / 5"}
-      minW={"328px"}
+      aspectRatio={4 / 5}
       {...props}
     >
       {/* <VStack

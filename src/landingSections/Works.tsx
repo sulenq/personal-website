@@ -151,6 +151,7 @@ export default function Works() {
                                 work={work}
                                 index={i}
                                 // setActiveWork={setActiveWork}
+                                minW={"328px"}
                                 w={sw < 350 ? "calc(100vw - 80px)" : "300px"}
                               />
                             </Box>

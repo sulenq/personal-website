@@ -126,7 +126,13 @@ export default function WorksPage() {
                 .slice()
                 .reverse()
                 .map((work, i) => (
-                  <Box className={"workItem"} key={i}>
+                  <Box
+                    className={"workItem"}
+                    key={i}
+                    aspectRatio={4 / 5}
+                    w={"100%"}
+                    overflow={"clip"}
+                  >
                     <PortfolioCard work={work} index={i} />
                   </Box>
                 ))}
