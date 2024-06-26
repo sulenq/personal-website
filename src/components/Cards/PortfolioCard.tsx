@@ -21,7 +21,7 @@ export default function PortfolioCard(props: any) {
     <VStack
       bgImage={work.image}
       bgSize={"cover"}
-      bgPos={"top"}
+      bgPos={"center"}
       cursor={"pointer"}
       scrollSnapAlign={"center"}
       align={"stretch"}

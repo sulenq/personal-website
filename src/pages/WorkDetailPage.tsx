@@ -126,7 +126,7 @@ const WorksDetailPage = () => {
             {data.demo && (
               <Box className="init">
                 <Button
-                  rightIcon={<Icon as={ArrowUpRight} fontSize={20} />}
+                  rightIcon={<Icon as={ArrowUpRight} fontSize={16} />}
                   className="clicky"
                   as={Link}
                   to={data.demo}
@@ -135,7 +135,7 @@ const WorksDetailPage = () => {
                   colorScheme="ap"
                   variant={"ghost"}
                 >
-                  <Text fontSize={20}>Demo</Text>
+                  <Text fontSize={16}>Demo</Text>
                 </Button>
               </Box>
             )}
@@ -143,7 +143,7 @@ const WorksDetailPage = () => {
             {data.link && (
               <Box className="init">
                 <Button
-                  rightIcon={<Icon as={ArrowUpRight} fontSize={20} />}
+                  rightIcon={<Icon as={ArrowUpRight} fontSize={16} />}
                   className="clicky"
                   as={Link}
                   to={data.link}
@@ -152,7 +152,7 @@ const WorksDetailPage = () => {
                   colorScheme="ap"
                   variant={"ghost"}
                 >
-                  <Text fontSize={20}>Link</Text>
+                  <Text fontSize={16}>Link</Text>
                 </Button>
               </Box>
             )}

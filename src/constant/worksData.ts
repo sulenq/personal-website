@@ -236,6 +236,33 @@ const worksData: WorksData = {
       ssScrollLength: 450,
       demo: "https://attendancedistro.netlify.app/",
     },
+
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Distro Components & Library",
+      title: "Reusable Custom Component & Custom Library",
+      image: "/images/works/9.png",
+      imageAlter: "/images/works/9.png",
+      solution:
+        "Agar proses pengembangan frontend di Distro Studio menjadi efisien, saya membuat library ini untuk saya gunakan pribadi (sementara), mungkin saya akan mempublikasikannya suatu hari nanti.",
+      narrative:
+        "Saya sebagai seorang Frontend di Distro Studio merasa membutuhkan custom komponen yang bisa digunakan kembali, karena jika tidak begitu, proses development jadi semakin lama dan tidak efisien.",
+      ss: [
+        "/images/works/9/ss/0.png",
+        "/images/works/9/ss/1.png",
+        "/images/works/9/ss/2.png",
+        "/images/works/9/ss/3.png",
+        "/images/works/9/ss/4.png",
+        "/images/works/9/ss/5.png",
+        "/images/works/9/ss/6.png",
+        "/images/works/9/ss/7.png",
+        "/images/works/9/ss/8.png",
+        "/images/works/9/ss/9.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://library-mahal.netlify.app/",
+    },
   ],
 
   en: [
@@ -467,6 +494,33 @@ const worksData: WorksData = {
       ],
       ssScrollLength: 450,
       demo: "https://attendancedistro.netlify.app/",
+    },
+
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Distro Components & Library",
+      title: "Reusable Custom Component & Custom Library",
+      image: "/images/works/9.png",
+      imageAlter: "/images/works/9.png",
+      solution:
+        "To make the frontend development process at Distro Studio more efficient, I created this library for my personal use (for now). I might publish it someday.",
+      narrative:
+        "As a Frontend Developer at Distro Studio, I felt the need for custom reusable components because without them, the development process would take longer and be less efficient.",
+      ss: [
+        "/images/works/9/ss/0.png",
+        "/images/works/9/ss/1.png",
+        "/images/works/9/ss/2.png",
+        "/images/works/9/ss/3.png",
+        "/images/works/9/ss/4.png",
+        "/images/works/9/ss/5.png",
+        "/images/works/9/ss/6.png",
+        "/images/works/9/ss/7.png",
+        "/images/works/9/ss/8.png",
+        "/images/works/9/ss/9.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://library-mahal.netlify.app/",
     },
   ],
 };
