@@ -241,7 +241,7 @@ const worksData: WorksData = {
       category: 0,
       clientLogo: "/images/clients/rski.png",
       clientName: "Distro Components & Library",
-      title: "Reusable Custom Component & Custom Library",
+      title: "Reusable Custom Component & Custom Library (Starter Pack)",
       image: "/images/works/9.png",
       imageAlter: "/images/works/9.png",
       solution:
@@ -500,7 +500,7 @@ const worksData: WorksData = {
       category: 0,
       clientLogo: "/images/clients/rski.png",
       clientName: "Distro Components & Library",
-      title: "Reusable Custom Component & Custom Library",
+      title: "Reusable Custom Component & Custom Library (Starter Pack)",
       image: "/images/works/9.png",
       imageAlter: "/images/works/9.png",
       solution:
