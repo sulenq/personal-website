@@ -212,7 +212,7 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
-      demo: "https://adminattendancedistro.netlify.app/",
+      demo: "https://rski-personalia-demo.netlify.app/",
     },
     {
       category: 0,
@@ -234,7 +234,7 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
-      demo: "https://attendancedistro.netlify.app/",
+      demo: "https://rski-pegawai-demo.netlify.app/",
     },
 
     {
@@ -471,7 +471,7 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
-      demo: "https://adminattendancedistro.netlify.app/",
+      demo: "https://rski-personalia-demo.netlify.app/",
     },
     {
       category: 0,
@@ -493,7 +493,7 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
-      demo: "https://attendancedistro.netlify.app/",
+      demo: "https://rski-pegawai-demo.netlify.app/",
     },
 
     {
