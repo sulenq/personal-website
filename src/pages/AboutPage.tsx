@@ -320,7 +320,7 @@ export default function AboutPage() {
 
                   <HStack mb={4} className="dataItem_6">
                     <Icon as={EnvelopeSimple} fontSize={20} />
-                    <Text>contact@distrostudio.id</Text>
+                    <Text>fatwalinovera@gmail.com</Text>
                   </HStack>
 
                   <HStack className="init">
