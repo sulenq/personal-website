@@ -68,7 +68,7 @@ const aboutData = {
           title: "Web Developer",
           company: "Business Watch Indonesia",
           location: "Semarang, Indonesia",
-          periode: "Desember 2022 -  sekarang",
+          periode: "Desember 2023 -  Agustus 2024",
           jobs: [
             "Mengembangkan website landingpage, blog dan online course. ",
             "Mengembangkan website admin untuk mengelola website landing page, blog dan online course.",
@@ -150,7 +150,7 @@ const aboutData = {
           title: "Web Developer",
           company: "Business Watch Indonesia",
           location: "Semarang, Indonesia",
-          periode: "December 2022 - Present",
+          periode: "December 2023 - August 2024",
           jobs: [
             "Developed landing page websites, blogs, and online courses.",
             "Created admin websites to manage landing pages, blogs, and online courses.",
