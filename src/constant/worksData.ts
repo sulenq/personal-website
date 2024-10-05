@@ -273,7 +273,7 @@ const worksData: WorksData = {
       clientName: "Geoportal",
       title: "Sistem Informasi Geografis",
       image: "/images/works/10.png",
-      imageAlter: "/images/works/10.png",
+      imageAlter: "/images/works/10_alter.png",
       solution:
         "Sistem GIS Pertanahan ini memungkinkan pengguna untuk melihat detail informasi tanah melalui fitur klik bidang, yang mencakup data sertifikat, NIK, NOP, jenis hak, luas tanah, serta tampilan peta satelit. Dilengkapi dengan fitur pengelolaan pengguna, import data SHP, dan dashboard untuk memonitor layer gap, overlap, serta LSD.",
       narrative:
@@ -291,7 +291,7 @@ const worksData: WorksData = {
         "/images/works/9/ss/9.png",
       ],
       ssScrollLength: 450,
-      link: "https://library-mahal.netlify.app/",
+      // link: "https://library-mahal.netlify.app/",
     },
   ],
 
@@ -578,7 +578,7 @@ const worksData: WorksData = {
         "/images/works/10/ss/7.png",
       ],
       ssScrollLength: 450,
-      link: "https://library-mahal.netlify.app/",
+      // link: "https://library-mahal.netlify.app/",
     },
   ],
 };
