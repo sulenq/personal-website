@@ -32,6 +32,8 @@ export default function DrawerNav(props: any) {
     setClosing(true);
   };
 
+  console.log("");
+
   useGSAP(
     () => {
       if (closing) {
