@@ -97,7 +97,8 @@ export default function DrawerNav(props: any) {
       {isOpen && (
         <VStack
           w={"100vw"}
-          minH={"100vh"}
+          h={"100vh"}
+          justify={"start"}
           bg={bg}
           position={"fixed"}
           top={0}
@@ -105,9 +106,10 @@ export default function DrawerNav(props: any) {
           zIndex={99}
           color={"current"}
           onClick={handleClose}
+          overflowY={"auto"}
         >
           <VStack
-            minH={"100%"}
+            overflowY={"auto"}
             w={"100%"}
             maxW={"500px"}
             mx={"auto"}
@@ -116,7 +118,7 @@ export default function DrawerNav(props: any) {
             pb={12}
             px={8}
             align={"stretch"}
-            justify={"center"}
+            justify={"start"}
             gap={3}
           >
             <VStack className="init" justify={"space-between"} mb={4}>
@@ -127,6 +129,7 @@ export default function DrawerNav(props: any) {
                 )}
               </Text>
             </VStack>
+
             <HStack
               color={"p.500"}
               justify={"space-between"}
@@ -146,12 +149,14 @@ export default function DrawerNav(props: any) {
                   fontSize={20}
                   className="btn-solid"
                   ml={"auto"}
+                  borderRadius={12}
                 />
 
                 <LangSwitcher
                   ml={"auto"}
                   w={"100%"}
                   h={"50px"}
+                  borderRadius={12}
                   className="btn-solid"
                 />
               </HStack>
