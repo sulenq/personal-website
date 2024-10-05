@@ -179,6 +179,7 @@ const worksData: WorksData = {
       link: "https://course.kubu.id/",
     },
 
+    // RSKI
     {
       category: 0,
       clientLogo: "/images/clients/rski.png",
@@ -237,6 +238,7 @@ const worksData: WorksData = {
       demo: "https://rski-pegawai-demo.netlify.app/",
     },
 
+    // Library Mahal
     {
       category: 0,
       clientLogo: "/images/clients/rski.png",
@@ -248,6 +250,34 @@ const worksData: WorksData = {
         "Agar proses pengembangan frontend di Distro Studio menjadi efisien, saya membuat library ini untuk saya gunakan pribadi (sementara), mungkin saya akan mempublikasikannya suatu hari nanti.",
       narrative:
         "Saya sebagai seorang Frontend di Distro Studio merasa membutuhkan custom komponen yang bisa digunakan kembali, karena jika tidak begitu, proses development jadi semakin lama dan tidak efisien.",
+      ss: [
+        "/images/works/9/ss/0.png",
+        "/images/works/9/ss/1.png",
+        "/images/works/9/ss/2.png",
+        "/images/works/9/ss/3.png",
+        "/images/works/9/ss/4.png",
+        "/images/works/9/ss/5.png",
+        "/images/works/9/ss/6.png",
+        "/images/works/9/ss/7.png",
+        "/images/works/9/ss/8.png",
+        "/images/works/9/ss/9.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://library-mahal.netlify.app/",
+    },
+
+    // Geoportal
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Geoportal",
+      title: "Sistem Informasi Geografis",
+      image: "/images/works/10.png",
+      imageAlter: "/images/works/10.png",
+      solution:
+        "Sistem GIS Pertanahan ini memungkinkan pengguna untuk melihat detail informasi tanah melalui fitur klik bidang, yang mencakup data sertifikat, NIK, NOP, jenis hak, luas tanah, serta tampilan peta satelit. Dilengkapi dengan fitur pengelolaan pengguna, import data SHP, dan dashboard untuk memonitor layer gap, overlap, serta LSD.",
+      narrative:
+        "Projek GIS Pertanahan yang saya kembangkan menyediakan solusi komprehensif dalam manajemen data pertanahan. Sistem ini dilengkapi dengan fitur interaktif di mana pengguna dapat mengklik pada bidang tanah di peta untuk menampilkan informasi lengkap, seperti nama pemilik, NIK, nomor sertifikat, NIB, NOP, jenis hak, luas tanah, alamat, dan pengelola lahan. Selain itu, sistem ini mendukung visualisasi data menggunakan tampilan satelit dan menyediakan dashboard canggih untuk memonitor gap, overlap, dan LSD pada layer-layer peta. Terdapat juga fitur pengelolaan pengguna serta kemampuan untuk mengimpor data berbasis SHP, memastikan fleksibilitas dan efisiensi dalam pengelolaan data pertanahan.",
       ss: [
         "/images/works/9/ss/0.png",
         "/images/works/9/ss/1.png",
@@ -438,6 +468,7 @@ const worksData: WorksData = {
       link: "https://course.kubu.id/",
     },
 
+    // RSKI
     {
       category: 0,
       clientLogo: "/images/clients/rski.png",
@@ -496,6 +527,7 @@ const worksData: WorksData = {
       demo: "https://rski-pegawai-demo.netlify.app/",
     },
 
+    // Library Mahal
     {
       category: 0,
       clientLogo: "/images/clients/rski.png",
@@ -518,6 +550,32 @@ const worksData: WorksData = {
         "/images/works/9/ss/7.png",
         "/images/works/9/ss/8.png",
         "/images/works/9/ss/9.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://library-mahal.netlify.app/",
+    },
+
+    // Geoportal
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Geoportal",
+      title: "Geographic Information System",
+      image: "/images/works/10.png",
+      imageAlter: "/images/works/10_alter.png",
+      solution:
+        "This Land GIS project allows users to view detailed land information through a click-on-field feature, displaying data such as certificate number, NIK, NOP, land rights type, land area, and satellite view. It also includes user management, SHP data import, and a dashboard for monitoring gap, overlap, and LSD layers.",
+      narrative:
+        "The Land GIS project I developed offers a comprehensive solution for land data management. It features an interactive system where users can click on a land plot to display detailed information, including the owner's name, NIK, certificate number, NIB, NOP, land rights type, land area, address, and land manager. The system supports satellite imagery visualization and provides an advanced dashboard to monitor gaps, overlaps, and LSD in map layers. Additionally, it includes user management functionality and the ability to import SHP-based data, ensuring flexibility and efficiency in managing land information.",
+      ss: [
+        "/images/works/10/ss/0.png",
+        "/images/works/10/ss/1.png",
+        "/images/works/10/ss/2.png",
+        "/images/works/10/ss/3.png",
+        "/images/works/10/ss/4.png",
+        "/images/works/10/ss/5.png",
+        "/images/works/10/ss/6.png",
+        "/images/works/10/ss/7.png",
       ],
       ssScrollLength: 450,
       link: "https://library-mahal.netlify.app/",

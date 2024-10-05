@@ -41,8 +41,8 @@ export default function ImageView({ data, imagePath, index }: Props) {
         _hover={{ opacity: 0.6 }}
         cursor={"pointer"}
         src={imagePath}
-        w={["80vw", null, "600px"]}
-        objectFit={"contain"}
+        w={["80vw", null, "60vw"]}
+        objectFit={"cover"}
         borderRadius={"0 !important"}
         aspectRatio={"16/9"}
         scrollSnapAlign={"center"}
