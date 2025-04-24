@@ -88,9 +88,9 @@ const landingData = {
             "Seni dan desain, saya menyukai keduanya. Menjadi seorang graphic desainer juga tidak disengaja, dengan menggunakan CorelDRAW, saya mampu membuat desain apapun yang saya mau.",
         },
         {
-          title: "Co-Founder of Distro Studio",
+          title: "Co-Founder of Exium Studio",
           narative:
-            "Distro Studio adalah agensi pengembangan perangkat lunak yang menyediakan layanan pembuatan webapp (PWA) lintas platform.",
+            "Exium Studio adalah agensi pengembangan perangkat lunak yang menyediakan layanan pembuatan webapp (PWA) lintas platform.",
         },
       ],
     },
@@ -118,9 +118,9 @@ const landingData = {
             "Art and design, I love both. Becoming a graphic designer is also accidental, by using CorelDRAW I am able to create any design I want.",
         },
         {
-          title: "Co-Founder of Distro Studio",
+          title: "Co-Founder of Exium Studio",
           narative:
-            "Distro Studio is a software development agency that provides cross-platform webapp (PWA) creation services.",
+            "Exium Studio is a software development agency that provides cross-platform webapp (PWA) creation services.",
         },
       ],
     },

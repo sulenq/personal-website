@@ -249,9 +249,9 @@ const worksData: WorksData = {
       image: "/images/works/9.png",
       imageAlter: "/images/works/9.png",
       solution:
-        "Agar proses pengembangan frontend di Distro Studio menjadi efisien, saya membuat library ini untuk saya gunakan pribadi (sementara), mungkin saya akan mempublikasikannya suatu hari nanti.",
+        "Agar proses pengembangan frontend di Exium Studio menjadi efisien, saya membuat library ini untuk saya gunakan pribadi (sementara), mungkin saya akan mempublikasikannya suatu hari nanti.",
       narrative:
-        "Saya sebagai seorang Frontend di Distro Studio merasa membutuhkan custom komponen yang bisa digunakan kembali, karena jika tidak begitu, proses development jadi semakin lama dan tidak efisien.",
+        "Saya sebagai seorang Frontend di Exium Studio merasa membutuhkan custom komponen yang bisa digunakan kembali, karena jika tidak begitu, proses development jadi semakin lama dan tidak efisien.",
       ss: [
         "/images/works/9/ss/0.png",
         "/images/works/9/ss/1.png",
@@ -540,9 +540,9 @@ const worksData: WorksData = {
       image: "/images/works/9.png",
       imageAlter: "/images/works/9.png",
       solution:
-        "To make the frontend development process at Distro Studio more efficient, I created this library for my personal use (for now). I might publish it someday.",
+        "To make the frontend development process at Exium Studio more efficient, I created this library for my personal use (for now). I might publish it someday.",
       narrative:
-        "As a Frontend Developer at Distro Studio, I felt the need for custom reusable components because without them, the development process would take longer and be less efficient.",
+        "As a Frontend Developer at Exium Studio, I felt the need for custom reusable components because without them, the development process would take longer and be less efficient.",
       ss: [
         "/images/works/9/ss/0.png",
         "/images/works/9/ss/1.png",

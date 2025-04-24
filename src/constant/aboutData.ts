@@ -76,14 +76,14 @@ const aboutData = {
         },
         {
           title: "Frontend Developer",
-          company: "Distro Studio",
+          company: "Exium Studio",
           location: "Semarang, Indonesia",
           periode: "Oktober 2022 -  sekarang",
           jobs: [
             "Mengembangkan frontend dengan React dan ChakraUI.",
             "Bekerja sebagai tim, frontend dibuat sesuai dengan desain dari UI/UX designer.",
             "Ikut serta diskusi untuk merencanakan kebutuhan sistem.",
-            "Mengembangkan dan memelihara landing page Distro Studio.",
+            "Mengembangkan dan memelihara landing page Exium Studio.",
             "Co-Founder",
           ],
         },
@@ -158,14 +158,14 @@ const aboutData = {
         },
         {
           title: "Frontend Developer",
-          company: "Distro Studio",
+          company: "Exium Studio",
           location: "Semarang, Indonesia",
           periode: "October 2022 - Present",
           jobs: [
             "Developed Frontend with React and ChakraUI.",
             "Worked as part of a team, implementing Frontend according to the UI/UX designer's specifications.",
             "Participated in discussions to plan system requirements.",
-            "Develop and maintaining Distro Studio's landing page.",
+            "Develop and maintaining Exium Studio's landing page.",
             "Co-Founder",
           ],
         },
