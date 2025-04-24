@@ -108,7 +108,7 @@ const worksData: WorksData = {
         "/images/works/5/ss/8.png",
       ],
       ssScrollLength: 450,
-      link: "https://admin2.kubu.id/",
+      // link: "https://admin2.kubu.id/",
     },
     {
       category: 0,
@@ -213,7 +213,8 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
-      demo: "https://rski-personalia-demo.netlify.app/",
+      demo: "https://rski-personalia.netlify.app/",
+      helperText: "username: demo.account, password: 1234",
     },
     {
       category: 0,
@@ -235,7 +236,8 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
-      demo: "https://rski-pegawai-demo.netlify.app/",
+      demo: "https://rski-karyawan.netlify.app/",
+      helperText: "username: demo.account, password: 1234",
     },
 
     // Library Mahal
@@ -397,7 +399,7 @@ const worksData: WorksData = {
         "/images/works/5/ss/8.png",
       ],
       ssScrollLength: 450,
-      link: "https://admin2.kubu.id/",
+      // link: "https://admin2.kubu.id/",
     },
     {
       category: 0,
@@ -502,7 +504,8 @@ const worksData: WorksData = {
         "/images/works/6/ss/18.png",
       ],
       ssScrollLength: 450,
-      demo: "https://rski-personalia-demo.netlify.app/",
+      demo: "https://rski-personalia.netlify.app/",
+      helperText: "username: demo.account, password: 1234",
     },
     {
       category: 0,
@@ -524,7 +527,8 @@ const worksData: WorksData = {
         "/images/works/7/ss/5.png",
       ],
       ssScrollLength: 450,
-      demo: "https://rski-pegawai-demo.netlify.app/",
+      demo: "https://rski-karyawan.netlify.app/",
+      helperText: "username: demo.account, password: 1234",
     },
 
     // Library Mahal

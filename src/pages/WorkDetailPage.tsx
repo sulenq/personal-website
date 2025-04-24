@@ -156,6 +156,12 @@ const WorksDetailPage = () => {
                 </Button>
               </Box>
             )}
+
+            {data.helperText && (
+              <Text className="init" opacity={0.5}>
+                {data.helperText}
+              </Text>
+            )}
           </VStack>
 
           <Image
