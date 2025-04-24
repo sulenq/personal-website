@@ -116,11 +116,11 @@ export default function About() {
                     {i == 3 && (
                       <Text
                         as={Link}
-                        to={"https://distrostudio.org/"}
+                        to={"https://exium-studio.vercel.app/"}
                         target="_blank"
                         color={"p.500"}
                       >
-                        https://distrostudio.org/
+                        https://exium-studio.vercel.app/
                       </Text>
                     )}
                   </Box>

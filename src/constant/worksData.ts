@@ -82,7 +82,7 @@ const worksData: WorksData = {
         "/images/works/1/ss/17.png",
       ],
       ssScrollLength: 450,
-      link: "https://lab.distrostudio.org/",
+      link: "https://lab.exium-studio.vercel.app/",
     },
     {
       category: 0,
@@ -373,7 +373,7 @@ const worksData: WorksData = {
         "/images/works/0/ss/12.png",
       ],
       ssScrollLength: 450,
-      link: "https://lab.distrostudio.org/",
+      link: "https://lab.exium-studio.vercel.app/",
     },
     {
       category: 0,
