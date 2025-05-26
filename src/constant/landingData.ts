@@ -34,13 +34,13 @@ const landingData = {
       contact: "Hubungi Saya",
       portfolio: "Portofolio",
       stats: [
-        {
-          name: "Portofolio (web & desain)",
-          value: "6 & 50",
-        },
+        // {
+        //   name: "Portofolio (web & desain)",
+        //   value: "6 & 50",
+        // },
         {
           name: "Tahun Pengalaman",
-          value: "2",
+          value: `${new Date().getFullYear() - 2019}+`,
         },
       ],
     },
