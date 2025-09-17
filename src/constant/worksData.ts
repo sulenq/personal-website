@@ -240,27 +240,6 @@ const worksData: WorksData = {
       helperText: "username: demo.account, password: 1234",
     },
 
-    // Library Mahal
-    {
-      category: 0,
-      clientLogo: "/images/clients/rski.png",
-      clientName: "Distro Components & Library",
-      title: "Reusable Custom Component & Custom Library (Starter Pack)",
-      image: "/images/works/9.png",
-      imageAlter: "/images/works/9.png",
-      solution:
-        "Agar proses pengembangan frontend di Exium Studio menjadi efisien, saya membuat library ini untuk saya gunakan pribadi (sementara), mungkin saya akan mempublikasikannya suatu hari nanti.",
-      narrative:
-        "Saya sebagai seorang Frontend di Exium Studio merasa membutuhkan custom komponen yang bisa digunakan kembali, karena jika tidak begitu, proses development jadi semakin lama dan tidak efisien.",
-      ss: [
-        "/images/works/9/ss/0.png",
-        "/images/works/9/ss/1.png",
-        "/images/works/9/ss/2.png",
-      ],
-      ssScrollLength: 450,
-      link: "https://vite-chakra-pwa-template.vercel.app/",
-    },
-
     // Geoportal
     {
       category: 0,
@@ -270,23 +249,13 @@ const worksData: WorksData = {
       image: "/images/works/10.png",
       imageAlter: "/images/works/10_alter.png",
       solution:
-        "Sistem GIS Pertanahan ini memungkinkan pengguna untuk melihat detail informasi tanah melalui fitur klik bidang, yang mencakup data sertifikat, NIK, NOP, jenis hak, luas tanah, serta tampilan peta satelit. Dilengkapi dengan fitur pengelolaan pengguna, import data SHP, dan dashboard untuk memonitor layer gap, overlap, serta LSD.",
+        "Saya mengerjakan secara penuh seluruh bagian frontend dari proyek GIS ini, mencakup perancangan desain antarmuka sekaligus implementasinya dengan pendekatan responsif agar dapat digunakan dengan optimal pada berbagai perangkat, mulai dari layar kecil hingga besar. Setiap elemen UI dirancang khusus untuk memastikan alur kerja yang intuitif, konsisten, dan memiliki performa yang baik, tanpa bergantung pada template bawaan. Dengan demikian, hasil akhir tidak hanya berfungsi secara teknis, tetapi juga memiliki kualitas visual yang profesional serta mendukung pengalaman pengguna yang mulus dalam konteks aplikasi GIS yang kompleks namun tetap responsif.",
       narrative:
-        "Projek GIS Pertanahan yang saya kembangkan menyediakan solusi komprehensif dalam manajemen data pertanahan. Sistem ini dilengkapi dengan fitur interaktif di mana pengguna dapat mengklik pada bidang tanah di peta untuk menampilkan informasi lengkap, seperti nama pemilik, NIK, nomor sertifikat, NIB, NOP, jenis hak, luas tanah, alamat, dan pengelola lahan. Selain itu, sistem ini mendukung visualisasi data menggunakan tampilan satelit dan menyediakan dashboard canggih untuk memonitor gap, overlap, dan LSD pada layer-layer peta. Terdapat juga fitur pengelolaan pengguna serta kemampuan untuk mengimpor data berbasis SHP, memastikan fleksibilitas dan efisiensi dalam pengelolaan data pertanahan.",
-      ss: [
-        "/images/works/9/ss/0.png",
-        "/images/works/9/ss/1.png",
-        "/images/works/9/ss/2.png",
-        "/images/works/9/ss/3.png",
-        "/images/works/9/ss/4.png",
-        "/images/works/9/ss/5.png",
-        "/images/works/9/ss/6.png",
-        "/images/works/9/ss/7.png",
-        "/images/works/9/ss/8.png",
-        "/images/works/9/ss/9.png",
-      ],
+        "Proyek ini adalah aplikasi web GIS interaktif yang memungkinkan pengguna membuat workspace untuk mengelola data spasial secara fleksibel. Dalam setiap workspace, pengguna bisa menambahkan banyak layer dari file .shp (yang otomatis dikonversi ke GeoJSON) lalu mengatur visualisasinya, baik dengan color scale cepat untuk atribut numerik maupun pewarnaan custom berdasarkan nilai properti tertentu. Workspace dapat dimuat secara asinkron dan dinamis, sehingga tidak perlu reload penuh saat berganti atau membuka project. Selain itu, layer dalam workspace bisa diatur urutannya dengan fitur bring to front, send to back, naik/turun satu level, sehingga pengguna memiliki kontrol penuh atas tampilan peta mereka.",
+      ss: ["/images/works/10/ss/0.png", "/images/works/10/ss/1.png"],
       ssScrollLength: 450,
-      // link: "https://library-mahal.netlify.app/",
+      link: "https://napgis.vercel.app",
+      helperText: "username: user@gmail.com, password: userlevel",
     },
   ],
 
@@ -524,27 +493,6 @@ const worksData: WorksData = {
       helperText: "username: demo.account, password: 1234",
     },
 
-    // Library Mahal
-    {
-      category: 0,
-      clientLogo: "/images/clients/rski.png",
-      clientName: "Distro Components & Library",
-      title: "Reusable Custom Component & Custom Library (Starter Pack)",
-      image: "/images/works/9.png",
-      imageAlter: "/images/works/9.png",
-      solution:
-        "To make the frontend development process at Exium Studio more efficient, I created this library for my personal use (for now). I might publish it someday.",
-      narrative:
-        "As a Frontend Developer at Exium Studio, I felt the need for custom reusable components because without them, the development process would take longer and be less efficient.",
-      ss: [
-        "/images/works/9/ss/0.png",
-        "/images/works/9/ss/1.png",
-        "/images/works/9/ss/2.png",
-      ],
-      ssScrollLength: 450,
-      link: "https://library-mahal.netlify.app/",
-    },
-
     // Geoportal
     {
       category: 0,
@@ -554,21 +502,13 @@ const worksData: WorksData = {
       image: "/images/works/10.png",
       imageAlter: "/images/works/10_alter.png",
       solution:
-        "This Land GIS project allows users to view detailed land information through a click-on-field feature, displaying data such as certificate number, NIK, NOP, land rights type, land area, and satellite view. It also includes user management, SHP data import, and a dashboard for monitoring gap, overlap, and LSD layers.",
+        "I am fully responsible for the frontend development of this GIS project, covering both the interface design and its responsive implementation to ensure seamless usability across devices of all sizes. Every UI element is carefully designed to deliver an intuitive workflow, consistent interactions, and high performance, without relying on pre-made templates. The outcome is not only technically functional but also visually refined and professional, providing a smooth user experience in a GIS application that remains highly responsive despite its complexity.",
       narrative:
-        "The Land GIS project I developed offers a comprehensive solution for land data management. It features an interactive system where users can click on a land plot to display detailed information, including the owner's name, NIK, certificate number, NIB, NOP, land rights type, land area, address, and land manager. The system supports satellite imagery visualization and provides an advanced dashboard to monitor gaps, overlaps, and LSD in map layers. Additionally, it includes user management functionality and the ability to import SHP-based data, ensuring flexibility and efficiency in managing land information.",
-      ss: [
-        "/images/works/10/ss/0.png",
-        "/images/works/10/ss/1.png",
-        "/images/works/10/ss/2.png",
-        "/images/works/10/ss/3.png",
-        "/images/works/10/ss/4.png",
-        "/images/works/10/ss/5.png",
-        "/images/works/10/ss/6.png",
-        "/images/works/10/ss/7.png",
-      ],
+        "This project is an interactive web-based GIS application that enables users to create workspaces for flexible spatial data management. Within each workspace, users can add multiple layers from .shp files (automatically converted to GeoJSON) and customize their visualizations using either quick color scales for numerical attributes or custom styling based on specific property values. Workspaces can be loaded asynchronously and dynamically, avoiding full page reloads when switching or opening projects. Additionally, the application offers layer ordering controls—bring to front, send to back, move up, or move down—granting users full control over their map presentation.",
+      ss: ["/images/works/10/ss/0.png", "/images/works/10/ss/1.png"],
       ssScrollLength: 450,
-      // link: "https://library-mahal.netlify.app/",
+      link: "https://napgis.vercel.app",
+      helperText: "username: user@gmail.com, password: userlevel",
     },
   ],
 };

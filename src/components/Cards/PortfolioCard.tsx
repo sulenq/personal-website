@@ -17,6 +17,8 @@ export default function PortfolioCard(props: any) {
   //   }
   // };
 
+  console.log(work.image);
+
   return (
     <VStack
       bgImage={work.image}
