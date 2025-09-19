@@ -25,7 +25,7 @@ export default function LangSwitcher(props: any) {
         // w={"70px"}
         px={"4px !important"}
       >
-        <Text>{lang === "en" ? "ID" : "EN"}</Text>
+        <Text>{lang === "en" ? "EN" : "ID"}</Text>
       </Button>
     </Tooltip>
   );
