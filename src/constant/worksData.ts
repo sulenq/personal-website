@@ -240,6 +240,53 @@ const worksData: WorksData = {
       helperText: "username: demo.account, password: 1234",
     },
 
+    // Piramid
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Mamura",
+      title: "E-Commerce",
+      image: "/images/works/12.png",
+      imageAlter: "/images/works/12_alter.png",
+      solution:
+        "Saya mengerjakan bagian frontend dari platform e-commerce ini menggunakan React dan Chakra UI, dengan fokus pada tampilan yang bersih, responsif, dan mudah diakses. Implementasi mencakup alur untuk titip qurban, titip sedekah, serta pemesanan aqiqah, yang semuanya terintegrasi dengan Midtrans sebagai payment gateway agar proses pembayaran lebih aman dan lancar.",
+      narrative:
+        "Platform e-commerce ini menghadirkan solusi digital bagi pengguna yang ingin berpartisipasi dalam layanan qurban, sedekah, dan aqiqah secara mudah tanpa hambatan logistik. Dengan dukungan transaksi online dan integrasi Midtrans, proses ibadah sosial ini menjadi lebih transparan, terpercaya, dan praktis untuk memenuhi kebutuhan pengguna modern.",
+      ss: [
+        "/images/works/12/ss/0.png",
+        "/images/works/12/ss/1.png",
+        "/images/works/12/ss/2.png",
+        "/images/works/12/ss/3.png",
+        "/images/works/12/ss/4.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://mamura.net.id/",
+    },
+
+    // Mamura
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Mamura",
+      title: "Mamura Website & Admin Portal",
+      image: "/images/works/11.png",
+      imageAlter: "/images/works/11_alter.png",
+      solution:
+        "Saya mengembangkan frontend untuk website dan admin portal penyedia layanan internet Mamura menggunakan React dan Chakra UI. Website difokuskan pada tampilan modern, responsif, dan informatif bagi pelanggan, sementara admin portal dilengkapi dengan CMS yang intuitif untuk mengelola konten, fitur CRUD blog, manajemen lowongan pekerjaan, serta dashboard interaktif untuk monitoring data secara real-time.",
+      narrative:
+        "Website dan admin portal Mamura dirancang untuk mendukung operasional penyedia layanan internet secara digital dan efisien. Melalui website, pengguna dapat dengan mudah mengakses informasi produk, layanan, dan berita terbaru. Sedangkan portal admin memberikan tim internal kemampuan untuk mengelola konten, blog, lowongan kerja, serta memantau performa bisnis melalui dashboard, sehingga proses manajemen menjadi lebih cepat, praktis, dan terpusat.",
+      ss: [
+        "/images/works/11/ss/0.png",
+        "/images/works/11/ss/1.png",
+        "/images/works/11/ss/2.png",
+        "/images/works/11/ss/3.png",
+        "/images/works/11/ss/4.png",
+        "/images/works/11/ss/5.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://mamura.net.id/",
+    },
+
     // Geoportal
     {
       category: 0,
@@ -493,6 +540,53 @@ const worksData: WorksData = {
       helperText: "username: demo.account, password: 1234",
     },
 
+    // Piramid
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Mamura",
+      title: "E-Commerce",
+      image: "/images/works/12.png",
+      imageAlter: "/images/works/12_alter.png",
+      solution:
+        "I developed the frontend of the e-commerce platform using React and Chakra UI, ensuring a clean, responsive, and accessible user interface. The implementation covered flows for online qurban reservations, sadaqah contributions, and aqiqah ordering, all seamlessly integrated with Midtrans as the payment gateway to provide users with a secure and smooth checkout experience.",
+      narrative:
+        "This e-commerce platform offers a digital solution for users who want to easily participate in qurban, sadaqah, and aqiqah services without logistical barriers. By leveraging online transactions and Midtrans integration, the platform simplifies religious giving and ceremonial preparations, making the process more transparent, reliable, and convenient for modern users.",
+      ss: [
+        "/images/works/12/ss/0.png",
+        "/images/works/12/ss/1.png",
+        "/images/works/12/ss/2.png",
+        "/images/works/12/ss/3.png",
+        "/images/works/12/ss/4.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://mamura.net.id/",
+    },
+
+    // Mamura
+    {
+      category: 0,
+      clientLogo: "/images/clients/rski.png",
+      clientName: "Mamura",
+      title: "Mamura Website & Admin Portal",
+      image: "/images/works/11.png",
+      imageAlter: "/images/works/11_alter.png",
+      solution:
+        "I developed the frontend for Mamura's website and admin portal using React and Chakra UI. The website focuses on a modern, responsive, and informative interface for customers, while the admin portal features an intuitive CMS for content management, CRUD functionality for blog posts, job vacancy management, and an interactive dashboard for real-time data monitoring.",
+      narrative:
+        "Mamura's website and admin portal are designed to support the operations of an internet service provider in a fully digital and efficient way. The website allows customers to easily access product information, services, and the latest updates. Meanwhile, the admin portal empowers the internal team to manage content, blog posts, job listings, and track business performance through a centralized dashboard, making management processes faster, more practical, and streamlined.",
+      ss: [
+        "/images/works/11/ss/0.png",
+        "/images/works/11/ss/1.png",
+        "/images/works/11/ss/2.png",
+        "/images/works/11/ss/3.png",
+        "/images/works/11/ss/4.png",
+        "/images/works/11/ss/5.png",
+      ],
+      ssScrollLength: 450,
+      link: "https://mamura.net.id/",
+    },
+
     // Geoportal
     {
       category: 0,
@@ -507,7 +601,7 @@ const worksData: WorksData = {
         "This project is an interactive web-based GIS application that enables users to create workspaces for flexible spatial data management. Within each workspace, users can add multiple layers from .shp files (automatically converted to GeoJSON) and customize their visualizations using either quick color scales for numerical attributes or custom styling based on specific property values. Workspaces can be loaded asynchronously and dynamically, avoiding full page reloads when switching or opening projects. Additionally, the application offers layer ordering controls—bring to front, send to back, move up, or move down—granting users full control over their map presentation.",
       ss: ["/images/works/10/ss/0.png", "/images/works/10/ss/1.png"],
       ssScrollLength: 450,
-      link: "https://napgis.vercel.app",
+      demo: "https://napgis.vercel.app",
       helperText: "username: user@gmail.com, password: userlevel",
     },
   ],

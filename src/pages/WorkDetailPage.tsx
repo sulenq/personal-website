@@ -45,13 +45,13 @@ const WorksDetailPage = () => {
 
   const handlePrev = () => {
     if (containerRef.current) {
-      containerRef.current.scrollLeft -= data.ssScrollLength;
+      containerRef.current.scrollLeft -= data?.ssScrollLength;
     }
   };
 
   const handleNext = () => {
     if (containerRef.current) {
-      containerRef.current.scrollLeft += data.ssScrollLength;
+      containerRef.current.scrollLeft += data?.ssScrollLength;
     }
   };
 
@@ -229,9 +229,12 @@ const WorksDetailPage = () => {
               py={2}
             >
               {data.ss.map((imagePath, i) => (
-                <Box className="image" key={i}>
-                  <ImageView data={data} imagePath={imagePath} index={i} />
-                </Box>
+                <ImageView
+                  key={i}
+                  data={data}
+                  imagePath={imagePath}
+                  index={i}
+                />
               ))}
             </HStack>
           </VStack>
