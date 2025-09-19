@@ -65,16 +65,6 @@ const aboutData = {
       title: "Pengalaman Kerja",
       items: [
         {
-          title: "Web Developer",
-          company: "Business Watch Indonesia",
-          location: "Semarang, Indonesia",
-          periode: "Desember 2023 -  Agustus 2024",
-          jobs: [
-            "Mengembangkan website landingpage, blog dan online course. ",
-            "Mengembangkan website admin untuk mengelola website landing page, blog dan online course.",
-          ],
-        },
-        {
           title: "Frontend Developer",
           company: "Exium Studio",
           location: "Semarang, Indonesia",
@@ -85,6 +75,16 @@ const aboutData = {
             "Ikut serta diskusi untuk merencanakan kebutuhan sistem.",
             "Mengembangkan dan memelihara landing page Exium Studio.",
             "Co-Founder",
+          ],
+        },
+        {
+          title: "Web Developer",
+          company: "Business Watch Indonesia",
+          location: "Semarang, Indonesia",
+          periode: "Desember 2023 -  Agustus 2024",
+          jobs: [
+            "Mengembangkan website landingpage, blog dan online course. ",
+            "Mengembangkan website admin untuk mengelola website landing page, blog dan online course.",
           ],
         },
         {

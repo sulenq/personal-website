@@ -120,7 +120,7 @@ export default function About() {
                         target="_blank"
                         color={"p.500"}
                       >
-                        https://exium-studio.vercel.app/
+                        https://exium.id/
                       </Text>
                     )}
                   </Box>
