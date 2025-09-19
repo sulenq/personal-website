@@ -40,7 +40,7 @@ const landingData = {
         },
         {
           name: "Tahun Pengalaman",
-          value: `${new Date().getFullYear() - 2019}+`,
+          value: `${new Date().getFullYear() - 2023}+`,
         },
       ],
     },
